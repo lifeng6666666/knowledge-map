@@ -1,0 +1,975 @@
+{
+  "nodes": [
+    {
+      "id": "concept_cs",
+      "label": "计算机科学",
+      "type": "学科",
+      "description": "计算机科学的基础学科，包括编程、算法和系统设计",
+      "shape": "diamond",
+      "color": {"background": "#667eea", "border": "#5568d3"},
+      "font": {"size": 16, "color": "#fff"}
+    },
+    {
+      "id": "concept_math",
+      "label": "数学基础",
+      "type": "学科",
+      "description": "计算的数学基础，包括离散数学、线性代数、概率统计",
+      "shape": "diamond",
+      "color": {"background": "#4facfe", "border": "#3d8fd9"},
+      "font": {"size": 16, "color": "#fff"}
+    },
+    {
+      "id": "concept_systems",
+      "label": "系统设计",
+      "type": "学科",
+      "description": "大规模分布式系统的架构设计和优化",
+      "shape": "diamond",
+      "color": {"background": "#43e97b", "border": "#38c178"},
+      "font": {"size": 16, "color": "#fff"}
+    },
+    {
+      "id": "concept_ml",
+      "label": "机器学习与AI",
+      "type": "学科",
+      "description": "数据驱动的智能学习系统",
+      "shape": "diamond",
+      "color": {"background": "#fa709a", "border": "#d85a7a"},
+      "font": {"size": 16, "color": "#fff"}
+    },
+    {
+      "id": "concept_economics",
+      "label": "经济学",
+      "type": "学科",
+      "description": "经济学原理与分析方法",
+      "shape": "diamond",
+      "color": {"background": "#feca57", "border": "#ffa502"},
+      "font": {"size": 16, "color": "#000"}
+    },
+    {
+      "id": "concept_web",
+      "label": "Web开发",
+      "type": "学科",
+      "description": "现代Web应用全栈开发技术",
+      "shape": "diamond",
+      "color": {"background": "#20c997", "border": "#0f9c6b"},
+      "font": {"size": 16, "color": "#fff"}
+    },
+    {
+      "id": "concept_soft_skills",
+      "label": "软技能",
+      "type": "学科",
+      "description": "沟通、团队协作和领导力",
+      "shape": "diamond",
+      "color": {"background": "#ff6348", "border": "#ff4518"},
+      "font": {"size": 16, "color": "#fff"}
+    },
+    {
+      "id": "skill_programming",
+      "label": "编程能力",
+      "type": "技能",
+      "description": "核心编程和代码实现能力",
+      "shape": "diamond",
+      "color": {"background": "#764ba2", "border": "#5d3a7d"},
+      "font": {"size": 16, "color": "#fff"}
+    },
+    {
+      "id": "skill_problem_solving",
+      "label": "问题求解",
+      "type": "思维方式",
+      "description": "算法思维和问题分析优化",
+      "shape": "diamond",
+      "color": {"background": "#f093fb", "border": "#d76fd3"},
+      "font": {"size": 16, "color": "#fff"}
+    },
+    {
+      "id": "skill_system_thinking",
+      "label": "系统思维",
+      "type": "思维方式",
+      "description": "从全局、整体的角度分析问题",
+      "shape": "diamond",
+      "color": {"background": "#43e97b", "border": "#38c178"},
+      "font": {"size": 16, "color": "#fff"}
+    },
+    {
+      "id": "skill_learning",
+      "label": "自主学习",
+      "type": "技能",
+      "description": "快速学习新技术和知识的能力",
+      "shape": "diamond",
+      "color": {"background": "#667eea", "border": "#5568d3"},
+      "font": {"size": 16, "color": "#fff"}
+    },
+    {
+      "id": "course_python",
+      "label": "Python编程",
+      "type": "course",
+      "description": "Python基础和面向对象编程",
+      "books": "Python速成课 - Eric Matthes; 流畅的Python - Luciano Ramalho",
+      "courses": "MIT 6.0001; Codecademy Python; DataCamp",
+      "shape": "box",
+      "color": {"background": "#3776ab", "border": "#1d4d6b"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_java",
+      "label": "Java与OOP",
+      "type": "course",
+      "description": "Java编程和面向对象设计原理",
+      "books": "Java入门到精通 - Kathy Sierra; Effective Java - Joshua Bloch",
+      "courses": "Oracle大学Java; Udacity Java课程",
+      "shape": "box",
+      "color": {"background": "#f89917", "border": "#cc7a0f"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_cpp",
+      "label": "C++系统编程",
+      "type": "course",
+      "description": "C++系统级和性能关键的编程",
+      "books": "C++程序设计语言 - Bjarne Stroustrup; Effective C++",
+      "courses": "MIT 6.S096; Udacity C++课程",
+      "shape": "box",
+      "color": {"background": "#00599c", "border": "#00447a"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_javascript",
+      "label": "JavaScript与前端",
+      "type": "course",
+      "description": "JavaScript前端开发基础",
+      "books": "你不知道的JavaScript - Kyle Simpson; 雄辩的JavaScript",
+      "courses": "The Odin Project; freeCodeCamp; Codecademy",
+      "shape": "box",
+      "color": {"background": "#f1e05a", "border": "#c8aa00"},
+      "font": {"size": 13, "color": "#000"}
+    },
+    {
+      "id": "course_dsa",
+      "label": "数据结构与算法",
+      "type": "course",
+      "description": "基础算法、数据结构和复杂度分析",
+      "books": "算法导论 - CLRS; 算法 - Sedgewick & Wayne",
+      "courses": "MIT 6.006; Stanford CS161; LeetCode",
+      "shape": "box",
+      "color": {"background": "#e34c26", "border": "#b83918"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_oop",
+      "label": "设计模式与架构",
+      "type": "course",
+      "description": "面向对象原理、设计模式和重构",
+      "books": "设计模式 - Gang of Four; 重构 - Martin Fowler",
+      "courses": "Pluralsight设计模式; LinkedIn Learning",
+      "shape": "box",
+      "color": {"background": "#9f7aea", "border": "#6b4da8"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_database",
+      "label": "数据库系统",
+      "type": "course",
+      "description": "关系数据库、SQL、设计和优化",
+      "books": "数据库设计 - Silberschatz; SQL性能详解",
+      "courses": "Stanford CS145; CMU 15-445; Udacity",
+      "shape": "box",
+      "color": {"background": "#336791", "border": "#1f3f5c"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_os",
+      "label": "操作系统",
+      "type": "course",
+      "description": "进程、内存、文件系统和并发",
+      "books": "操作系统概念 - Silberschatz; 现代操作系统 - Tanenbaum",
+      "courses": "MIT 6.004; Berkeley CS162; MIT 6.S081",
+      "shape": "box",
+      "color": {"background": "#1e1e1e", "border": "#000"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_networks",
+      "label": "计算机网络",
+      "type": "course",
+      "description": "OSI模型、TCP/IP、HTTP、DNS、路由、网络安全",
+      "books": "计算机网络 - Tanenbaum; 自顶向下方法 - Kurose & Ross",
+      "courses": "Stanford CS144; Udacity网络; Coursera",
+      "shape": "box",
+      "color": {"background": "#cc342d", "border": "#8b2320"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_web_frontend",
+      "label": "前端Web开发",
+      "type": "course",
+      "description": "HTML/CSS/JavaScript前端框架和工具",
+      "books": "你不知道的JavaScript; 雄辩的JavaScript; Vue官方文档",
+      "courses": "The Odin Project; freeCodeCamp; Vue官方教程",
+      "shape": "box",
+      "color": {"background": "#20c997", "border": "#0f9c6b"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_web_backend",
+      "label": "后端Web开发",
+      "type": "course",
+      "description": "服务器、API、框架和部署",
+      "books": "Flask Web开发 - Miguel Grinberg; Django官方文档",
+      "courses": "Real Python; Miguel's Flask教程; Django官方",
+      "shape": "box",
+      "color": {"background": "#20c997", "border": "#0f9c6b"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_web_fullstack",
+      "label": "全栈Web开发",
+      "type": "course",
+      "description": "全栈开发：前端、后端、数据库、部署",
+      "books": "全栈JavaScript - Bos; 雄辩的JavaScript",
+      "courses": "The Odin Project; freeCodeCamp; MERN课程",
+      "shape": "box",
+      "color": {"background": "#20c997", "border": "#0f9c6b"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_systems_design",
+      "label": "系统设计与架构",
+      "type": "course",
+      "description": "可扩展性、可用性、缓存、分布式系统",
+      "books": "设计数据密集型应用 - Kleppmann; 系统设计面试 - Xu",
+      "courses": "ByteByteGo系统设计; AlgoExpert",
+      "shape": "box",
+      "color": {"background": "#2d3436", "border": "#0a0a0a"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_discrete_math",
+      "label": "离散数学",
+      "type": "course",
+      "description": "集合论、逻辑、图论、组合数学",
+      "books": "离散数学与应用 - Kenneth Rosen; 具体数学",
+      "courses": "MIT 6.042; 离散数学课程",
+      "shape": "box",
+      "color": {"background": "#5865f2", "border": "#3e4fb5"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_linear_algebra",
+      "label": "线性代数",
+      "type": "course",
+      "description": "向量、矩阵、变换、特征值、在机器学习中的应用",
+      "books": "线性代数导论 - Gilbert Strang; 线性代数应该这样学",
+      "courses": "MIT 18.06; 3Blue1Brown线性代数",
+      "shape": "box",
+      "color": {"background": "#0066cc", "border": "#003d99"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_probability_stats",
+      "label": "概率与统计",
+      "type": "course",
+      "description": "概率分布、假设检验、贝叶斯推断",
+      "books": "概率论基础 - Bertsekas; 统计重思考 - McElreath",
+      "courses": "MIT 18.05; Stanford STATS 110; Coursera",
+      "shape": "box",
+      "color": {"background": "#00796b", "border": "#004d40"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_machine_learning",
+      "label": "机器学习基础",
+      "type": "course",
+      "description": "监督学习、非监督学习、特征工程、模型评估",
+      "books": "动手学机器学习 - Aurélien Géron; PRML - Christopher Bishop",
+      "courses": "Andrew Ng机器学习专项; Fast.ai; Google ML课程",
+      "shape": "box",
+      "color": {"background": "#ff7043", "border": "#d84315"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_deep_learning",
+      "label": "深度学习",
+      "type": "course",
+      "description": "神经网络、CNN、RNN、LSTM、Transformers",
+      "books": "深度学习 - Goodfellow & Bengio; 计算机视觉深度学习",
+      "courses": "DeepLearning.AI专项; Fast.ai; Stanford CS231N",
+      "shape": "box",
+      "color": {"background": "#e91e63", "border": "#880e4f"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_nlp",
+      "label": "自然语言处理",
+      "type": "course",
+      "description": "文本处理、词嵌入、语言模型、Transformer",
+      "books": "语音和语言处理 - Jurafsky & Martin; NLP with Transformers",
+      "courses": "Stanford CS224N; DeepLearning.AI NLP; Hugging Face",
+      "shape": "box",
+      "color": {"background": "#9c27b0", "border": "#4a148c"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_computer_vision",
+      "label": "计算机视觉",
+      "type": "course",
+      "description": "图像处理、特征检测、目标检测、分割",
+      "books": "计算机视觉：算法与应用 - Richard Szeliski",
+      "courses": "Stanford CS231N; DeepLearning.AI CV; OpenCV",
+      "shape": "box",
+      "color": {"background": "#00bcd4", "border": "#006064"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_data_analysis",
+      "label": "数据分析与可视化",
+      "type": "course",
+      "description": "数据清洗、探索分析、统计分析、可视化",
+      "books": "Python数据分析 - Wes McKinney; 数据可视化 - Claus Wilke",
+      "courses": "DataCamp; Google数据分析; Tableau",
+      "shape": "box",
+      "color": {"background": "#3498db", "border": "#2c3e50"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_microeconomics",
+      "label": "微观经济学",
+      "type": "course",
+      "description": "个体经济决策、供求关系、市场结构",
+      "books": "经济学原理 - Gregory Mankiw; 中级微观经济学 - Varian",
+      "courses": "MIT 14.01; Yale ECON 115; Khan Academy",
+      "shape": "box",
+      "color": {"background": "#f39c12", "border": "#c67f0a"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_macroeconomics",
+      "label": "宏观经济学",
+      "type": "course",
+      "description": "GDP、失业、通胀、货币政策、经济增长",
+      "books": "宏观经济学 - Gregory Mankiw; 高级宏观经济学 - David Romer",
+      "courses": "MIT 14.02; Yale ECON 119; Khan Academy",
+      "shape": "box",
+      "color": {"background": "#e74c3c", "border": "#c0392b"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_communication",
+      "label": "技术沟通",
+      "type": "course",
+      "description": "技术写作、演讲、文档、团队沟通",
+      "books": "演讲说动人心 - Nancy Duarte; 技术写作 - Andrew Etter",
+      "courses": "Toastmasters; Coursera沟通; Skillshare",
+      "shape": "box",
+      "color": {"background": "#16a085", "border": "#0d5a47"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_teamwork",
+      "label": "团队协作与敏捷",
+      "type": "course",
+      "description": "敏捷方法、Scrum、Git协作、代码审查",
+      "books": "人件 - Tom DeMarco; 凤凰项目 - Gene Kim",
+      "courses": "Scrum.org基础; Coursera敏捷; Git教程",
+      "shape": "box",
+      "color": {"background": "#8e44ad", "border": "#512e5f"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "practice_coding",
+      "label": "编码练习与竞赛",
+      "type": "course",
+      "description": "LeetCode问题、竞技编程、问题求解练习",
+      "books": "破解编码面试 - Gayle Laakmann McDowell",
+      "courses": "LeetCode; Codeforces; HackerRank; CodeSignal",
+      "shape": "box",
+      "color": {"background": "#34495e", "border": "#1c2833"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "practice_projects",
+      "label": "实战项目",
+      "type": "course",
+      "description": "个人项目、开源贡献、实习、产品开发",
+      "books": "神话的人月 - Frederick Brooks Jr.; 代码大全",
+      "courses": "GitHub挑战; FreeCodeCamp项目; Udacity毕设",
+      "shape": "box",
+      "color": {"background": "#27ae60", "border": "#1e8449"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "practice_research",
+      "label": "论文阅读与研究",
+      "type": "course",
+      "description": "阅读学术论文、理解研究、追踪前沿技术",
+      "books": "如何阅读论文 - S. Keshav; 研究方法论",
+      "courses": "ArXiv.org; Google Scholar; Medium; 技术博客",
+      "shape": "box",
+      "color": {"background": "#2980b9", "border": "#1b4f72"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_cloud_devops",
+      "label": "云计算与DevOps",
+      "type": "course",
+      "description": "AWS/GCP/Azure、Docker、Kubernetes、CI/CD",
+      "books": "AWS官方文档; Kubernetes官方文档; Docker实战",
+      "courses": "A Cloud Guru; Linux Academy; Pluralsight",
+      "shape": "box",
+      "color": {"background": "#ff9800", "border": "#e65100"},
+      "font": {"size": 13, "color": "#fff"}
+    },
+    {
+      "id": "course_security",
+      "label": "信息安全",
+      "type": "course",
+      "description": "密码学、网络安全、应用安全、安全设计",
+      "books": "应用密码学 - Bruce Schneier; Web应用安全",
+      "courses": "Stanford CS255; OWASP; Udacity安全",
+      "shape": "box",
+      "color": {"background": "#c62828", "border": "#880e4f"},
+      "font": {"size": 13, "color": "#fff"}
+    }
+  ],
+  "edges": [
+    {
+      "id": "cs_to_skill_prog",
+      "from": "concept_cs",
+      "to": "skill_programming",
+      "label": "基础",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#667eea"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "cs_to_skill_prob",
+      "from": "concept_cs",
+      "to": "skill_problem_solving",
+      "label": "核心",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#667eea"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "cs_to_math",
+      "from": "concept_cs",
+      "to": "concept_math",
+      "label": "依赖",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "skill_prog_to_py",
+      "from": "skill_programming",
+      "to": "course_python",
+      "label": "学习",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#667eea"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "skill_prog_to_java",
+      "from": "skill_programming",
+      "to": "course_java",
+      "label": "学习",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#667eea"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "skill_prog_to_cpp",
+      "from": "skill_programming",
+      "to": "course_cpp",
+      "label": "学习",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#667eea"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "skill_prog_to_js",
+      "from": "skill_programming",
+      "to": "course_javascript",
+      "label": "学习",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#667eea"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "py_to_dsa",
+      "from": "course_python",
+      "to": "course_dsa",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "py_to_data_analysis",
+      "from": "course_python",
+      "to": "course_data_analysis",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "py_to_ml",
+      "from": "course_python",
+      "to": "course_machine_learning",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "dsa_to_systems_design",
+      "from": "course_dsa",
+      "to": "course_systems_design",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "dsa_to_problem_solving",
+      "from": "course_dsa",
+      "to": "skill_problem_solving",
+      "label": "训练",
+      "type": "applied",
+      "arrows": "to",
+      "color": {"color": "#FFD93D"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "js_to_frontend",
+      "from": "course_javascript",
+      "to": "course_web_frontend",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "frontend_to_fullstack",
+      "from": "course_web_frontend",
+      "to": "course_web_fullstack",
+      "label": "组件",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "backend_to_fullstack",
+      "from": "course_web_backend",
+      "to": "course_web_fullstack",
+      "label": "组件",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "db_to_backend",
+      "from": "course_database",
+      "to": "course_web_backend",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "db_to_systems",
+      "from": "course_database",
+      "to": "course_systems_design",
+      "label": "组件",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "os_to_systems",
+      "from": "course_os",
+      "to": "course_systems_design",
+      "label": "组件",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "networks_to_systems",
+      "from": "course_networks",
+      "to": "course_systems_design",
+      "label": "组件",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "math_to_discrete",
+      "from": "concept_math",
+      "to": "course_discrete_math",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "math_to_linear",
+      "from": "concept_math",
+      "to": "course_linear_algebra",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "math_to_prob",
+      "from": "concept_math",
+      "to": "course_probability_stats",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "linear_to_ml",
+      "from": "course_linear_algebra",
+      "to": "course_machine_learning",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "prob_to_ml",
+      "from": "course_probability_stats",
+      "to": "course_machine_learning",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "ml_to_dl",
+      "from": "course_machine_learning",
+      "to": "course_deep_learning",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "ml_concept_to_ml_course",
+      "from": "concept_ml",
+      "to": "course_machine_learning",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "ml_concept_to_dl",
+      "from": "concept_ml",
+      "to": "course_deep_learning",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "ml_concept_to_nlp",
+      "from": "concept_ml",
+      "to": "course_nlp",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "ml_concept_to_cv",
+      "from": "concept_ml",
+      "to": "course_computer_vision",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "dl_to_nlp",
+      "from": "course_deep_learning",
+      "to": "course_nlp",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "dl_to_cv",
+      "from": "course_deep_learning",
+      "to": "course_computer_vision",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "econ_concept_to_micro",
+      "from": "concept_economics",
+      "to": "course_microeconomics",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "econ_concept_to_macro",
+      "from": "concept_economics",
+      "to": "course_macroeconomics",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "micro_to_macro",
+      "from": "course_microeconomics",
+      "to": "course_macroeconomics",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "econ_to_math",
+      "from": "concept_economics",
+      "to": "concept_math",
+      "label": "依赖",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "web_concept_to_frontend",
+      "from": "concept_web",
+      "to": "course_web_frontend",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "web_concept_to_backend",
+      "from": "concept_web",
+      "to": "course_web_backend",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "web_concept_to_fullstack",
+      "from": "concept_web",
+      "to": "course_web_fullstack",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "soft_to_comm",
+      "from": "concept_soft_skills",
+      "to": "course_communication",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "soft_to_team",
+      "from": "concept_soft_skills",
+      "to": "course_teamwork",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "skill_prog_to_practice",
+      "from": "skill_programming",
+      "to": "practice_coding",
+      "label": "练习",
+      "type": "applied",
+      "arrows": "to",
+      "color": {"color": "#FFD93D"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "practice_coding_to_projects",
+      "from": "practice_coding",
+      "to": "practice_projects",
+      "label": "进阶",
+      "type": "follow",
+      "arrows": "to",
+      "color": {"color": "#4ECDC4"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "teamwork_to_projects",
+      "from": "course_teamwork",
+      "to": "practice_projects",
+      "label": "应用",
+      "type": "applied",
+      "arrows": "to",
+      "color": {"color": "#FFD93D"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "research_to_ml",
+      "from": "practice_research",
+      "to": "course_machine_learning",
+      "label": "前沿",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "research_to_dl",
+      "from": "practice_research",
+      "to": "course_deep_learning",
+      "label": "前沿",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "research_to_systems",
+      "from": "practice_research",
+      "to": "course_systems_design",
+      "label": "前沿",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "systems_concept_to_course",
+      "from": "concept_systems",
+      "to": "course_systems_design",
+      "label": "包含",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#95E1D3"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "py_to_backend",
+      "from": "course_python",
+      "to": "course_web_backend",
+      "label": "工具",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#667eea"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "oop_to_backend",
+      "from": "course_oop",
+      "to": "course_web_backend",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {"color": "#FF6B6B"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "cs_to_security",
+      "from": "concept_cs",
+      "to": "course_security",
+      "label": "重要",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#667eea"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "cs_to_cloud",
+      "from": "concept_cs",
+      "to": "course_cloud_devops",
+      "label": "现代",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#667eea"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "systems_to_cloud",
+      "from": "course_systems_design",
+      "to": "course_cloud_devops",
+      "label": "应用",
+      "type": "applied",
+      "arrows": "to",
+      "color": {"color": "#FFD93D"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "learning_skill_to_all",
+      "from": "skill_learning",
+      "to": "course_python",
+      "label": "基础",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#667eea"},
+      "font": {"size": 12}
+    },
+    {
+      "id": "system_thinking_to_design",
+      "from": "skill_system_thinking",
+      "to": "course_systems_design",
+      "label": "核心",
+      "type": "related",
+      "arrows": "to",
+      "color": {"color": "#667eea"},
+      "font": {"size": 12}
+    }
+  ]
+}
