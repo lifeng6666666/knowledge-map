@@ -1,0 +1,3540 @@
+{
+  "nodes": [
+    {
+      "id": "concept_subject_math_stats",
+      "label": "数学与统计",
+      "type": "学科",
+      "description": "支撑定量理解：从代数到统计推断与建模",
+      "shape": "diamond",
+      "color": {
+        "background": "#667eea",
+        "border": "#5568d3"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>数学与统计</b>\n\n支撑定量理解：从代数到统计推断与建模"
+    },
+    {
+      "id": "concept_subject_cs_it",
+      "label": "计算机与信息技术",
+      "type": "学科",
+      "description": "从编程到系统与网络：理解与构建数字世界",
+      "shape": "diamond",
+      "color": {
+        "background": "#667eea",
+        "border": "#5568d3"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>计算机与信息技术</b>\n\n从编程到系统与网络：理解与构建数字世界"
+    },
+    {
+      "id": "concept_subject_natural_science",
+      "label": "自然科学",
+      "type": "学科",
+      "description": "物理、化学、地球与宇宙：用科学解释自然",
+      "shape": "diamond",
+      "color": {
+        "background": "#667eea",
+        "border": "#5568d3"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>自然科学</b>\n\n物理、化学、地球与宇宙：用科学解释自然"
+    },
+    {
+      "id": "concept_subject_life_science",
+      "label": "生命科学",
+      "type": "学科",
+      "description": "生物与遗传：理解生命系统与机制",
+      "shape": "diamond",
+      "color": {
+        "background": "#667eea",
+        "border": "#5568d3"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>生命科学</b>\n\n生物与遗传：理解生命系统与机制"
+    },
+    {
+      "id": "concept_subject_health",
+      "label": "健康与医学常识",
+      "type": "学科",
+      "description": "健康管理、公共卫生与心理健康：做更好的健康决策",
+      "shape": "diamond",
+      "color": {
+        "background": "#667eea",
+        "border": "#5568d3"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>健康与医学常识</b>\n\n健康管理、公共卫生与心理健康：做更好的健康决策"
+    },
+    {
+      "id": "concept_subject_engineering",
+      "label": "工程与技术",
+      "type": "学科",
+      "description": "工程设计与技术实现：把方案落地成可用系统",
+      "shape": "diamond",
+      "color": {
+        "background": "#667eea",
+        "border": "#5568d3"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>工程与技术</b>\n\n工程设计与技术实现：把方案落地成可用系统"
+    },
+    {
+      "id": "concept_subject_social_science",
+      "label": "社会科学",
+      "type": "学科",
+      "description": "心理、社会、政治：理解社会运行与人类行为",
+      "shape": "diamond",
+      "color": {
+        "background": "#667eea",
+        "border": "#5568d3"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>社会科学</b>\n\n心理、社会、政治：理解社会运行与人类行为"
+    },
+    {
+      "id": "concept_subject_econ_business",
+      "label": "经济与商业",
+      "type": "学科",
+      "description": "经济学与商业实践：理解市场与组织运作",
+      "shape": "diamond",
+      "color": {
+        "background": "#667eea",
+        "border": "#5568d3"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>经济与商业</b>\n\n经济学与商业实践：理解市场与组织运作"
+    },
+    {
+      "id": "concept_subject_humanities",
+      "label": "人文",
+      "type": "学科",
+      "description": "历史、哲学与文学：理解价值、意义与文化",
+      "shape": "diamond",
+      "color": {
+        "background": "#667eea",
+        "border": "#5568d3"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>人文</b>\n\n历史、哲学与文学：理解价值、意义与文化"
+    },
+    {
+      "id": "concept_subject_arts_design",
+      "label": "艺术与设计",
+      "type": "学科",
+      "description": "审美、表达与设计方法：提升创造与表达能力",
+      "shape": "diamond",
+      "color": {
+        "background": "#667eea",
+        "border": "#5568d3"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>艺术与设计</b>\n\n审美、表达与设计方法：提升创造与表达能力"
+    },
+    {
+      "id": "concept_subject_law_policy",
+      "label": "法律与公共事务",
+      "type": "学科",
+      "description": "基本法律常识与公共治理：权利义务与公共选择",
+      "shape": "diamond",
+      "color": {
+        "background": "#667eea",
+        "border": "#5568d3"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>法律与公共事务</b>\n\n基本法律常识与公共治理：权利义务与公共选择"
+    },
+    {
+      "id": "concept_subject_environment",
+      "label": "环境与可持续",
+      "type": "学科",
+      "description": "环境科学与可持续实践：理解与参与可持续发展",
+      "shape": "diamond",
+      "color": {
+        "background": "#667eea",
+        "border": "#5568d3"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>环境与可持续</b>\n\n环境科学与可持续实践：理解与参与可持续发展"
+    },
+    {
+      "id": "concept_cap_learning_systems",
+      "label": "学习能力",
+      "type": "能力",
+      "description": "目标拆解、学习策略、习惯与复盘：让学习可持续",
+      "shape": "diamond",
+      "color": {
+        "background": "#764ba2",
+        "border": "#5e3d86"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>学习能力</b>\n\n目标拆解、学习策略、习惯与复盘：让学习可持续"
+    },
+    {
+      "id": "concept_cap_information_literacy",
+      "label": "信息素养",
+      "type": "能力",
+      "description": "检索、引用、核查与反谣言：建立可靠信息输入",
+      "shape": "diamond",
+      "color": {
+        "background": "#764ba2",
+        "border": "#5e3d86"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>信息素养</b>\n\n检索、引用、核查与反谣言：建立可靠信息输入"
+    },
+    {
+      "id": "concept_cap_writing_argumentation",
+      "label": "写作能力",
+      "type": "能力",
+      "description": "结构化写作、论证与报告：把想法写清楚",
+      "shape": "diamond",
+      "color": {
+        "background": "#764ba2",
+        "border": "#5e3d86"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>写作能力</b>\n\n结构化写作、论证与报告：把想法写清楚"
+    },
+    {
+      "id": "concept_cap_speaking_storytelling",
+      "label": "演讲能力",
+      "type": "能力",
+      "description": "表达结构、讲述与呈现：把信息说清楚",
+      "shape": "diamond",
+      "color": {
+        "background": "#764ba2",
+        "border": "#5e3d86"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>演讲能力</b>\n\n表达结构、讲述与呈现：把信息说清楚"
+    },
+    {
+      "id": "concept_cap_communication_influence",
+      "label": "沟通能力",
+      "type": "能力",
+      "description": "倾听、反馈、协商与冲突处理：高效互动与协作",
+      "shape": "diamond",
+      "color": {
+        "background": "#764ba2",
+        "border": "#5e3d86"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>沟通能力</b>\n\n倾听、反馈、协商与冲突处理：高效互动与协作"
+    },
+    {
+      "id": "concept_cap_data_analysis",
+      "label": "数据分析能力",
+      "type": "能力",
+      "description": "用数据提出问题、分析并表达洞察",
+      "shape": "diamond",
+      "color": {
+        "background": "#764ba2",
+        "border": "#5e3d86"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>数据分析能力</b>\n\n用数据提出问题、分析并表达洞察"
+    },
+    {
+      "id": "concept_cap_research_methods",
+      "label": "研究能力",
+      "type": "能力",
+      "description": "提出问题、设计方法、收集数据并解释证据",
+      "shape": "diamond",
+      "color": {
+        "background": "#764ba2",
+        "border": "#5e3d86"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>研究能力</b>\n\n提出问题、设计方法、收集数据并解释证据"
+    },
+    {
+      "id": "concept_cap_tooling_automation",
+      "label": "工具能力",
+      "type": "能力",
+      "description": "熟练使用数字工具并建立稳定流程（可包含自动化）",
+      "shape": "diamond",
+      "color": {
+        "background": "#764ba2",
+        "border": "#5e3d86"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>工具能力</b>\n\n熟练使用数字工具并建立稳定流程（可包含自动化）"
+    },
+    {
+      "id": "concept_cap_project_delivery",
+      "label": "项目管理能力",
+      "type": "能力",
+      "description": "计划、执行、风险与交付：把目标变成成果",
+      "shape": "diamond",
+      "color": {
+        "background": "#764ba2",
+        "border": "#5e3d86"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>项目管理能力</b>\n\n计划、执行、风险与交付：把目标变成成果"
+    },
+    {
+      "id": "concept_cap_design_product",
+      "label": "设计能力",
+      "type": "能力",
+      "description": "用户理解、原型与迭代：做出可用方案",
+      "shape": "diamond",
+      "color": {
+        "background": "#764ba2",
+        "border": "#5e3d86"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>设计能力</b>\n\n用户理解、原型与迭代：做出可用方案"
+    },
+    {
+      "id": "concept_cap_finance_risk",
+      "label": "财务能力",
+      "type": "能力",
+      "description": "预算、现金流、投资与风险：建立长期稳定",
+      "shape": "diamond",
+      "color": {
+        "background": "#764ba2",
+        "border": "#5e3d86"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>财务能力</b>\n\n预算、现金流、投资与风险：建立长期稳定"
+    },
+    {
+      "id": "concept_cap_ethics_civic",
+      "label": "伦理责任",
+      "type": "能力",
+      "description": "隐私、安全与公共利益：做负责任的选择",
+      "shape": "diamond",
+      "color": {
+        "background": "#764ba2",
+        "border": "#5e3d86"
+      },
+      "font": {
+        "size": 16,
+        "color": "#fff"
+      },
+      "title": "<b>伦理责任</b>\n\n隐私、安全与公共利益：做负责任的选择"
+    },
+    {
+      "id": "course_algebra_functions",
+      "label": "代数与函数",
+      "type": "course",
+      "description": "方程、不等式、函数与图像：后续数学与数据分析的底座",
+      "books": "Algebra - I.M. Gelfand & A. Shen\nHow to Solve It - George Polya",
+      "courses": "Khan Academy - Algebra (I/II)\nKhan Academy - Precalculus (Functions)",
+      "projects": "项目：做一份“函数图像与变换”可视化笔记（含例题与图形）",
+      "shape": "box",
+      "color": {
+        "background": "#4facfe",
+        "border": "#3d8fd9"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>代数与函数</b>\n\n方程、不等式、函数与图像：后续数学与数据分析的底座\n\n📚 教科书:\nAlgebra - I.M. Gelfand & A. Shen\nHow to Solve It - George Polya\n\n🎓 课程:\nKhan Academy - Algebra (I/II)\nKhan Academy - Precalculus (Functions)\n\n🧪 项目:\n项目：做一份“函数图像与变换”可视化笔记（含例题与图形）"
+    },
+    {
+      "id": "course_calculus",
+      "label": "微积分",
+      "type": "course",
+      "description": "极限、导数、积分与变化率：理解连续变化与优化",
+      "books": "Calculus - James Stewart\nCalculus Made Easy - Silvanus P. Thompson",
+      "courses": "MIT OCW 18.01 Single Variable Calculus\nKhan Academy - Calculus",
+      "projects": "项目：用数值方法实现导数/积分，并用梯度下降做曲线拟合（含可视化）",
+      "shape": "box",
+      "color": {
+        "background": "#4facfe",
+        "border": "#3d8fd9"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>微积分</b>\n\n极限、导数、积分与变化率：理解连续变化与优化\n\n📚 教科书:\nCalculus - James Stewart\nCalculus Made Easy - Silvanus P. Thompson\n\n🎓 课程:\nMIT OCW 18.01 Single Variable Calculus\nKhan Academy - Calculus\n\n🧪 项目:\n项目：用数值方法实现导数/积分，并用梯度下降做曲线拟合（含可视化）"
+    },
+    {
+      "id": "course_linear_algebra",
+      "label": "线性代数",
+      "type": "course",
+      "description": "向量、矩阵、特征值与SVD：建模与机器学习的核心语言",
+      "books": "Introduction to Linear Algebra - Gilbert Strang\nLinear Algebra Done Right - Sheldon Axler",
+      "courses": "MIT OCW 18.06 Linear Algebra (Strang)",
+      "projects": "项目：用 PCA/SVD 做一个降维可视化项目（Iris/手写数字/任意公开数据）",
+      "shape": "box",
+      "color": {
+        "background": "#4facfe",
+        "border": "#3d8fd9"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>线性代数</b>\n\n向量、矩阵、特征值与SVD：建模与机器学习的核心语言\n\n📚 教科书:\nIntroduction to Linear Algebra - Gilbert Strang\nLinear Algebra Done Right - Sheldon Axler\n\n🎓 课程:\nMIT OCW 18.06 Linear Algebra (Strang)\n\n🧪 项目:\n项目：用 PCA/SVD 做一个降维可视化项目（Iris/手写数字/任意公开数据）"
+    },
+    {
+      "id": "course_probability_statistics",
+      "label": "概率与统计推断",
+      "type": "course",
+      "description": "概率模型、估计与假设检验：用数据做判断",
+      "books": "All of Statistics - Larry Wasserman\nIntroduction to Probability - Blitzstein & Hwang",
+      "courses": "Harvard Stat 110: Probability\nKhan Academy - Statistics and probability",
+      "projects": "项目：完成一次 A/B 测试分析（含功效、置信区间与结论阐释）",
+      "shape": "box",
+      "color": {
+        "background": "#4facfe",
+        "border": "#3d8fd9"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>概率与统计推断</b>\n\n概率模型、估计与假设检验：用数据做判断\n\n📚 教科书:\nAll of Statistics - Larry Wasserman\nIntroduction to Probability - Blitzstein & Hwang\n\n🎓 课程:\nHarvard Stat 110: Probability\nKhan Academy - Statistics and probability\n\n🧪 项目:\n项目：完成一次 A/B 测试分析（含功效、置信区间与结论阐释）"
+    },
+    {
+      "id": "course_discrete_math",
+      "label": "离散数学",
+      "type": "course",
+      "description": "集合、组合、图论与逻辑：计算与算法的数学基础",
+      "books": "Discrete Mathematics and Its Applications - Rosen",
+      "courses": "MIT 6.042J Mathematics for Computer Science",
+      "projects": "项目：实现并可视化图算法（BFS/最短路/最小生成树），用真实网络数据演示",
+      "shape": "box",
+      "color": {
+        "background": "#4facfe",
+        "border": "#3d8fd9"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>离散数学</b>\n\n集合、组合、图论与逻辑：计算与算法的数学基础\n\n📚 教科书:\nDiscrete Mathematics and Its Applications - Rosen\n\n🎓 课程:\nMIT 6.042J Mathematics for Computer Science\n\n🧪 项目:\n项目：实现并可视化图算法（BFS/最短路/最小生成树），用真实网络数据演示"
+    },
+    {
+      "id": "course_programming_fundamentals",
+      "label": "编程基础",
+      "type": "course",
+      "description": "变量、控制、函数与基本数据结构：用代码解决问题",
+      "books": "Automate the Boring Stuff with Python - Al Sweigart\nPython Crash Course - Eric Matthes",
+      "courses": "CS50: Introduction to Computer Science (Harvard/edX)\nMIT OCW 6.0001 Introduction to Computer Science and Programming in Python",
+      "projects": "项目：做一个可发布的小工具（CLI/小网页/自动化脚本）并写 README",
+      "shape": "box",
+      "color": {
+        "background": "#3776ab",
+        "border": "#1d4d6b"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>编程基础</b>\n\n变量、控制、函数与基本数据结构：用代码解决问题\n\n📚 教科书:\nAutomate the Boring Stuff with Python - Al Sweigart\nPython Crash Course - Eric Matthes\n\n🎓 课程:\nCS50: Introduction to Computer Science (Harvard/edX)\nMIT OCW 6.0001 Introduction to Computer Science and Programming in Python\n\n🧪 项目:\n项目：做一个可发布的小工具（CLI/小网页/自动化脚本）并写 README"
+    },
+    {
+      "id": "course_data_structures_algorithms",
+      "label": "数据结构与算法",
+      "type": "course",
+      "description": "复杂度、经典结构与算法思想：写出正确且高效的程序",
+      "books": "Introduction to Algorithms (CLRS)\nAlgorithms - Robert Sedgewick & Kevin Wayne",
+      "courses": "Princeton Algorithms I & II (Coursera)",
+      "projects": "项目：按主题完成 50-100 题并输出 10 篇题型总结（含复杂度与模板）",
+      "shape": "box",
+      "color": {
+        "background": "#3776ab",
+        "border": "#1d4d6b"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>数据结构与算法</b>\n\n复杂度、经典结构与算法思想：写出正确且高效的程序\n\n📚 教科书:\nIntroduction to Algorithms (CLRS)\nAlgorithms - Robert Sedgewick & Kevin Wayne\n\n🎓 课程:\nPrinceton Algorithms I & II (Coursera)\n\n🧪 项目:\n项目：按主题完成 50-100 题并输出 10 篇题型总结（含复杂度与模板）"
+    },
+    {
+      "id": "course_computer_systems",
+      "label": "计算机系统基础",
+      "type": "course",
+      "description": "程序如何运行：内存、编译、并发与操作系统概念",
+      "books": "Computer Systems: A Programmer's Perspective (CS:APP)",
+      "courses": "CMU 15-213 Introduction to Computer Systems",
+      "projects": "项目：实现一个简化 shell（支持管道或重定向其一）或写一个内存分配练习",
+      "shape": "box",
+      "color": {
+        "background": "#3776ab",
+        "border": "#1d4d6b"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>计算机系统基础</b>\n\n程序如何运行：内存、编译、并发与操作系统概念\n\n📚 教科书:\nComputer Systems: A Programmer's Perspective (CS:APP)\n\n🎓 课程:\nCMU 15-213 Introduction to Computer Systems\n\n🧪 项目:\n项目：实现一个简化 shell（支持管道或重定向其一）或写一个内存分配练习"
+    },
+    {
+      "id": "course_networks",
+      "label": "计算机网络",
+      "type": "course",
+      "description": "分层、协议与网络编程：理解互联网如何运转",
+      "books": "Computer Networking: A Top-Down Approach - Kurose & Ross",
+      "courses": "Stanford CS144: Introduction to Computer Networking",
+      "projects": "项目：写一个简单聊天程序或 HTTP 客户端/服务器，并用抓包分析通信过程",
+      "shape": "box",
+      "color": {
+        "background": "#3776ab",
+        "border": "#1d4d6b"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>计算机网络</b>\n\n分层、协议与网络编程：理解互联网如何运转\n\n📚 教科书:\nComputer Networking: A Top-Down Approach - Kurose & Ross\n\n🎓 课程:\nStanford CS144: Introduction to Computer Networking\n\n🧪 项目:\n项目：写一个简单聊天程序或 HTTP 客户端/服务器，并用抓包分析通信过程"
+    },
+    {
+      "id": "course_database_systems",
+      "label": "数据库系统",
+      "type": "course",
+      "description": "建模、事务、索引与查询：让数据可靠高效地流动",
+      "books": "Database System Concepts - Silberschatz\nDesigning Data-Intensive Applications - Martin Kleppmann",
+      "courses": "CMU 15-445 Database Systems",
+      "projects": "项目：为一个小应用完成 ER 设计+建表+20 条分析查询（含索引与解释）",
+      "shape": "box",
+      "color": {
+        "background": "#3776ab",
+        "border": "#1d4d6b"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>数据库系统</b>\n\n建模、事务、索引与查询：让数据可靠高效地流动\n\n📚 教科书:\nDatabase System Concepts - Silberschatz\nDesigning Data-Intensive Applications - Martin Kleppmann\n\n🎓 课程:\nCMU 15-445 Database Systems\n\n🧪 项目:\n项目：为一个小应用完成 ER 设计+建表+20 条分析查询（含索引与解释）"
+    },
+    {
+      "id": "course_software_engineering",
+      "label": "软件工程与协作",
+      "type": "course",
+      "description": "需求、设计、测试与协作：做可维护的工程化软件",
+      "books": "The Pragmatic Programmer - Hunt & Thomas\nClean Code - Robert C. Martin",
+      "courses": "Google Testing Blog (阅读与实践)",
+      "projects": "项目：给一个小项目补齐测试+CI（GitHub Actions）+代码规范（lint/format）",
+      "shape": "box",
+      "color": {
+        "background": "#3776ab",
+        "border": "#1d4d6b"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>软件工程与协作</b>\n\n需求、设计、测试与协作：做可维护的工程化软件\n\n📚 教科书:\nThe Pragmatic Programmer - Hunt & Thomas\nClean Code - Robert C. Martin\n\n🎓 课程:\nGoogle Testing Blog (阅读与实践)\n\n🧪 项目:\n项目：给一个小项目补齐测试+CI（GitHub Actions）+代码规范（lint/format）"
+    },
+    {
+      "id": "course_system_design",
+      "label": "系统设计",
+      "type": "course",
+      "description": "可扩展系统与权衡：从需求到架构方案",
+      "books": "Designing Data-Intensive Applications - Martin Kleppmann",
+      "courses": "Grokking the System Design Interview (可选)",
+      "projects": "项目：选“短链/消息队列/搜索/推荐”之一写系统设计文档（容量、架构、权衡）",
+      "shape": "box",
+      "color": {
+        "background": "#3776ab",
+        "border": "#1d4d6b"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>系统设计</b>\n\n可扩展系统与权衡：从需求到架构方案\n\n📚 教科书:\nDesigning Data-Intensive Applications - Martin Kleppmann\n\n🎓 课程:\nGrokking the System Design Interview (可选)\n\n🧪 项目:\n项目：选“短链/消息队列/搜索/推荐”之一写系统设计文档（容量、架构、权衡）"
+    },
+    {
+      "id": "course_web_dev",
+      "label": "Web与应用开发基础",
+      "type": "course",
+      "description": "网页结构、交互与基本后端概念",
+      "books": "Eloquent JavaScript - Marijn Haverbeke",
+      "courses": "freeCodeCamp - Responsive Web Design\nMDN Web Docs (文档)",
+      "projects": "项目：做一个响应式个人主页并上线（含无障碍基础检查）",
+      "shape": "box",
+      "color": {
+        "background": "#3776ab",
+        "border": "#1d4d6b"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>Web与应用开发基础</b>\n\n网页结构、交互与基本后端概念\n\n📚 教科书:\nEloquent JavaScript - Marijn Haverbeke\n\n🎓 课程:\nfreeCodeCamp - Responsive Web Design\nMDN Web Docs (文档)\n\n🧪 项目:\n项目：做一个响应式个人主页并上线（含无障碍基础检查）"
+    },
+    {
+      "id": "course_version_control",
+      "label": "版本控制与开源协作",
+      "type": "course",
+      "description": "用 Git 管理历史与协作：PR、review 与发布流程",
+      "books": "Pro Git - Scott Chacon",
+      "courses": "Udacity - Version Control with Git",
+      "projects": "项目：为开源项目提交 1 个 Issue + 1 个 PR（文档/测试/小修复均可）",
+      "shape": "box",
+      "color": {
+        "background": "#3776ab",
+        "border": "#1d4d6b"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>版本控制与开源协作</b>\n\n用 Git 管理历史与协作：PR、review 与发布流程\n\n📚 教科书:\nPro Git - Scott Chacon\n\n🎓 课程:\nUdacity - Version Control with Git\n\n🧪 项目:\n项目：为开源项目提交 1 个 Issue + 1 个 PR（文档/测试/小修复均可）"
+    },
+    {
+      "id": "course_digital_security",
+      "label": "数字安全与隐私",
+      "type": "course",
+      "description": "威胁模型、账号安全、隐私与常见攻击面",
+      "books": "Security Engineering - Ross Anderson (选读)\nClick Here to Kill Everybody - Bruce Schneier",
+      "courses": "EFF Surveillance Self-Defense (指南)",
+      "projects": "项目：为个人做威胁模型并落地 10 条安全改进清单（2FA、备份、权限等）",
+      "shape": "box",
+      "color": {
+        "background": "#3776ab",
+        "border": "#1d4d6b"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>数字安全与隐私</b>\n\n威胁模型、账号安全、隐私与常见攻击面\n\n📚 教科书:\nSecurity Engineering - Ross Anderson (选读)\nClick Here to Kill Everybody - Bruce Schneier\n\n🎓 课程:\nEFF Surveillance Self-Defense (指南)\n\n🧪 项目:\n项目：为个人做威胁模型并落地 10 条安全改进清单（2FA、备份、权限等）"
+    },
+    {
+      "id": "course_spreadsheets",
+      "label": "电子表格与分析工具",
+      "type": "course",
+      "description": "用表格做分析：透视表、函数与基础可视化",
+      "books": "Storytelling with Data - Cole Nussbaumer Knaflic",
+      "courses": "Coursera - Excel Skills for Business (Macquarie)",
+      "projects": "项目：做一个个人财务/学习进度仪表盘（自动统计+图表）",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>电子表格与分析工具</b>\n\n用表格做分析：透视表、函数与基础可视化\n\n📚 教科书:\nStorytelling with Data - Cole Nussbaumer Knaflic\n\n🎓 课程:\nCoursera - Excel Skills for Business (Macquarie)\n\n🧪 项目:\n项目：做一个个人财务/学习进度仪表盘（自动统计+图表）"
+    },
+    {
+      "id": "course_sql",
+      "label": "SQL数据查询",
+      "type": "course",
+      "description": "用 SQL 从数据中提取信息并做分析查询",
+      "books": "SQL for Data Analysis - Cathy Tanimura",
+      "courses": "Khan Academy - Intro to SQL",
+      "projects": "项目：选公开数据集写 20 个 SQL 查询并输出洞察（含可视化）",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>SQL数据查询</b>\n\n用 SQL 从数据中提取信息并做分析查询\n\n📚 教科书:\nSQL for Data Analysis - Cathy Tanimura\n\n🎓 课程:\nKhan Academy - Intro to SQL\n\n🧪 项目:\n项目：选公开数据集写 20 个 SQL 查询并输出洞察（含可视化）"
+    },
+    {
+      "id": "course_data_viz",
+      "label": "数据可视化",
+      "type": "course",
+      "description": "图表选择、叙事与误导避免：把结论说清楚",
+      "books": "The Visual Display of Quantitative Information - Edward Tufte\nStorytelling with Data - Cole Nussbaumer Knaflic",
+      "courses": "Information Visualization (选修)",
+      "projects": "项目：用公开数据讲一个故事：提出问题->做图->写结论（至少 3 张图）",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>数据可视化</b>\n\n图表选择、叙事与误导避免：把结论说清楚\n\n📚 教科书:\nThe Visual Display of Quantitative Information - Edward Tufte\nStorytelling with Data - Cole Nussbaumer Knaflic\n\n🎓 课程:\nInformation Visualization (选修)\n\n🧪 项目:\n项目：用公开数据讲一个故事：提出问题->做图->写结论（至少 3 张图）"
+    },
+    {
+      "id": "course_data_analysis",
+      "label": "数据分析实战",
+      "type": "course",
+      "description": "从问题到报告：清洗、分析、可视化与可复现",
+      "books": "Practical Statistics for Data Scientists - Bruce, Gedeck",
+      "courses": "Google Data Analytics Professional Certificate (Coursera)",
+      "projects": "项目：完成一份端到端分析报告（数据、代码、图表、结论与局限）",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>数据分析实战</b>\n\n从问题到报告：清洗、分析、可视化与可复现\n\n📚 教科书:\nPractical Statistics for Data Scientists - Bruce, Gedeck\n\n🎓 课程:\nGoogle Data Analytics Professional Certificate (Coursera)\n\n🧪 项目:\n项目：完成一份端到端分析报告（数据、代码、图表、结论与局限）"
+    },
+    {
+      "id": "course_machine_learning",
+      "label": "机器学习入门",
+      "type": "course",
+      "description": "监督学习、特征工程与模型评估：建立可解释基线",
+      "books": "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow - Aurelien Geron",
+      "courses": "Coursera - Machine Learning (Andrew Ng)",
+      "projects": "项目：完成一个 Kaggle 入门赛（Titanic/House Prices），对比 3 个模型并写报告",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>机器学习入门</b>\n\n监督学习、特征工程与模型评估：建立可解释基线\n\n📚 教科书:\nHands-On Machine Learning with Scikit-Learn, Keras & TensorFlow - Aurelien Geron\n\n🎓 课程:\nCoursera - Machine Learning (Andrew Ng)\n\n🧪 项目:\n项目：完成一个 Kaggle 入门赛（Titanic/House Prices），对比 3 个模型并写报告"
+    },
+    {
+      "id": "course_physics",
+      "label": "物理基础",
+      "type": "course",
+      "description": "力学、电磁与能量：理解自然规律与工程基础",
+      "books": "The Feynman Lectures on Physics (选读)\nConceptual Physics - Paul Hewitt",
+      "courses": "MIT OCW 8.01 Classical Mechanics\nKhan Academy - Physics",
+      "projects": "项目：用代码模拟一个经典系统（抛体/摆/RC 电路），并与实验或公开数据对比",
+      "shape": "box",
+      "color": {
+        "background": "#00bcd4",
+        "border": "#008394"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>物理基础</b>\n\n力学、电磁与能量：理解自然规律与工程基础\n\n📚 教科书:\nThe Feynman Lectures on Physics (选读)\nConceptual Physics - Paul Hewitt\n\n🎓 课程:\nMIT OCW 8.01 Classical Mechanics\nKhan Academy - Physics\n\n🧪 项目:\n项目：用代码模拟一个经典系统（抛体/摆/RC 电路），并与实验或公开数据对比"
+    },
+    {
+      "id": "course_chemistry",
+      "label": "化学基础",
+      "type": "course",
+      "description": "物质结构与化学反应：从微观到宏观",
+      "books": "Chemistry: The Central Science - Brown, LeMay, Bursten",
+      "courses": "MIT OCW 5.111 Principles of Chemical Science",
+      "projects": "项目：做一个“化学计量/溶液浓度”计算器并用例题验证",
+      "shape": "box",
+      "color": {
+        "background": "#00bcd4",
+        "border": "#008394"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>化学基础</b>\n\n物质结构与化学反应：从微观到宏观\n\n📚 教科书:\nChemistry: The Central Science - Brown, LeMay, Bursten\n\n🎓 课程:\nMIT OCW 5.111 Principles of Chemical Science\n\n🧪 项目:\n项目：做一个“化学计量/溶液浓度”计算器并用例题验证"
+    },
+    {
+      "id": "course_earth_science",
+      "label": "地球科学与气候",
+      "type": "course",
+      "description": "地球系统、地质与气候：理解地球如何变化",
+      "books": "Earth: An Introduction to Physical Geology - Tarbuck & Lutgens",
+      "courses": "Coursera - Planet Earth...and You!",
+      "projects": "项目：用公开气象/地震数据做地图可视化与趋势分析报告",
+      "shape": "box",
+      "color": {
+        "background": "#00bcd4",
+        "border": "#008394"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>地球科学与气候</b>\n\n地球系统、地质与气候：理解地球如何变化\n\n📚 教科书:\nEarth: An Introduction to Physical Geology - Tarbuck & Lutgens\n\n🎓 课程:\nCoursera - Planet Earth...and You!\n\n🧪 项目:\n项目：用公开气象/地震数据做地图可视化与趋势分析报告"
+    },
+    {
+      "id": "course_biology",
+      "label": "生物学基础",
+      "type": "course",
+      "description": "细胞、代谢与生态：生命系统入门",
+      "books": "Campbell Biology - Urry et al.",
+      "courses": "MIT OCW 7.016 Introductory Biology\nKhan Academy - Biology",
+      "projects": "项目：做本地生物多样性观察记录（如 iNaturalist）并写自然笔记",
+      "shape": "box",
+      "color": {
+        "background": "#66bb6a",
+        "border": "#3d8b40"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>生物学基础</b>\n\n细胞、代谢与生态：生命系统入门\n\n📚 教科书:\nCampbell Biology - Urry et al.\n\n🎓 课程:\nMIT OCW 7.016 Introductory Biology\nKhan Academy - Biology\n\n🧪 项目:\n项目：做本地生物多样性观察记录（如 iNaturalist）并写自然笔记"
+    },
+    {
+      "id": "course_genetics",
+      "label": "遗传学入门",
+      "type": "course",
+      "description": "遗传规律与基因表达：理解遗传与变异",
+      "books": "The Gene: An Intimate History - Siddhartha Mukherjee",
+      "courses": "Coursera - Introduction to Genetics and Evolution (Duke)",
+      "projects": "项目：做一个遗传概率计算器（Punnett 方格/简单模型）并用模拟验证",
+      "shape": "box",
+      "color": {
+        "background": "#66bb6a",
+        "border": "#3d8b40"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>遗传学入门</b>\n\n遗传规律与基因表达：理解遗传与变异\n\n📚 教科书:\nThe Gene: An Intimate History - Siddhartha Mukherjee\n\n🎓 课程:\nCoursera - Introduction to Genetics and Evolution (Duke)\n\n🧪 项目:\n项目：做一个遗传概率计算器（Punnett 方格/简单模型）并用模拟验证"
+    },
+    {
+      "id": "course_neuroscience",
+      "label": "神经科学导论",
+      "type": "course",
+      "description": "大脑与神经系统：感知、学习与行为基础",
+      "books": "Neuroscience: Exploring the Brain - Bear, Connors, Paradiso",
+      "courses": "HarvardX MCB80x: Fundamentals of Neuroscience",
+      "projects": "项目：做一个注意力/记忆的自我实验（固定流程、多次测量）并分析结果",
+      "shape": "box",
+      "color": {
+        "background": "#66bb6a",
+        "border": "#3d8b40"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>神经科学导论</b>\n\n大脑与神经系统：感知、学习与行为基础\n\n📚 教科书:\nNeuroscience: Exploring the Brain - Bear, Connors, Paradiso\n\n🎓 课程:\nHarvardX MCB80x: Fundamentals of Neuroscience\n\n🧪 项目:\n项目：做一个注意力/记忆的自我实验（固定流程、多次测量）并分析结果"
+    },
+    {
+      "id": "course_anatomy",
+      "label": "人体解剖与生理常识",
+      "type": "course",
+      "description": "人体系统与基本生理：理解健康与疾病的基础",
+      "books": "The Body: A Guide for Occupants - Bill Bryson",
+      "courses": "Coursera - Vital Signs (University of Pennsylvania)",
+      "projects": "项目：制作人体系统知识卡片（循环/呼吸/消化/神经）并用图示串联",
+      "shape": "box",
+      "color": {
+        "background": "#ec407a",
+        "border": "#ad1457"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>人体解剖与生理常识</b>\n\n人体系统与基本生理：理解健康与疾病的基础\n\n📚 教科书:\nThe Body: A Guide for Occupants - Bill Bryson\n\n🎓 课程:\nCoursera - Vital Signs (University of Pennsylvania)\n\n🧪 项目:\n项目：制作人体系统知识卡片（循环/呼吸/消化/神经）并用图示串联"
+    },
+    {
+      "id": "course_nutrition",
+      "label": "营养与健康",
+      "type": "course",
+      "description": "营养、饮食与生活方式：做基于证据的健康选择",
+      "books": "In Defense of Food - Michael Pollan",
+      "courses": "Stanford Online - Nutrition and Health\nCoursera - The Science of Well-Being (Yale)",
+      "projects": "项目：连续 14 天游动记录饮食并分析宏量营养素，提出可执行改进计划",
+      "shape": "box",
+      "color": {
+        "background": "#ec407a",
+        "border": "#ad1457"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>营养与健康</b>\n\n营养、饮食与生活方式：做基于证据的健康选择\n\n📚 教科书:\nIn Defense of Food - Michael Pollan\n\n🎓 课程:\nStanford Online - Nutrition and Health\nCoursera - The Science of Well-Being (Yale)\n\n🧪 项目:\n项目：连续 14 天游动记录饮食并分析宏量营养素，提出可执行改进计划"
+    },
+    {
+      "id": "course_public_health",
+      "label": "公共卫生与流行病学常识",
+      "type": "course",
+      "description": "风险、传播与干预：理解公共卫生决策逻辑",
+      "books": "Factfulness - Hans Rosling",
+      "courses": "Coursera - Essentials of Global Health (Yale)",
+      "projects": "项目：用公开健康数据完成趋势分析与干预建议（含可视化）",
+      "shape": "box",
+      "color": {
+        "background": "#ec407a",
+        "border": "#ad1457"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>公共卫生与流行病学常识</b>\n\n风险、传播与干预：理解公共卫生决策逻辑\n\n📚 教科书:\nFactfulness - Hans Rosling\n\n🎓 课程:\nCoursera - Essentials of Global Health (Yale)\n\n🧪 项目:\n项目：用公开健康数据完成趋势分析与干预建议（含可视化）"
+    },
+    {
+      "id": "course_mental_health",
+      "label": "心理健康与压力管理",
+      "type": "course",
+      "description": "情绪调节、压力与睡眠：做可持续的心理健康管理",
+      "books": "Why We Sleep - Matthew Walker\nThe Upside of Stress - Kelly McGonigal",
+      "courses": "Coursera - The Science of Well-Being (Yale)",
+      "projects": "项目：做 4 周睡眠/情绪日志，尝试 1 个干预并用数据评估效果",
+      "shape": "box",
+      "color": {
+        "background": "#ec407a",
+        "border": "#ad1457"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>心理健康与压力管理</b>\n\n情绪调节、压力与睡眠：做可持续的心理健康管理\n\n📚 教科书:\nWhy We Sleep - Matthew Walker\nThe Upside of Stress - Kelly McGonigal\n\n🎓 课程:\nCoursera - The Science of Well-Being (Yale)\n\n🧪 项目:\n项目：做 4 周睡眠/情绪日志，尝试 1 个干预并用数据评估效果"
+    },
+    {
+      "id": "course_engineering_design",
+      "label": "工程设计方法",
+      "type": "course",
+      "description": "需求-约束-方案-验证：把问题变成可落地的工程方案",
+      "books": "Engineering Fundamentals - Saeed Moaveni\nThe Design of Everyday Things - Don Norman",
+      "courses": "MIT OCW 2.007 Design and Manufacturing I",
+      "projects": "项目：为一个日常问题做工程方案并完成原型/验证记录",
+      "shape": "box",
+      "color": {
+        "background": "#ff9800",
+        "border": "#e65100"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>工程设计方法</b>\n\n需求-约束-方案-验证：把问题变成可落地的工程方案\n\n📚 教科书:\nEngineering Fundamentals - Saeed Moaveni\nThe Design of Everyday Things - Don Norman\n\n🎓 课程:\nMIT OCW 2.007 Design and Manufacturing I\n\n🧪 项目:\n项目：为一个日常问题做工程方案并完成原型/验证记录"
+    },
+    {
+      "id": "course_electronics",
+      "label": "电路与电子基础",
+      "type": "course",
+      "description": "基本电路与电子元件：理解电子系统的基本构成",
+      "books": "The Art of Electronics - Horowitz & Hill",
+      "courses": "MIT 6.002 Circuits and Electronics",
+      "projects": "项目：在线仿真搭建 3 个基本电路（分压/滤波/放大）并写实验记录",
+      "shape": "box",
+      "color": {
+        "background": "#ff9800",
+        "border": "#e65100"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>电路与电子基础</b>\n\n基本电路与电子元件：理解电子系统的基本构成\n\n📚 教科书:\nThe Art of Electronics - Horowitz & Hill\n\n🎓 课程:\nMIT 6.002 Circuits and Electronics\n\n🧪 项目:\n项目：在线仿真搭建 3 个基本电路（分压/滤波/放大）并写实验记录"
+    },
+    {
+      "id": "course_iot",
+      "label": "物联网与传感系统入门",
+      "type": "course",
+      "description": "采集-传输-存储-展示：把传感数据变成可用信息",
+      "books": "Making Embedded Systems - Elecia White (选读)",
+      "courses": "Coursera - Internet of Things Specialization (UCSD)",
+      "projects": "项目：完成一个传感器数据采集->存储->可视化的小系统（温湿度/光照等）",
+      "shape": "box",
+      "color": {
+        "background": "#ff9800",
+        "border": "#e65100"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>物联网与传感系统入门</b>\n\n采集-传输-存储-展示：把传感数据变成可用信息\n\n📚 教科书:\nMaking Embedded Systems - Elecia White (选读)\n\n🎓 课程:\nCoursera - Internet of Things Specialization (UCSD)\n\n🧪 项目:\n项目：完成一个传感器数据采集->存储->可视化的小系统（温湿度/光照等）"
+    },
+    {
+      "id": "course_psychology",
+      "label": "心理学导论",
+      "type": "course",
+      "description": "认知、学习、情绪与行为：理解人如何做决定",
+      "books": "Psychology - David Myers",
+      "courses": "Open Yale Courses: Introduction to Psychology (PSYC 110)",
+      "projects": "项目：设计一个小型行为实验并收集数据、写结论（含局限）",
+      "shape": "box",
+      "color": {
+        "background": "#8e24aa",
+        "border": "#5e1780"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>心理学导论</b>\n\n认知、学习、情绪与行为：理解人如何做决定\n\n📚 教科书:\nPsychology - David Myers\n\n🎓 课程:\nOpen Yale Courses: Introduction to Psychology (PSYC 110)\n\n🧪 项目:\n项目：设计一个小型行为实验并收集数据、写结论（含局限）"
+    },
+    {
+      "id": "course_sociology",
+      "label": "社会学导论",
+      "type": "course",
+      "description": "社会结构、阶层与制度：理解社会如何塑造行为",
+      "books": "The Sociological Imagination - C. Wright Mills",
+      "courses": "Coursera - Classical Sociological Theory",
+      "projects": "项目：设计问卷（n>=30）并做描述统计与结论撰写",
+      "shape": "box",
+      "color": {
+        "background": "#8e24aa",
+        "border": "#5e1780"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>社会学导论</b>\n\n社会结构、阶层与制度：理解社会如何塑造行为\n\n📚 教科书:\nThe Sociological Imagination - C. Wright Mills\n\n🎓 课程:\nCoursera - Classical Sociological Theory\n\n🧪 项目:\n项目：设计问卷（n>=30）并做描述统计与结论撰写"
+    },
+    {
+      "id": "course_political_science",
+      "label": "政治学导论",
+      "type": "course",
+      "description": "制度、治理与公共选择：理解权力与政策",
+      "books": "The Dictator's Handbook - Bueno de Mesquita & Smith (选读)",
+      "courses": "Coursera - Moral Foundations of Politics (Yale)",
+      "projects": "项目：写一页政策简报（问题-证据-方案-推荐）并标注来源",
+      "shape": "box",
+      "color": {
+        "background": "#8e24aa",
+        "border": "#5e1780"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>政治学导论</b>\n\n制度、治理与公共选择：理解权力与政策\n\n📚 教科书:\nThe Dictator's Handbook - Bueno de Mesquita & Smith (选读)\n\n🎓 课程:\nCoursera - Moral Foundations of Politics (Yale)\n\n🧪 项目:\n项目：写一页政策简报（问题-证据-方案-推荐）并标注来源"
+    },
+    {
+      "id": "course_microeconomics",
+      "label": "微观经济学",
+      "type": "course",
+      "description": "供需、市场与激励：理解个体与企业行为",
+      "books": "Principles of Economics - N. Gregory Mankiw",
+      "courses": "MIT OCW 14.01 Principles of Microeconomics",
+      "projects": "项目：选一个真实市场，用供需与弹性分析定价与竞争策略",
+      "shape": "box",
+      "color": {
+        "background": "#f39c12",
+        "border": "#c67f0a"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>微观经济学</b>\n\n供需、市场与激励：理解个体与企业行为\n\n📚 教科书:\nPrinciples of Economics - N. Gregory Mankiw\n\n🎓 课程:\nMIT OCW 14.01 Principles of Microeconomics\n\n🧪 项目:\n项目：选一个真实市场，用供需与弹性分析定价与竞争策略"
+    },
+    {
+      "id": "course_macroeconomics",
+      "label": "宏观经济学",
+      "type": "course",
+      "description": "增长、通胀、失业与政策：理解宏观波动",
+      "books": "Macroeconomics - Olivier Blanchard",
+      "courses": "Khan Academy - Macroeconomics",
+      "projects": "项目：用公开宏观数据分析通胀/失业/利率并写观点报告",
+      "shape": "box",
+      "color": {
+        "background": "#f39c12",
+        "border": "#c67f0a"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>宏观经济学</b>\n\n增长、通胀、失业与政策：理解宏观波动\n\n📚 教科书:\nMacroeconomics - Olivier Blanchard\n\n🎓 课程:\nKhan Academy - Macroeconomics\n\n🧪 项目:\n项目：用公开宏观数据分析通胀/失业/利率并写观点报告"
+    },
+    {
+      "id": "course_accounting",
+      "label": "会计与财务报表",
+      "type": "course",
+      "description": "读懂财务报表：利润、现金流与风险",
+      "books": "Financial Intelligence - Berman & Knight",
+      "courses": "Coursera - Introduction to Financial Accounting (Wharton)",
+      "projects": "项目：选一家上市公司做 3 年比率分析并写结论（盈利/现金流/风险）",
+      "shape": "box",
+      "color": {
+        "background": "#f39c12",
+        "border": "#c67f0a"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>会计与财务报表</b>\n\n读懂财务报表：利润、现金流与风险\n\n📚 教科书:\nFinancial Intelligence - Berman & Knight\n\n🎓 课程:\nCoursera - Introduction to Financial Accounting (Wharton)\n\n🧪 项目:\n项目：选一家上市公司做 3 年比率分析并写结论（盈利/现金流/风险）"
+    },
+    {
+      "id": "course_marketing",
+      "label": "市场营销基础",
+      "type": "course",
+      "description": "定位、渠道与增长：理解市场与消费者",
+      "books": "Positioning - Ries & Trout\nMarketing Management - Kotler",
+      "courses": "Coursera - Marketing in a Digital World (Illinois)",
+      "projects": "项目：拆解一个营销活动（渠道/受众/转化/成本）并提出改进建议",
+      "shape": "box",
+      "color": {
+        "background": "#f39c12",
+        "border": "#c67f0a"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>市场营销基础</b>\n\n定位、渠道与增长：理解市场与消费者\n\n📚 教科书:\nPositioning - Ries & Trout\nMarketing Management - Kotler\n\n🎓 课程:\nCoursera - Marketing in a Digital World (Illinois)\n\n🧪 项目:\n项目：拆解一个营销活动（渠道/受众/转化/成本）并提出改进建议"
+    },
+    {
+      "id": "course_operations",
+      "label": "运营与流程管理",
+      "type": "course",
+      "description": "流程、瓶颈与改进：让系统更高效",
+      "books": "The Goal - Eliyahu Goldratt",
+      "courses": "Coursera - Operations Management (Wharton)",
+      "projects": "项目：对一个真实流程做流程图与指标设计，输出改善方案并验证",
+      "shape": "box",
+      "color": {
+        "background": "#f39c12",
+        "border": "#c67f0a"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>运营与流程管理</b>\n\n流程、瓶颈与改进：让系统更高效\n\n📚 教科书:\nThe Goal - Eliyahu Goldratt\n\n🎓 课程:\nCoursera - Operations Management (Wharton)\n\n🧪 项目:\n项目：对一个真实流程做流程图与指标设计，输出改善方案并验证"
+    },
+    {
+      "id": "course_product_management",
+      "label": "产品管理基础",
+      "type": "course",
+      "description": "需求、路线图与协作：从问题到产品",
+      "books": "Inspired - Marty Cagan",
+      "courses": "Coursera - Digital Product Management (UVA)",
+      "projects": "项目：写 PRD（目标/用户/需求/指标/里程碑）并做一次评审",
+      "shape": "box",
+      "color": {
+        "background": "#f39c12",
+        "border": "#c67f0a"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>产品管理基础</b>\n\n需求、路线图与协作：从问题到产品\n\n📚 教科书:\nInspired - Marty Cagan\n\n🎓 课程:\nCoursera - Digital Product Management (UVA)\n\n🧪 项目:\n项目：写 PRD（目标/用户/需求/指标/里程碑）并做一次评审"
+    },
+    {
+      "id": "course_world_history",
+      "label": "世界历史",
+      "type": "course",
+      "description": "文明、制度与关键转折：建立历史视野",
+      "books": "Guns, Germs, and Steel - Jared Diamond\nThe Silk Roads - Peter Frankopan (选读)",
+      "courses": "Crash Course - World History (YouTube)",
+      "projects": "项目：做一条主题时间线（含引用）并写一篇对比短文",
+      "shape": "box",
+      "color": {
+        "background": "#795548",
+        "border": "#5d4037"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>世界历史</b>\n\n文明、制度与关键转折：建立历史视野\n\n📚 教科书:\nGuns, Germs, and Steel - Jared Diamond\nThe Silk Roads - Peter Frankopan (选读)\n\n🎓 课程:\nCrash Course - World History (YouTube)\n\n🧪 项目:\n项目：做一条主题时间线（含引用）并写一篇对比短文"
+    },
+    {
+      "id": "course_philosophy",
+      "label": "哲学导论",
+      "type": "course",
+      "description": "知识、存在与价值：训练概念与论证能力",
+      "books": "Sophie's World - Jostein Gaarder\nThe Problems of Philosophy - Bertrand Russell",
+      "courses": "Open Yale Courses: Philosophy and the Science of Human Nature (PHIL 181)",
+      "projects": "项目：写一篇 1200 字论证文章（观点-论证-反驳-结论）",
+      "shape": "box",
+      "color": {
+        "background": "#795548",
+        "border": "#5d4037"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>哲学导论</b>\n\n知识、存在与价值：训练概念与论证能力\n\n📚 教科书:\nSophie's World - Jostein Gaarder\nThe Problems of Philosophy - Bertrand Russell\n\n🎓 课程:\nOpen Yale Courses: Philosophy and the Science of Human Nature (PHIL 181)\n\n🧪 项目:\n项目：写一篇 1200 字论证文章（观点-论证-反驳-结论）"
+    },
+    {
+      "id": "course_literature",
+      "label": "文学阅读与鉴赏",
+      "type": "course",
+      "description": "阅读经典与写作传统：提升理解与表达",
+      "books": "How to Read Literature Like a Professor - Thomas C. Foster",
+      "courses": "Harvard - Masterpieces of World Literature (公开资源)",
+      "projects": "项目：完成一本作品的阅读笔记与主题分析，并做一次分享",
+      "shape": "box",
+      "color": {
+        "background": "#795548",
+        "border": "#5d4037"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>文学阅读与鉴赏</b>\n\n阅读经典与写作传统：提升理解与表达\n\n📚 教科书:\nHow to Read Literature Like a Professor - Thomas C. Foster\n\n🎓 课程:\nHarvard - Masterpieces of World Literature (公开资源)\n\n🧪 项目:\n项目：完成一本作品的阅读笔记与主题分析，并做一次分享"
+    },
+    {
+      "id": "course_visual_design",
+      "label": "视觉设计基础",
+      "type": "course",
+      "description": "版式、色彩与构图：做出清晰且一致的视觉表达",
+      "books": "The Non-Designer's Design Book - Robin Williams",
+      "courses": "Coursera - Graphic Design Specialization (CalArts)",
+      "projects": "项目：做一套海报/社媒封面（3 张）并写设计选择说明",
+      "shape": "box",
+      "color": {
+        "background": "#26a69a",
+        "border": "#1b7f75"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>视觉设计基础</b>\n\n版式、色彩与构图：做出清晰且一致的视觉表达\n\n📚 教科书:\nThe Non-Designer's Design Book - Robin Williams\n\n🎓 课程:\nCoursera - Graphic Design Specialization (CalArts)\n\n🧪 项目:\n项目：做一套海报/社媒封面（3 张）并写设计选择说明"
+    },
+    {
+      "id": "course_design_thinking",
+      "label": "设计思维",
+      "type": "course",
+      "description": "以人为中心：洞察->原型->测试的闭环",
+      "books": "Change by Design - Tim Brown",
+      "courses": "Stanford d.school (资源与方法)",
+      "projects": "项目：完成一次用户访谈->洞察->原型->测试闭环（>=3 位用户）",
+      "shape": "box",
+      "color": {
+        "background": "#26a69a",
+        "border": "#1b7f75"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>设计思维</b>\n\n以人为中心：洞察->原型->测试的闭环\n\n📚 教科书:\nChange by Design - Tim Brown\n\n🎓 课程:\nStanford d.school (资源与方法)\n\n🧪 项目:\n项目：完成一次用户访谈->洞察->原型->测试闭环（>=3 位用户）"
+    },
+    {
+      "id": "course_music",
+      "label": "音乐欣赏",
+      "type": "course",
+      "description": "音乐语言与审美：提升感受与表达",
+      "books": "The Rest Is Noise - Alex Ross",
+      "courses": "Open Yale Courses: Listening to Music",
+      "projects": "项目：做 10 首曲目的结构/配器/情绪分析，制作注释歌单",
+      "shape": "box",
+      "color": {
+        "background": "#26a69a",
+        "border": "#1b7f75"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>音乐欣赏</b>\n\n音乐语言与审美：提升感受与表达\n\n📚 教科书:\nThe Rest Is Noise - Alex Ross\n\n🎓 课程:\nOpen Yale Courses: Listening to Music\n\n🧪 项目:\n项目：做 10 首曲目的结构/配器/情绪分析，制作注释歌单"
+    },
+    {
+      "id": "course_law",
+      "label": "法律基础",
+      "type": "course",
+      "description": "基本法律概念：权利、义务、程序与证据",
+      "books": "The Rule of Law - Tom Bingham\nLaw 101 - Jay M. Feinman",
+      "courses": "Coursera - A Law Student's Toolkit (Yale)",
+      "projects": "项目：建立法律概念卡片库，并用真实案例做应用练习",
+      "shape": "box",
+      "color": {
+        "background": "#5c6bc0",
+        "border": "#3f51b5"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>法律基础</b>\n\n基本法律概念：权利、义务、程序与证据\n\n📚 教科书:\nThe Rule of Law - Tom Bingham\nLaw 101 - Jay M. Feinman\n\n🎓 课程:\nCoursera - A Law Student's Toolkit (Yale)\n\n🧪 项目:\n项目：建立法律概念卡片库，并用真实案例做应用练习"
+    },
+    {
+      "id": "course_public_policy",
+      "label": "公共政策入门",
+      "type": "course",
+      "description": "政策工具与评估：如何把问题变成政策方案",
+      "books": "Public Policy: A New Introduction - Cairney",
+      "courses": "Coursera - Public Policy Challenges",
+      "projects": "项目：写政策简报（问题-证据-方案-推荐）并做一次同伴评审",
+      "shape": "box",
+      "color": {
+        "background": "#5c6bc0",
+        "border": "#3f51b5"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>公共政策入门</b>\n\n政策工具与评估：如何把问题变成政策方案\n\n📚 教科书:\nPublic Policy: A New Introduction - Cairney\n\n🎓 课程:\nCoursera - Public Policy Challenges\n\n🧪 项目:\n项目：写政策简报（问题-证据-方案-推荐）并做一次同伴评审"
+    },
+    {
+      "id": "course_privacy_law",
+      "label": "隐私、数据与合规常识",
+      "type": "course",
+      "description": "数据保护与合规基础：理解隐私与责任边界",
+      "books": "Privacy in the Age of Big Data - Cukier & Mayer-Schonberger",
+      "courses": "Coursera - Privacy Law and Data Protection",
+      "projects": "项目：为个人/小团队做数据合规检查清单（收集-存储-共享-删除）",
+      "shape": "box",
+      "color": {
+        "background": "#5c6bc0",
+        "border": "#3f51b5"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>隐私、数据与合规常识</b>\n\n数据保护与合规基础：理解隐私与责任边界\n\n📚 教科书:\nPrivacy in the Age of Big Data - Cukier & Mayer-Schonberger\n\n🎓 课程:\nCoursera - Privacy Law and Data Protection\n\n🧪 项目:\n项目：为个人/小团队做数据合规检查清单（收集-存储-共享-删除）"
+    },
+    {
+      "id": "course_environmental_science",
+      "label": "环境科学",
+      "type": "course",
+      "description": "环境问题、生态系统与人类影响",
+      "books": "The Sixth Extinction - Elizabeth Kolbert",
+      "courses": "edX - Environmental Science",
+      "projects": "项目：选择一个本地环境问题，做“问题画像+数据+干预方案”的报告",
+      "shape": "box",
+      "color": {
+        "background": "#43a047",
+        "border": "#2e7d32"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>环境科学</b>\n\n环境问题、生态系统与人类影响\n\n📚 教科书:\nThe Sixth Extinction - Elizabeth Kolbert\n\n🎓 课程:\nedX - Environmental Science\n\n🧪 项目:\n项目：选择一个本地环境问题，做“问题画像+数据+干预方案”的报告"
+    },
+    {
+      "id": "course_climate_change",
+      "label": "气候变化",
+      "type": "course",
+      "description": "气候系统与全球影响：理解科学与行动路径",
+      "books": "The Uninhabitable Earth - David Wallace-Wells (选读)",
+      "courses": "Coursera - Global Warming (UChicago)",
+      "projects": "项目：用公开气候数据做趋势分析并写解释（温度/CO2/海平面任选）",
+      "shape": "box",
+      "color": {
+        "background": "#43a047",
+        "border": "#2e7d32"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>气候变化</b>\n\n气候系统与全球影响：理解科学与行动路径\n\n📚 教科书:\nThe Uninhabitable Earth - David Wallace-Wells (选读)\n\n🎓 课程:\nCoursera - Global Warming (UChicago)\n\n🧪 项目:\n项目：用公开气候数据做趋势分析并写解释（温度/CO2/海平面任选）"
+    },
+    {
+      "id": "course_sustainability",
+      "label": "可持续发展实践",
+      "type": "course",
+      "description": "把可持续落到日常：资源、能源与行为系统",
+      "books": "Cradle to Cradle - McDonough & Braungart",
+      "courses": "Coursera - Introduction to Sustainability (Illinois)",
+      "projects": "项目：制定并执行 4 周减排/节能计划，跟踪数据并复盘",
+      "shape": "box",
+      "color": {
+        "background": "#43a047",
+        "border": "#2e7d32"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>可持续发展实践</b>\n\n把可持续落到日常：资源、能源与行为系统\n\n📚 教科书:\nCradle to Cradle - McDonough & Braungart\n\n🎓 课程:\nCoursera - Introduction to Sustainability (Illinois)\n\n🧪 项目:\n项目：制定并执行 4 周减排/节能计划，跟踪数据并复盘"
+    },
+    {
+      "id": "course_learning_how_to_learn",
+      "label": "学习如何学习",
+      "type": "course",
+      "description": "主动回忆、间隔复习与学习策略：提升长期记忆与迁移",
+      "books": "Make It Stick - Brown, Roediger, McDaniel\nA Mind for Numbers - Barbara Oakley",
+      "courses": "Coursera - Learning How to Learn (McMaster/UCSD)",
+      "projects": "项目：建立主动回忆+间隔复习体系并持续 4 周，记录学习效果并复盘",
+      "shape": "box",
+      "color": {
+        "background": "#9e9d24",
+        "border": "#7a7a16"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>学习如何学习</b>\n\n主动回忆、间隔复习与学习策略：提升长期记忆与迁移\n\n📚 教科书:\nMake It Stick - Brown, Roediger, McDaniel\nA Mind for Numbers - Barbara Oakley\n\n🎓 课程:\nCoursera - Learning How to Learn (McMaster/UCSD)\n\n🧪 项目:\n项目：建立主动回忆+间隔复习体系并持续 4 周，记录学习效果并复盘"
+    },
+    {
+      "id": "course_time_management",
+      "label": "时间与优先级管理",
+      "type": "course",
+      "description": "目标、计划与执行：用系统管理注意力与时间",
+      "books": "Getting Things Done - David Allen\nAtomic Habits - James Clear",
+      "courses": "Coursera - Work Smarter, Not Harder (UC Irvine)",
+      "projects": "项目：做 4 周时间审计（记录-分析-调整），形成可复用周计划模板",
+      "shape": "box",
+      "color": {
+        "background": "#9e9d24",
+        "border": "#7a7a16"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>时间与优先级管理</b>\n\n目标、计划与执行：用系统管理注意力与时间\n\n📚 教科书:\nGetting Things Done - David Allen\nAtomic Habits - James Clear\n\n🎓 课程:\nCoursera - Work Smarter, Not Harder (UC Irvine)\n\n🧪 项目:\n项目：做 4 周时间审计（记录-分析-调整），形成可复用周计划模板"
+    },
+    {
+      "id": "course_knowledge_management",
+      "label": "知识管理与输出",
+      "type": "course",
+      "description": "收集-整理-输出：把信息变成可复用的知识资产",
+      "books": "Building a Second Brain - Tiago Forte\nHow to Take Smart Notes - Sonke Ahrens",
+      "courses": "Second Brain / Zettelkasten (方法实践)",
+      "projects": "项目：搭建个人知识库并输出 10 条高质量笔记/文章（可复用）",
+      "shape": "box",
+      "color": {
+        "background": "#9e9d24",
+        "border": "#7a7a16"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>知识管理与输出</b>\n\n收集-整理-输出：把信息变成可复用的知识资产\n\n📚 教科书:\nBuilding a Second Brain - Tiago Forte\nHow to Take Smart Notes - Sonke Ahrens\n\n🎓 课程:\nSecond Brain / Zettelkasten (方法实践)\n\n🧪 项目:\n项目：搭建个人知识库并输出 10 条高质量笔记/文章（可复用）"
+    },
+    {
+      "id": "course_information_literacy",
+      "label": "信息检索与引用",
+      "type": "course",
+      "description": "检索、引用与证据链：把结论建立在可核查来源上",
+      "books": "The Craft of Research - Booth, Colomb, Williams",
+      "courses": "Purdue OWL Research and Citation Resources (指南)",
+      "projects": "项目：建立 Zotero 文献库（>=20 条）并输出 1 份文献综述提纲",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>信息检索与引用</b>\n\n检索、引用与证据链：把结论建立在可核查来源上\n\n📚 教科书:\nThe Craft of Research - Booth, Colomb, Williams\n\n🎓 课程:\nPurdue OWL Research and Citation Resources (指南)\n\n🧪 项目:\n项目：建立 Zotero 文献库（>=20 条）并输出 1 份文献综述提纲"
+    },
+    {
+      "id": "course_fact_checking",
+      "label": "事实核查",
+      "type": "course",
+      "description": "验证信息、识别误导：方法、工具与常见陷阱",
+      "books": "Blur: How to Know What's True - Kovach & Rosenstiel",
+      "courses": "First Draft / Fact-checking resources (实践)",
+      "projects": "项目：对一个热点观点做多源核查，输出可复现的核查报告",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>事实核查</b>\n\n验证信息、识别误导：方法、工具与常见陷阱\n\n📚 教科书:\nBlur: How to Know What's True - Kovach & Rosenstiel\n\n🎓 课程:\nFirst Draft / Fact-checking resources (实践)\n\n🧪 项目:\n项目：对一个热点观点做多源核查，输出可复现的核查报告"
+    },
+    {
+      "id": "course_media_literacy",
+      "label": "媒体素养",
+      "type": "course",
+      "description": "理解媒体叙事、立场与议程设置：更清醒地获取信息",
+      "books": "Amusing Ourselves to Death - Neil Postman",
+      "courses": "Coursera - Making Sense of the News (HKU)",
+      "projects": "项目：选 3 条新闻做“立场/证据/修辞/遗漏”分析，并写读新闻指南",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>媒体素养</b>\n\n理解媒体叙事、立场与议程设置：更清醒地获取信息\n\n📚 教科书:\nAmusing Ourselves to Death - Neil Postman\n\n🎓 课程:\nCoursera - Making Sense of the News (HKU)\n\n🧪 项目:\n项目：选 3 条新闻做“立场/证据/修辞/遗漏”分析，并写读新闻指南"
+    },
+    {
+      "id": "course_writing_science",
+      "label": "科学写作与报告",
+      "type": "course",
+      "description": "写清楚研究与结论：结构、图表与可复现",
+      "books": "Writing Science - Joshua Schimel",
+      "courses": "Coursera - Writing in the Sciences (Stanford)",
+      "projects": "项目：把一份分析/研究写成可读报告（问题-方法-结果-局限-下一步）",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>科学写作与报告</b>\n\n写清楚研究与结论：结构、图表与可复现\n\n📚 教科书:\nWriting Science - Joshua Schimel\n\n🎓 课程:\nCoursera - Writing in the Sciences (Stanford)\n\n🧪 项目:\n项目：把一份分析/研究写成可读报告（问题-方法-结果-局限-下一步）"
+    },
+    {
+      "id": "course_argumentation",
+      "label": "论证写作",
+      "type": "course",
+      "description": "观点构建、证据选择与反驳：写出有说服力的文章",
+      "books": "They Say / I Say - Graff & Birkenstein",
+      "courses": "edX - Rhetoric: The Art of Persuasive Writing and Public Speaking",
+      "projects": "项目：写一篇论证文章并加入反方观点与反驳，做 2 轮修改",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>论证写作</b>\n\n观点构建、证据选择与反驳：写出有说服力的文章\n\n📚 教科书:\nThey Say / I Say - Graff & Birkenstein\n\n🎓 课程:\nedX - Rhetoric: The Art of Persuasive Writing and Public Speaking\n\n🧪 项目:\n项目：写一篇论证文章并加入反方观点与反驳，做 2 轮修改"
+    },
+    {
+      "id": "course_public_speaking",
+      "label": "公众演讲",
+      "type": "course",
+      "description": "结构、表达与台风：让信息被听懂并被记住",
+      "books": "TED Talks: The Official TED Guide to Public Speaking - Chris Anderson",
+      "courses": "Coursera - Introduction to Public Speaking (UWashington)",
+      "projects": "项目：录制 5-8 分钟演讲，做 2 轮改稿与复录",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>公众演讲</b>\n\n结构、表达与台风：让信息被听懂并被记住\n\n📚 教科书:\nTED Talks: The Official TED Guide to Public Speaking - Chris Anderson\n\n🎓 课程:\nCoursera - Introduction to Public Speaking (UWashington)\n\n🧪 项目:\n项目：录制 5-8 分钟演讲，做 2 轮改稿与复录"
+    },
+    {
+      "id": "course_presentation_design",
+      "label": "演示设计",
+      "type": "course",
+      "description": "信息组织与视觉表达：做出清晰、有说服力的演示",
+      "books": "Presentation Zen - Garr Reynolds\nSlide:ology - Nancy Duarte",
+      "courses": "Nancy Duarte resources (公开材料)",
+      "projects": "项目：做 10 页演示文稿并试讲，收集反馈后改版",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>演示设计</b>\n\n信息组织与视觉表达：做出清晰、有说服力的演示\n\n📚 教科书:\nPresentation Zen - Garr Reynolds\nSlide:ology - Nancy Duarte\n\n🎓 课程:\nNancy Duarte resources (公开材料)\n\n🧪 项目:\n项目：做 10 页演示文稿并试讲，收集反馈后改版"
+    },
+    {
+      "id": "course_interpersonal_communication",
+      "label": "人际沟通",
+      "type": "course",
+      "description": "倾听、共情与反馈：减少误解，提高协作效率",
+      "books": "Nonviolent Communication - Marshall Rosenberg\nCrucial Conversations - Patterson et al.",
+      "courses": "Coursera - Improving Communication Skills",
+      "projects": "项目：做 2 周沟通复盘（场景-目标-表达-结果-改进），形成个人沟通手册",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>人际沟通</b>\n\n倾听、共情与反馈：减少误解，提高协作效率\n\n📚 教科书:\nNonviolent Communication - Marshall Rosenberg\nCrucial Conversations - Patterson et al.\n\n🎓 课程:\nCoursera - Improving Communication Skills\n\n🧪 项目:\n项目：做 2 周沟通复盘（场景-目标-表达-结果-改进），形成个人沟通手册"
+    },
+    {
+      "id": "course_negotiation",
+      "label": "谈判",
+      "type": "course",
+      "description": "利益、底线与 BATNA：在冲突中找到更好的结果",
+      "books": "Getting to Yes - Fisher & Ury\nNever Split the Difference - Chris Voss",
+      "courses": "Coursera - Successful Negotiation (University of Michigan)",
+      "projects": "项目：为一个真实议题做谈判准备单并进行角色扮演复盘",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>谈判</b>\n\n利益、底线与 BATNA：在冲突中找到更好的结果\n\n📚 教科书:\nGetting to Yes - Fisher & Ury\nNever Split the Difference - Chris Voss\n\n🎓 课程:\nCoursera - Successful Negotiation (University of Michigan)\n\n🧪 项目:\n项目：为一个真实议题做谈判准备单并进行角色扮演复盘"
+    },
+    {
+      "id": "course_conflict_resolution",
+      "label": "冲突管理",
+      "type": "course",
+      "description": "识别冲突结构与调解策略：把冲突变成建设性讨论",
+      "books": "Difficult Conversations - Stone, Patton, Heen",
+      "courses": "Coursera - Conflict Transformation",
+      "projects": "项目：写 3 个冲突案例处理脚本并演练，记录改进点",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>冲突管理</b>\n\n识别冲突结构与调解策略：把冲突变成建设性讨论\n\n📚 教科书:\nDifficult Conversations - Stone, Patton, Heen\n\n🎓 课程:\nCoursera - Conflict Transformation\n\n🧪 项目:\n项目：写 3 个冲突案例处理脚本并演练，记录改进点"
+    },
+    {
+      "id": "course_team_collaboration",
+      "label": "团队协作",
+      "type": "course",
+      "description": "分工、协作机制与共识：让团队有效运转",
+      "books": "The Five Dysfunctions of a Team - Patrick Lencioni",
+      "courses": "Atlassian Team Playbook (实践)",
+      "projects": "项目：组织一个小组项目并做团队复盘（流程/协作/改进）",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>团队协作</b>\n\n分工、协作机制与共识：让团队有效运转\n\n📚 教科书:\nThe Five Dysfunctions of a Team - Patrick Lencioni\n\n🎓 课程:\nAtlassian Team Playbook (实践)\n\n🧪 项目:\n项目：组织一个小组项目并做团队复盘（流程/协作/改进）"
+    },
+    {
+      "id": "course_leadership",
+      "label": "领导力基础",
+      "type": "course",
+      "description": "目标、激励与决策：让团队持续交付与成长",
+      "books": "Leaders Eat Last - Simon Sinek\nDare to Lead - Brene Brown",
+      "courses": "Coursera - Leading People and Teams (University of Michigan)",
+      "projects": "项目：为一个小团队制定节奏（目标/周例会/复盘）并记录影响与调整",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>领导力基础</b>\n\n目标、激励与决策：让团队持续交付与成长\n\n📚 教科书:\nLeaders Eat Last - Simon Sinek\nDare to Lead - Brene Brown\n\n🎓 课程:\nCoursera - Leading People and Teams (University of Michigan)\n\n🧪 项目:\n项目：为一个小团队制定节奏（目标/周例会/复盘）并记录影响与调整"
+    },
+    {
+      "id": "course_scientific_method",
+      "label": "科学方法与实验设计",
+      "type": "course",
+      "description": "从问题到证据：假设、测量、偏差与可重复性",
+      "books": "The Demon-Haunted World - Carl Sagan",
+      "courses": "Coursera - Understanding Research Methods (University of London)",
+      "projects": "项目：提出一个可检验假设并完成数据收集与分析，写结论与局限",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>科学方法与实验设计</b>\n\n从问题到证据：假设、测量、偏差与可重复性\n\n📚 教科书:\nThe Demon-Haunted World - Carl Sagan\n\n🎓 课程:\nCoursera - Understanding Research Methods (University of London)\n\n🧪 项目:\n项目：提出一个可检验假设并完成数据收集与分析，写结论与局限"
+    },
+    {
+      "id": "course_research_methods",
+      "label": "研究方法入门",
+      "type": "course",
+      "description": "定量与定性研究：研究问题、方法选择与报告",
+      "books": "Research Design - John W. Creswell",
+      "courses": "Coursera - Qualitative and Quantitative Research Methods (选修)",
+      "projects": "项目：写一份研究计划书（问题/假设/方法/样本/指标/伦理/局限）",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>研究方法入门</b>\n\n定量与定性研究：研究问题、方法选择与报告\n\n📚 教科书:\nResearch Design - John W. Creswell\n\n🎓 课程:\nCoursera - Qualitative and Quantitative Research Methods (选修)\n\n🧪 项目:\n项目：写一份研究计划书（问题/假设/方法/样本/指标/伦理/局限）"
+    },
+    {
+      "id": "course_user_research_ux",
+      "label": "用户研究与体验设计",
+      "type": "course",
+      "description": "访谈、可用性测试与体验改进：从用户到方案",
+      "books": "Don't Make Me Think - Steve Krug",
+      "courses": "Google UX Design Certificate",
+      "projects": "项目：对一个产品做 5 位用户可用性测试并输出改进清单与原型",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>用户研究与体验设计</b>\n\n访谈、可用性测试与体验改进：从用户到方案\n\n📚 教科书:\nDon't Make Me Think - Steve Krug\n\n🎓 课程:\nGoogle UX Design Certificate\n\n🧪 项目:\n项目：对一个产品做 5 位用户可用性测试并输出改进清单与原型"
+    },
+    {
+      "id": "course_prototyping",
+      "label": "原型与迭代",
+      "type": "course",
+      "description": "快速验证：从想法到可测试原型",
+      "books": "Sprint - Jake Knapp",
+      "courses": "Udacity - Rapid Prototyping (选修)",
+      "projects": "项目：完成可点击原型并做 2 轮迭代，记录关键决策",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>原型与迭代</b>\n\n快速验证：从想法到可测试原型\n\n📚 教科书:\nSprint - Jake Knapp\n\n🎓 课程:\nUdacity - Rapid Prototyping (选修)\n\n🧪 项目:\n项目：完成可点击原型并做 2 轮迭代，记录关键决策"
+    },
+    {
+      "id": "course_project_management",
+      "label": "项目管理",
+      "type": "course",
+      "description": "范围、进度、成本与风险：稳定交付",
+      "books": "The Fast Forward MBA in Project Management - Eric Verzuh\nPMBOK Guide - PMI (参考)",
+      "courses": "Google Project Management Certificate (Coursera)",
+      "projects": "项目：为 4 周项目做 WBS/里程碑/风险清单，并每周更新复盘",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>项目管理</b>\n\n范围、进度、成本与风险：稳定交付\n\n📚 教科书:\nThe Fast Forward MBA in Project Management - Eric Verzuh\nPMBOK Guide - PMI (参考)\n\n🎓 课程:\nGoogle Project Management Certificate (Coursera)\n\n🧪 项目:\n项目：为 4 周项目做 WBS/里程碑/风险清单，并每周更新复盘"
+    },
+    {
+      "id": "course_agile",
+      "label": "敏捷与迭代交付",
+      "type": "course",
+      "description": "Scrum/Kanban：让复杂工作可视化与持续改进",
+      "books": "Scrum: The Art of Doing Twice the Work in Half the Time - Jeff Sutherland",
+      "courses": "Atlassian Agile Coach",
+      "projects": "项目：跑 2 个迭代（待办-计划-回顾），输出燃尽图与改进项",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>敏捷与迭代交付</b>\n\nScrum/Kanban：让复杂工作可视化与持续改进\n\n📚 教科书:\nScrum: The Art of Doing Twice the Work in Half the Time - Jeff Sutherland\n\n🎓 课程:\nAtlassian Agile Coach\n\n🧪 项目:\n项目：跑 2 个迭代（待办-计划-回顾），输出燃尽图与改进项"
+    },
+    {
+      "id": "course_risk_management",
+      "label": "风险管理",
+      "type": "course",
+      "description": "识别、评估与应对：把不确定性纳入计划",
+      "books": "The Black Swan - Nassim Nicholas Taleb (选读)",
+      "courses": "Coursera - Managing Project Risks and Changes",
+      "projects": "项目：建立风险登记表（概率/影响/应对/触发条件）并定期复盘",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>风险管理</b>\n\n识别、评估与应对：把不确定性纳入计划\n\n📚 教科书:\nThe Black Swan - Nassim Nicholas Taleb (选读)\n\n🎓 课程:\nCoursera - Managing Project Risks and Changes\n\n🧪 项目:\n项目：建立风险登记表（概率/影响/应对/触发条件）并定期复盘"
+    },
+    {
+      "id": "course_office_productivity",
+      "label": "办公效率与协作工具",
+      "type": "course",
+      "description": "文档、表格、协作与个人系统：提高信息处理效率",
+      "books": "Deep Work - Cal Newport (选读)",
+      "courses": "Notion/Obsidian/Office 365 (实践)",
+      "projects": "项目：建立工作模板库（文档/表格/邮件）并迭代 4 周",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>办公效率与协作工具</b>\n\n文档、表格、协作与个人系统：提高信息处理效率\n\n📚 教科书:\nDeep Work - Cal Newport (选读)\n\n🎓 课程:\nNotion/Obsidian/Office 365 (实践)\n\n🧪 项目:\n项目：建立工作模板库（文档/表格/邮件）并迭代 4 周"
+    },
+    {
+      "id": "course_automation_tools",
+      "label": "自动化工具与流程",
+      "type": "course",
+      "description": "用工具连接应用：减少重复劳动",
+      "books": "The Checklist Manifesto - Atul Gawande (选读)",
+      "courses": "Zapier / IFTTT / Apple Shortcuts (实践)",
+      "projects": "项目：搭 1 条流程（信息收集->整理->提醒/汇总）稳定运行 2 周",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>自动化工具与流程</b>\n\n用工具连接应用：减少重复劳动\n\n📚 教科书:\nThe Checklist Manifesto - Atul Gawande (选读)\n\n🎓 课程:\nZapier / IFTTT / Apple Shortcuts (实践)\n\n🧪 项目:\n项目：搭 1 条流程（信息收集->整理->提醒/汇总）稳定运行 2 周"
+    },
+    {
+      "id": "course_automation_scripting",
+      "label": "自动化脚本",
+      "type": "course",
+      "description": "用代码把流程固化：抓取、清洗、生成报告",
+      "books": "Automate the Boring Stuff with Python - Al Sweigart",
+      "courses": "Real Python tutorials (选读)",
+      "projects": "项目：自动化一个真实痛点（整理文件/抓取数据/生成报告）并写使用说明",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>自动化脚本</b>\n\n用代码把流程固化：抓取、清洗、生成报告\n\n📚 教科书:\nAutomate the Boring Stuff with Python - Al Sweigart\n\n🎓 课程:\nReal Python tutorials (选读)\n\n🧪 项目:\n项目：自动化一个真实痛点（整理文件/抓取数据/生成报告）并写使用说明"
+    },
+    {
+      "id": "course_personal_finance",
+      "label": "个人理财",
+      "type": "course",
+      "description": "预算、储蓄、保险与目标：建立财务稳定性",
+      "books": "The Psychology of Money - Morgan Housel",
+      "courses": "Coursera - Personal & Family Financial Planning (University of Florida)",
+      "projects": "项目：建立收支系统并连续记录 30 天，复盘消费结构与改进计划",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>个人理财</b>\n\n预算、储蓄、保险与目标：建立财务稳定性\n\n📚 教科书:\nThe Psychology of Money - Morgan Housel\n\n🎓 课程:\nCoursera - Personal & Family Financial Planning (University of Florida)\n\n🧪 项目:\n项目：建立收支系统并连续记录 30 天，复盘消费结构与改进计划"
+    },
+    {
+      "id": "course_budgeting",
+      "label": "预算与现金流管理",
+      "type": "course",
+      "description": "现金流与优先级：让钱为目标服务",
+      "books": "Your Money or Your Life - Vicki Robin",
+      "courses": "YNAB Methodology (工具/方法)",
+      "projects": "项目：用零基/50-30-20 做 3 个月预算模板并执行复盘",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>预算与现金流管理</b>\n\n现金流与优先级：让钱为目标服务\n\n📚 教科书:\nYour Money or Your Life - Vicki Robin\n\n🎓 课程:\nYNAB Methodology (工具/方法)\n\n🧪 项目:\n项目：用零基/50-30-20 做 3 个月预算模板并执行复盘"
+    },
+    {
+      "id": "course_investing",
+      "label": "投资基础",
+      "type": "course",
+      "description": "资产配置、风险与长期：建立可持续投资框架",
+      "books": "A Random Walk Down Wall Street - Burton Malkiel\nThe Intelligent Investor - Benjamin Graham (选读)",
+      "courses": "Coursera - Financial Markets (Yale)",
+      "projects": "项目：做个人资产配置草案（目标/期限/风险）并写再平衡规则",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>投资基础</b>\n\n资产配置、风险与长期：建立可持续投资框架\n\n📚 教科书:\nA Random Walk Down Wall Street - Burton Malkiel\nThe Intelligent Investor - Benjamin Graham (选读)\n\n🎓 课程:\nCoursera - Financial Markets (Yale)\n\n🧪 项目:\n项目：做个人资产配置草案（目标/期限/风险）并写再平衡规则"
+    },
+    {
+      "id": "course_ethics",
+      "label": "伦理与责任",
+      "type": "course",
+      "description": "利益相关者、风险与原则：做负责任的选择",
+      "books": "Justice: What's the Right Thing to Do? - Michael Sandel",
+      "courses": "HarvardX - Justice",
+      "projects": "项目：对一个真实决策写伦理评估备忘录（影响/权衡/建议）",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>伦理与责任</b>\n\n利益相关者、风险与原则：做负责任的选择\n\n📚 教科书:\nJustice: What's the Right Thing to Do? - Michael Sandel\n\n🎓 课程:\nHarvardX - Justice\n\n🧪 项目:\n项目：对一个真实决策写伦理评估备忘录（影响/权衡/建议）"
+    }
+  ],
+  "edges": [
+    {
+      "id": "concept_subject_math_stats__contains__course_algebra_functions",
+      "from": "concept_subject_math_stats",
+      "to": "course_algebra_functions",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_math_stats__contains__course_calculus",
+      "from": "concept_subject_math_stats",
+      "to": "course_calculus",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_math_stats__contains__course_linear_algebra",
+      "from": "concept_subject_math_stats",
+      "to": "course_linear_algebra",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_math_stats__contains__course_probability_statistics",
+      "from": "concept_subject_math_stats",
+      "to": "course_probability_statistics",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_math_stats__contains__course_discrete_math",
+      "from": "concept_subject_math_stats",
+      "to": "course_discrete_math",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_cs_it__contains__course_programming_fundamentals",
+      "from": "concept_subject_cs_it",
+      "to": "course_programming_fundamentals",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_cs_it__contains__course_data_structures_algorithms",
+      "from": "concept_subject_cs_it",
+      "to": "course_data_structures_algorithms",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_cs_it__contains__course_computer_systems",
+      "from": "concept_subject_cs_it",
+      "to": "course_computer_systems",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_cs_it__contains__course_networks",
+      "from": "concept_subject_cs_it",
+      "to": "course_networks",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_cs_it__contains__course_database_systems",
+      "from": "concept_subject_cs_it",
+      "to": "course_database_systems",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_cs_it__contains__course_software_engineering",
+      "from": "concept_subject_cs_it",
+      "to": "course_software_engineering",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_cs_it__contains__course_system_design",
+      "from": "concept_subject_cs_it",
+      "to": "course_system_design",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_cs_it__contains__course_web_dev",
+      "from": "concept_subject_cs_it",
+      "to": "course_web_dev",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_cs_it__contains__course_version_control",
+      "from": "concept_subject_cs_it",
+      "to": "course_version_control",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_cs_it__contains__course_digital_security",
+      "from": "concept_subject_cs_it",
+      "to": "course_digital_security",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_natural_science__contains__course_physics",
+      "from": "concept_subject_natural_science",
+      "to": "course_physics",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_natural_science__contains__course_chemistry",
+      "from": "concept_subject_natural_science",
+      "to": "course_chemistry",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_natural_science__contains__course_earth_science",
+      "from": "concept_subject_natural_science",
+      "to": "course_earth_science",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_natural_science__contains__course_scientific_method",
+      "from": "concept_subject_natural_science",
+      "to": "course_scientific_method",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_life_science__contains__course_biology",
+      "from": "concept_subject_life_science",
+      "to": "course_biology",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_life_science__contains__course_genetics",
+      "from": "concept_subject_life_science",
+      "to": "course_genetics",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_life_science__contains__course_neuroscience",
+      "from": "concept_subject_life_science",
+      "to": "course_neuroscience",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_health__contains__course_anatomy",
+      "from": "concept_subject_health",
+      "to": "course_anatomy",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_health__contains__course_nutrition",
+      "from": "concept_subject_health",
+      "to": "course_nutrition",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_health__contains__course_public_health",
+      "from": "concept_subject_health",
+      "to": "course_public_health",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_health__contains__course_mental_health",
+      "from": "concept_subject_health",
+      "to": "course_mental_health",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_engineering__contains__course_engineering_design",
+      "from": "concept_subject_engineering",
+      "to": "course_engineering_design",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_engineering__contains__course_electronics",
+      "from": "concept_subject_engineering",
+      "to": "course_electronics",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_engineering__contains__course_iot",
+      "from": "concept_subject_engineering",
+      "to": "course_iot",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_social_science__contains__course_psychology",
+      "from": "concept_subject_social_science",
+      "to": "course_psychology",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_social_science__contains__course_sociology",
+      "from": "concept_subject_social_science",
+      "to": "course_sociology",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_social_science__contains__course_political_science",
+      "from": "concept_subject_social_science",
+      "to": "course_political_science",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_econ_business__contains__course_microeconomics",
+      "from": "concept_subject_econ_business",
+      "to": "course_microeconomics",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_econ_business__contains__course_macroeconomics",
+      "from": "concept_subject_econ_business",
+      "to": "course_macroeconomics",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_econ_business__contains__course_accounting",
+      "from": "concept_subject_econ_business",
+      "to": "course_accounting",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_econ_business__contains__course_marketing",
+      "from": "concept_subject_econ_business",
+      "to": "course_marketing",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_econ_business__contains__course_operations",
+      "from": "concept_subject_econ_business",
+      "to": "course_operations",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_econ_business__contains__course_product_management",
+      "from": "concept_subject_econ_business",
+      "to": "course_product_management",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_humanities__contains__course_world_history",
+      "from": "concept_subject_humanities",
+      "to": "course_world_history",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_humanities__contains__course_philosophy",
+      "from": "concept_subject_humanities",
+      "to": "course_philosophy",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_humanities__contains__course_literature",
+      "from": "concept_subject_humanities",
+      "to": "course_literature",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_arts_design__contains__course_visual_design",
+      "from": "concept_subject_arts_design",
+      "to": "course_visual_design",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_arts_design__contains__course_design_thinking",
+      "from": "concept_subject_arts_design",
+      "to": "course_design_thinking",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_arts_design__contains__course_music",
+      "from": "concept_subject_arts_design",
+      "to": "course_music",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_arts_design__contains__course_data_viz",
+      "from": "concept_subject_arts_design",
+      "to": "course_data_viz",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_arts_design__contains__course_presentation_design",
+      "from": "concept_subject_arts_design",
+      "to": "course_presentation_design",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_law_policy__contains__course_law",
+      "from": "concept_subject_law_policy",
+      "to": "course_law",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_law_policy__contains__course_public_policy",
+      "from": "concept_subject_law_policy",
+      "to": "course_public_policy",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_law_policy__contains__course_privacy_law",
+      "from": "concept_subject_law_policy",
+      "to": "course_privacy_law",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_environment__contains__course_environmental_science",
+      "from": "concept_subject_environment",
+      "to": "course_environmental_science",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_environment__contains__course_climate_change",
+      "from": "concept_subject_environment",
+      "to": "course_climate_change",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_subject_environment__contains__course_sustainability",
+      "from": "concept_subject_environment",
+      "to": "course_sustainability",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_learning_systems__contains__course_learning_how_to_learn",
+      "from": "concept_cap_learning_systems",
+      "to": "course_learning_how_to_learn",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_learning_systems__contains__course_time_management",
+      "from": "concept_cap_learning_systems",
+      "to": "course_time_management",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_learning_systems__contains__course_knowledge_management",
+      "from": "concept_cap_learning_systems",
+      "to": "course_knowledge_management",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_information_literacy__contains__course_information_literacy",
+      "from": "concept_cap_information_literacy",
+      "to": "course_information_literacy",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_information_literacy__contains__course_fact_checking",
+      "from": "concept_cap_information_literacy",
+      "to": "course_fact_checking",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_information_literacy__contains__course_media_literacy",
+      "from": "concept_cap_information_literacy",
+      "to": "course_media_literacy",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_writing_argumentation__contains__course_writing_science",
+      "from": "concept_cap_writing_argumentation",
+      "to": "course_writing_science",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_writing_argumentation__contains__course_argumentation",
+      "from": "concept_cap_writing_argumentation",
+      "to": "course_argumentation",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_writing_argumentation__contains__course_information_literacy",
+      "from": "concept_cap_writing_argumentation",
+      "to": "course_information_literacy",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_speaking_storytelling__contains__course_presentation_design",
+      "from": "concept_cap_speaking_storytelling",
+      "to": "course_presentation_design",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_speaking_storytelling__contains__course_public_speaking",
+      "from": "concept_cap_speaking_storytelling",
+      "to": "course_public_speaking",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_speaking_storytelling__contains__course_data_viz",
+      "from": "concept_cap_speaking_storytelling",
+      "to": "course_data_viz",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_communication_influence__contains__course_interpersonal_communication",
+      "from": "concept_cap_communication_influence",
+      "to": "course_interpersonal_communication",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_communication_influence__contains__course_negotiation",
+      "from": "concept_cap_communication_influence",
+      "to": "course_negotiation",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_communication_influence__contains__course_conflict_resolution",
+      "from": "concept_cap_communication_influence",
+      "to": "course_conflict_resolution",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_communication_influence__contains__course_team_collaboration",
+      "from": "concept_cap_communication_influence",
+      "to": "course_team_collaboration",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_communication_influence__contains__course_leadership",
+      "from": "concept_cap_communication_influence",
+      "to": "course_leadership",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_data_analysis__contains__course_probability_statistics",
+      "from": "concept_cap_data_analysis",
+      "to": "course_probability_statistics",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_data_analysis__contains__course_spreadsheets",
+      "from": "concept_cap_data_analysis",
+      "to": "course_spreadsheets",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_data_analysis__contains__course_sql",
+      "from": "concept_cap_data_analysis",
+      "to": "course_sql",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_data_analysis__contains__course_data_viz",
+      "from": "concept_cap_data_analysis",
+      "to": "course_data_viz",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_data_analysis__contains__course_data_analysis",
+      "from": "concept_cap_data_analysis",
+      "to": "course_data_analysis",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_data_analysis__contains__course_machine_learning",
+      "from": "concept_cap_data_analysis",
+      "to": "course_machine_learning",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_research_methods__contains__course_scientific_method",
+      "from": "concept_cap_research_methods",
+      "to": "course_scientific_method",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_research_methods__contains__course_research_methods",
+      "from": "concept_cap_research_methods",
+      "to": "course_research_methods",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_research_methods__contains__course_information_literacy",
+      "from": "concept_cap_research_methods",
+      "to": "course_information_literacy",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_research_methods__contains__course_probability_statistics",
+      "from": "concept_cap_research_methods",
+      "to": "course_probability_statistics",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_tooling_automation__contains__course_office_productivity",
+      "from": "concept_cap_tooling_automation",
+      "to": "course_office_productivity",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_tooling_automation__contains__course_automation_tools",
+      "from": "concept_cap_tooling_automation",
+      "to": "course_automation_tools",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_tooling_automation__contains__course_automation_scripting",
+      "from": "concept_cap_tooling_automation",
+      "to": "course_automation_scripting",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_tooling_automation__contains__course_version_control",
+      "from": "concept_cap_tooling_automation",
+      "to": "course_version_control",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_project_delivery__contains__course_project_management",
+      "from": "concept_cap_project_delivery",
+      "to": "course_project_management",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_project_delivery__contains__course_agile",
+      "from": "concept_cap_project_delivery",
+      "to": "course_agile",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_project_delivery__contains__course_risk_management",
+      "from": "concept_cap_project_delivery",
+      "to": "course_risk_management",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_project_delivery__contains__course_time_management",
+      "from": "concept_cap_project_delivery",
+      "to": "course_time_management",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_design_product__contains__course_user_research_ux",
+      "from": "concept_cap_design_product",
+      "to": "course_user_research_ux",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_design_product__contains__course_prototyping",
+      "from": "concept_cap_design_product",
+      "to": "course_prototyping",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_design_product__contains__course_design_thinking",
+      "from": "concept_cap_design_product",
+      "to": "course_design_thinking",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_design_product__contains__course_product_management",
+      "from": "concept_cap_design_product",
+      "to": "course_product_management",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_finance_risk__contains__course_personal_finance",
+      "from": "concept_cap_finance_risk",
+      "to": "course_personal_finance",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_finance_risk__contains__course_budgeting",
+      "from": "concept_cap_finance_risk",
+      "to": "course_budgeting",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_finance_risk__contains__course_investing",
+      "from": "concept_cap_finance_risk",
+      "to": "course_investing",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_finance_risk__contains__course_accounting",
+      "from": "concept_cap_finance_risk",
+      "to": "course_accounting",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_ethics_civic__contains__course_ethics",
+      "from": "concept_cap_ethics_civic",
+      "to": "course_ethics",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_ethics_civic__contains__course_privacy_law",
+      "from": "concept_cap_ethics_civic",
+      "to": "course_privacy_law",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_ethics_civic__contains__course_digital_security",
+      "from": "concept_cap_ethics_civic",
+      "to": "course_digital_security",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_ethics_civic__contains__course_public_policy",
+      "from": "concept_cap_ethics_civic",
+      "to": "course_public_policy",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "concept_cap_ethics_civic__contains__course_public_health",
+      "from": "concept_cap_ethics_civic",
+      "to": "course_public_health",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": {
+        "color": "#95E1D3"
+      }
+    },
+    {
+      "id": "course_algebra_functions__prerequisite__course_calculus",
+      "from": "course_algebra_functions",
+      "to": "course_calculus",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_algebra_functions__prerequisite__course_probability_statistics",
+      "from": "course_algebra_functions",
+      "to": "course_probability_statistics",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_algebra_functions__prerequisite__course_discrete_math",
+      "from": "course_algebra_functions",
+      "to": "course_discrete_math",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_calculus__prerequisite__course_physics",
+      "from": "course_calculus",
+      "to": "course_physics",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_linear_algebra__prerequisite__course_machine_learning",
+      "from": "course_linear_algebra",
+      "to": "course_machine_learning",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_probability_statistics__prerequisite__course_data_analysis",
+      "from": "course_probability_statistics",
+      "to": "course_data_analysis",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_probability_statistics__prerequisite__course_machine_learning",
+      "from": "course_probability_statistics",
+      "to": "course_machine_learning",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_programming_fundamentals__prerequisite__course_data_structures_algorithms",
+      "from": "course_programming_fundamentals",
+      "to": "course_data_structures_algorithms",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_programming_fundamentals__prerequisite__course_computer_systems",
+      "from": "course_programming_fundamentals",
+      "to": "course_computer_systems",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_computer_systems__prerequisite__course_networks",
+      "from": "course_computer_systems",
+      "to": "course_networks",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_database_systems__prerequisite__course_sql",
+      "from": "course_database_systems",
+      "to": "course_sql",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_programming_fundamentals__prerequisite__course_automation_scripting",
+      "from": "course_programming_fundamentals",
+      "to": "course_automation_scripting",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_version_control__prerequisite__course_software_engineering",
+      "from": "course_version_control",
+      "to": "course_software_engineering",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_software_engineering__prerequisite__course_system_design",
+      "from": "course_software_engineering",
+      "to": "course_system_design",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_biology__prerequisite__course_genetics",
+      "from": "course_biology",
+      "to": "course_genetics",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_biology__prerequisite__course_neuroscience",
+      "from": "course_biology",
+      "to": "course_neuroscience",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_biology__prerequisite__course_anatomy",
+      "from": "course_biology",
+      "to": "course_anatomy",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_anatomy__prerequisite__course_nutrition",
+      "from": "course_anatomy",
+      "to": "course_nutrition",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_engineering_design__prerequisite__course_electronics",
+      "from": "course_engineering_design",
+      "to": "course_electronics",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_electronics__prerequisite__course_iot",
+      "from": "course_electronics",
+      "to": "course_iot",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_microeconomics__prerequisite__course_macroeconomics",
+      "from": "course_microeconomics",
+      "to": "course_macroeconomics",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_accounting__prerequisite__course_personal_finance",
+      "from": "course_accounting",
+      "to": "course_personal_finance",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_information_literacy__prerequisite__course_writing_science",
+      "from": "course_information_literacy",
+      "to": "course_writing_science",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_argumentation__prerequisite__course_public_speaking",
+      "from": "course_argumentation",
+      "to": "course_public_speaking",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_presentation_design__prerequisite__course_public_speaking",
+      "from": "course_presentation_design",
+      "to": "course_public_speaking",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_interpersonal_communication__prerequisite__course_negotiation",
+      "from": "course_interpersonal_communication",
+      "to": "course_negotiation",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_interpersonal_communication__prerequisite__course_conflict_resolution",
+      "from": "course_interpersonal_communication",
+      "to": "course_conflict_resolution",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_team_collaboration__prerequisite__course_leadership",
+      "from": "course_team_collaboration",
+      "to": "course_leadership",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_project_management__prerequisite__course_agile",
+      "from": "course_project_management",
+      "to": "course_agile",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_project_management__prerequisite__course_risk_management",
+      "from": "course_project_management",
+      "to": "course_risk_management",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_design_thinking__prerequisite__course_user_research_ux",
+      "from": "course_design_thinking",
+      "to": "course_user_research_ux",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_user_research_ux__prerequisite__course_prototyping",
+      "from": "course_user_research_ux",
+      "to": "course_prototyping",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_personal_finance__prerequisite__course_budgeting",
+      "from": "course_personal_finance",
+      "to": "course_budgeting",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_budgeting__prerequisite__course_investing",
+      "from": "course_budgeting",
+      "to": "course_investing",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_environmental_science__prerequisite__course_climate_change",
+      "from": "course_environmental_science",
+      "to": "course_climate_change",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_climate_change__prerequisite__course_sustainability",
+      "from": "course_climate_change",
+      "to": "course_sustainability",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_law__prerequisite__course_public_policy",
+      "from": "course_law",
+      "to": "course_public_policy",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_law__prerequisite__course_privacy_law",
+      "from": "course_law",
+      "to": "course_privacy_law",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_learning_how_to_learn__prerequisite__course_time_management",
+      "from": "course_learning_how_to_learn",
+      "to": "course_time_management",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_time_management__prerequisite__course_knowledge_management",
+      "from": "course_time_management",
+      "to": "course_knowledge_management",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_spreadsheets__prerequisite__course_sql",
+      "from": "course_spreadsheets",
+      "to": "course_sql",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_sql__prerequisite__course_data_analysis",
+      "from": "course_sql",
+      "to": "course_data_analysis",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    },
+    {
+      "id": "course_data_viz__prerequisite__course_data_analysis",
+      "from": "course_data_viz",
+      "to": "course_data_analysis",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": {
+        "color": "#FF6B6B"
+      }
+    }
+  ]
+}

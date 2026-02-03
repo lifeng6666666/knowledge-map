@@ -381,6 +381,14 @@
                             <label>描述</label>
                             <textarea id="nodeDescription" placeholder="节点描述..."></textarea>
                         </div>
+                        <div class="form-group" id="conceptTypeGroup" style="display: none;">
+                            <label>概念类型</label>
+                            <select id="nodeConceptType">
+                                <option value="">-- 选择类型 --</option>
+                                <option value="学科">学科</option>
+                                <option value="能力">能力</option>
+                            </select>
+                        </div>
                         <div class="form-group">
                             <label>推荐教科书</label>
                             <textarea id="nodeBooks" placeholder="例：\nPrinciples of Microeconomics - Gregory Mankiw\nMicroeconomic Theory - Mas-Colell"></textarea>
@@ -388,6 +396,10 @@
                         <div class="form-group">
                             <label>推荐课程</label>
                             <textarea id="nodeCourses" placeholder="例：\nMIT 14.01 Economics\nYale ECON 115"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>推荐项目</label>
+                            <textarea id="nodeProjects" placeholder="例：\n用公开数据完成一份统计分析报告\n完成一个小型可视化仪表盘"></textarea>
                         </div>
                         <div class="btn-group">
                             <button class="btn-primary" onclick="addNode()">✨ 添加节点</button>
@@ -411,10 +423,8 @@
                         <div class="form-group">
                             <label>关系类型</label>
                             <select id="edgeType" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                                <option value="contains">包含关系</option>
                                 <option value="prerequisite">前置课程</option>
-                                <option value="follow">后继课程</option>
-                                <option value="related">相关课程</option>
-                                <option value="applied">应用</option>
                             </select>
                         </div>
                         <div class="btn-group">
@@ -426,6 +436,7 @@
                         <h2>操作</h2>
                         <div class="btn-group">
                             <button class="btn-secondary" onclick="deleteSelected()">🗑️ 删除选中节点</button>
+                            <button class="btn-secondary" onclick="deleteSelectedEdge()">✂️ 删除选中关系</button>
                             <button class="btn-secondary" onclick="clearAll()">⚠️ 清空所有</button>
                         </div>
                     </div>
@@ -466,8 +477,8 @@
         </div>
 
         <div class="network">
-            <div id="conceptTagsContainer" style="background: white; padding: 15px; border-bottom: 1px solid #e0e0e0; overflow-x: auto; overflow-y: auto; max-height: 120px; flex-shrink: 0;">
-                <div id="conceptTags" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+            <div id="conceptTagsContainer" style="background: white; padding: 15px; border-bottom: 1px solid #e0e0e0; flex-shrink: 0;">
+                <div id="conceptTags" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;"></div>
             </div>
             <div id="network"></div>
         </div>

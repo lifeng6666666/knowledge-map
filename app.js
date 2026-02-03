@@ -1,24 +1,21 @@
 // 全局变量
 let nodes = new vis.DataSet();
 let edges = new vis.DataSet();
+let allNodesBackup = [];  // 备份所有原始节点
+let allEdgesBackup = [];  // 备份所有原始边
 let network = null;
 let selectedNodeId = null;
+let selectedEdgeId = null;
 let currentNodeType = 'course';
 
 // 初始化
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     initializeNetwork();
     
-    // 首次加载 - 先加载中文数据，然后尝试从本地加载
-    const hasLocalData = localStorage.getItem('knowledgeMapData');
-    const dataVersion = localStorage.getItem('knowledgeMapVersion');
-    
-    // 如果没有本地数据，或者版本过旧，先加载样本数据
-    if (!hasLocalData || dataVersion !== 'v2.0-cn') {
-        loadSampleData();
-    } else {
-        loadFromLocal();
-    }
+    // 强制清除旧缓存，加载最新数据
+    localStorage.removeItem('knowledgeMapData');
+    localStorage.removeItem('knowledgeMapVersion');
+    await loadSampleData();
     
     setupEventListeners();
     updateNodeSelectors();
@@ -28,10 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
 async function loadSampleData() {
     try {
         // 添加时间戳防止缓存
-        const response = await fetch('knowledge-map-cn.json?t=' + new Date().getTime());
+        const url = 'knowledge-map-cn.json?t=' + new Date().getTime();
+        console.log('Attempting to fetch:', url);
+        const response = await fetch(url);
+        console.log('Fetch response status:', response.status);
+        
         if (!response.ok) {
-            console.log('knowledge-map-cn.json not found, using default data');
-            loadDefaultData();
+            console.log('knowledge-map-cn.json not found, status:', response.status, 'using default data');
+            await loadDefaultData();
             return;
         }
         
@@ -39,34 +40,36 @@ async function loadSampleData() {
         console.log('Loaded data:', data.nodes.length, 'nodes,', data.edges.length, 'edges');
         
         if (data.nodes && data.edges) {
-            // 处理节点，为概念节点添加类型标签
-            let conceptCount = 0;
-            data.nodes.forEach(node => {
-                if (node.type !== 'course') {
-                    conceptCount++;
-                    // 为节点标签添加类型标识
-                    if (node.type) {
-                        node.label = node.label + '\n(' + node.type + ')';
-                    }
-                }
-            });
-            console.log('Found', conceptCount, 'concept nodes');
+            // 保存原始备份（在修改前）
+            allNodesBackup = JSON.parse(JSON.stringify(data.nodes));
+            allEdgesBackup = JSON.parse(JSON.stringify(data.edges));
             
-            nodes.add(data.nodes);
+            // 不显示悬浮 tooltip：移除 vis.js 会用到的 title 字段（详情统一在左侧面板查看）
+            const cleanNodes = data.nodes.map(n => {
+                const copy = { ...n };
+                delete copy.title;
+                return copy;
+            });
+
+            const conceptCount = cleanNodes.filter(n => n.type && n.type !== 'course').length;
+            console.log('Found', conceptCount, 'concept nodes');
+
+            nodes.add(cleanNodes);
             edges.add(data.edges);
             updateNodeSelectors();
             updateJSONPreview();
+            network.fit();
             updateConceptTags();
             // 标记版本
             localStorage.setItem('knowledgeMapVersion', 'v2.0-cn');
         }
     } catch (error) {
         console.log('Error loading sample data:', error);
-        loadDefaultData();
+        await loadDefaultData();
     }
 }
 
-// 更新概念标签过滤器
+// 更新概念标签过滤器 - 紧凑布局，按类型颜色区分
 function updateConceptTags() {
     const conceptNodes = nodes.get({
         filter: function(item) {
@@ -74,28 +77,112 @@ function updateConceptTags() {
         }
     });
     
-    console.log('Found concept nodes:', conceptNodes.length, conceptNodes);
+    console.log('Found concept nodes:', conceptNodes.length);
     
-    const tagContainer = document.getElementById('conceptTags');
-    if (!tagContainer) {
-        console.log('Tag container not found');
-        return;
-    }
-    
-    tagContainer.innerHTML = '<button class="tag-btn active" onclick="filterByTag(null)">全部</button>';
+    // 按类型分组（概念只保留：学科 / 能力）
+    const byType = {
+        '学科': [],
+        '能力': []
+    };
     
     conceptNodes.forEach(node => {
-        const btn = document.createElement('button');
-        btn.className = 'tag-btn';
-        const labelText = node.label.includes('\n') ? node.label.split('\n')[0] : node.label;
-        btn.textContent = labelText;
-        btn.onclick = function() {
-            filterByTag(node.id);
-        };
-        tagContainer.appendChild(btn);
+        const type = node.type;
+        if (byType[type]) {
+            byType[type].push(node);
+        }
     });
     
-    console.log('Updated concept tags with', conceptNodes.length, 'nodes');
+    const tagContainer = document.getElementById('conceptTags');
+    if (!tagContainer) return;
+    
+    tagContainer.innerHTML = '';
+    
+    // 颜色映射
+    const typeColors = {
+        '学科': { bg: '#667eea', text: '#fff' },
+        '能力': { bg: '#764ba2', text: '#fff' }
+    };
+    
+    // 遍历每个类型的标签
+    ['学科', '能力'].forEach(type => {
+        const nodeList = byType[type];
+        if (nodeList.length === 0) return;
+        
+        const colors = typeColors[type];
+        const MAX_VISIBLE = 10; // 超过10个才显示下拉
+        
+        // 显示前MAX_VISIBLE个标签
+        const visibleNodes = nodeList.slice(0, MAX_VISIBLE);
+        const hiddenNodes = nodeList.slice(MAX_VISIBLE);
+        
+        visibleNodes.forEach(node => {
+            const btn = createTagButton(node, colors);
+            tagContainer.appendChild(btn);
+        });
+        
+        // 如果有隐藏的标签，添加下拉按钮
+        if (hiddenNodes.length > 0) {
+            const dropdownBtn = document.createElement('div');
+            dropdownBtn.style.cssText = 'position: relative; display: inline-block;';
+            
+            const expandBtn = document.createElement('button');
+            expandBtn.className = 'tag-btn';
+            expandBtn.textContent = `▼ 更多 (${hiddenNodes.length})`;
+            expandBtn.style.cssText = `padding: 8px 10px; font-size: 13px; min-width: auto; white-space: nowrap; background: ${colors.bg}; color: ${colors.text}; border: none; border-radius: 6px; cursor: pointer; font-weight: 500;`;
+            
+            const dropdownMenu = document.createElement('div');
+            dropdownMenu.style.cssText = 'position: absolute; top: 100%; left: 0; background: white; border: 1px solid #e0e0e0; border-radius: 6px; padding: 8px; margin-top: 4px; z-index: 1000; min-width: 180px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: none;';
+            
+            hiddenNodes.forEach(hiddenNode => {
+                const hiddenBtn = createTagButton(hiddenNode, colors);
+                hiddenBtn.style.display = 'block';
+                hiddenBtn.style.marginBottom = '4px';
+                hiddenBtn.style.width = '100%';
+                hiddenBtn.style.textAlign = 'left';
+                dropdownMenu.appendChild(hiddenBtn);
+            });
+            
+            expandBtn.onclick = function(e) {
+                e.stopPropagation();
+                const isVisible = dropdownMenu.style.display !== 'none';
+                dropdownMenu.style.display = isVisible ? 'none' : 'block';
+                expandBtn.textContent = isVisible ? `▼ 更多 (${hiddenNodes.length})` : `▲ 收起`;
+            };
+            
+            // 点击页面其他地方关闭下拉菜单
+            document.addEventListener('click', function(e) {
+                if (!dropdownBtn.contains(e.target)) {
+                    dropdownMenu.style.display = 'none';
+                    expandBtn.textContent = `▼ 更多 (${hiddenNodes.length})`;
+                }
+            });
+            
+            dropdownBtn.appendChild(expandBtn);
+            dropdownBtn.appendChild(dropdownMenu);
+            tagContainer.appendChild(dropdownBtn);
+        }
+    });
+}
+
+// 创建标签按钮 - 带颜色
+function createTagButton(node, colors) {
+    const btn = document.createElement('button');
+    btn.className = 'tag-btn';
+    btn.textContent = node.label;
+    btn.style.cssText = `padding: 8px 12px; font-size: 13px; min-width: auto; white-space: nowrap; background: ${colors.bg}; color: ${colors.text}; border: none; border-radius: 6px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;`;
+    btn.onmouseover = function() {
+        this.style.opacity = '0.8';
+        this.style.transform = 'translateY(-2px)';
+    };
+    btn.onmouseout = function() {
+        this.style.opacity = '1';
+        this.style.transform = 'translateY(0)';
+    };
+    btn.onclick = function(e) {
+        e.stopPropagation();
+        filterByTag(node.id);
+    };
+    return btn;
 }
 
 // 初始化网络
@@ -138,9 +225,18 @@ function initializeNetwork() {
     network.on('click', function(params) {
         if (params.nodes.length > 0) {
             selectedNodeId = params.nodes[0];
+            selectedEdgeId = null;
+            expandRelatedNodes(selectedNodeId);
+            updateNodeInfo();
+        } else if (params.edges.length > 0) {
+            selectedEdgeId = params.edges[0];
+            selectedNodeId = null;
             updateNodeInfo();
         } else {
             selectedNodeId = null;
+            selectedEdgeId = null;
+            // 点击空白处恢复显示全部
+            expandRelatedNodes(null);
             updateNodeInfo();
         }
     });
@@ -155,6 +251,11 @@ function setNodeType(type) {
     event.target.classList.add('active');
     event.target.style.background = '#667eea';
     event.target.style.color = 'white';
+
+    const conceptTypeGroup = document.getElementById('conceptTypeGroup');
+    if (conceptTypeGroup) {
+        conceptTypeGroup.style.display = currentNodeType === 'concept' ? 'block' : 'none';
+    }
 }
 
 // 添加节点
@@ -163,28 +264,40 @@ function addNode() {
     const description = document.getElementById('nodeDescription').value.trim();
     const books = document.getElementById('nodeBooks').value.trim();
     const courses = document.getElementById('nodeCourses').value.trim();
+    const projects = document.getElementById('nodeProjects').value.trim();
+    const conceptType = document.getElementById('nodeConceptType')?.value?.trim();
     
     if (!name) {
         showStatus('请输入节点名称', 'error');
         return;
     }
+
+    if (currentNodeType === 'concept' && !conceptType) {
+        showStatus('请选择概念类型（学科 / 能力）', 'error');
+        return;
+    }
     
     const nodeId = 'node_' + Date.now();
+    const isConcept = currentNodeType === 'concept';
+    const nodeType = isConcept ? conceptType : 'course';
+    const conceptColors = {
+        '学科': { background: '#667eea', border: '#5568d3', highlight: { background: '#5c6ee0', border: '#4b5fc5' } },
+        '能力': { background: '#764ba2', border: '#5e3d86', highlight: { background: '#6b4295', border: '#4f3371' } }
+    };
     
     const nodeData = {
         id: nodeId,
         label: name,
-        title: generateTooltip(name, description, books, courses),
-        type: currentNodeType,
+        type: nodeType,
         description: description,
         books: books,
         courses: courses,
-        shape: currentNodeType === 'concept' ? 'diamond' : 'box',
-        color: currentNodeType === 'concept' ? 
-            { background: '#FFD700', border: '#FFA500', highlight: { background: '#FFC700', border: '#FF8C00' } } :
+        projects: projects,
+        shape: isConcept ? 'diamond' : 'box',
+        color: isConcept ? (conceptColors[conceptType] || { background: '#FFD700', border: '#FFA500', highlight: { background: '#FFC700', border: '#FF8C00' } }) :
             { background: '#87CEEB', border: '#4682B4', highlight: { background: '#6CB4EE', border: '#36648B' } },
         font: {
-            size: currentNodeType === 'concept' ? 16 : 14,
+            size: isConcept ? 16 : 14,
             color: '#000'
         }
     };
@@ -196,6 +309,10 @@ function addNode() {
     document.getElementById('nodeDescription').value = '';
     document.getElementById('nodeBooks').value = '';
     document.getElementById('nodeCourses').value = '';
+    document.getElementById('nodeProjects').value = '';
+    if (document.getElementById('nodeConceptType')) {
+        document.getElementById('nodeConceptType').value = '';
+    }
     
     updateNodeSelectors();
     updateJSONPreview();
@@ -203,11 +320,12 @@ function addNode() {
 }
 
 // 生成 tooltip
-function generateTooltip(name, description, books, courses) {
+function generateTooltip(name, description, books, courses, projects) {
     let tooltip = `<b>${name}</b>\n`;
     if (description) tooltip += `\n${description}`;
     if (books) tooltip += `\n\n📚 教科书:\n${books}`;
     if (courses) tooltip += `\n\n🎓 课程:\n${courses}`;
+    if (projects) tooltip += `\n\n🧪 项目:\n${projects}`;
     return tooltip;
 }
 
@@ -226,7 +344,29 @@ function addEdge() {
         showStatus('起点和终点不能相同', 'error');
         return;
     }
-    
+
+    // Enforce the simplified relationship model:
+    // - contains: concept -> course
+    // - prerequisite: course -> course
+    const fromNode = nodes.get(fromNodeId);
+    const toNode = nodes.get(toNodeId);
+    if (!fromNode || !toNode) {
+        showStatus('节点不存在，请刷新后重试', 'error');
+        return;
+    }
+    if (edgeType === 'contains') {
+        if (fromNode.type === 'course' || toNode.type !== 'course') {
+            showStatus('“包含”关系必须是：概念 → 课程', 'error');
+            return;
+        }
+    }
+    if (edgeType === 'prerequisite') {
+        if (fromNode.type !== 'course' || toNode.type !== 'course') {
+            showStatus('“前置”关系必须是：课程 → 课程', 'error');
+            return;
+        }
+    }
+
     const edgeId = fromNodeId + '_' + toNodeId;
     
     // 检查关系是否已存在
@@ -236,17 +376,13 @@ function addEdge() {
     }
     
     const labelMap = {
-        'prerequisite': '前置',
-        'follow': '后继',
-        'related': '相关',
-        'applied': '应用'
+        'contains': '包含',
+        'prerequisite': '前置'
     };
     
     const colorMap = {
-        'prerequisite': '#FF6B6B',
-        'follow': '#4ECDC4',
-        'related': '#95E1D3',
-        'applied': '#FFD93D'
+        'contains': '#95E1D3',
+        'prerequisite': '#FF6B6B'
     };
     
     const edgeData = {
@@ -286,10 +422,24 @@ function deleteSelected() {
     // 删除节点
     nodes.remove(selectedNodeId);
     selectedNodeId = null;
+    selectedEdgeId = null;
     updateNodeInfo();
     updateNodeSelectors();
     updateJSONPreview();
     showStatus('节点已删除', 'success');
+}
+
+// 删除选中关系
+function deleteSelectedEdge() {
+    if (!selectedEdgeId) {
+        showStatus('请先选中一条关系', 'error');
+        return;
+    }
+    edges.remove(selectedEdgeId);
+    selectedEdgeId = null;
+    updateNodeInfo();
+    updateJSONPreview();
+    showStatus('关系已删除', 'success');
 }
 
 // 清空所有
@@ -298,6 +448,7 @@ function clearAll() {
         nodes.clear();
         edges.clear();
         selectedNodeId = null;
+        selectedEdgeId = null;
         updateNodeInfo();
         updateNodeSelectors();
         updateJSONPreview();
@@ -334,16 +485,38 @@ function clearCacheAndReload() {
 function updateNodeInfo() {
     const panel = document.getElementById('nodeInfoPanel');
     
-    if (!selectedNodeId) {
+    if (!selectedNodeId && !selectedEdgeId) {
         panel.innerHTML = '<p style="color: #999; font-size: 13px;">点击图表中的节点查看详情</p>';
         return;
     }
-    
+
+    if (selectedEdgeId) {
+        const edge = edges.get(selectedEdgeId);
+        if (!edge) return;
+        const fromNode = nodes.get(edge.from);
+        const toNode = nodes.get(edge.to);
+        const fromLabel = fromNode ? fromNode.label : edge.from;
+        const toLabel = toNode ? toNode.label : edge.to;
+        panel.innerHTML = `
+            <h3>关系详情</h3>
+            <div class="node-detail"><strong>类型：</strong> ${edge.label || edge.type || '关系'}</div>
+            <div class="node-detail"><strong>从：</strong> ${fromLabel}</div>
+            <div class="node-detail"><strong>到：</strong> ${toLabel}</div>
+        `;
+        return;
+    }
+
     const node = nodes.get(selectedNodeId);
     if (!node) return;
     
     let html = `<h3>${node.label}</h3>`;
-    html += `<div class="node-detail"><strong>类型：</strong> ${node.type === 'concept' ? '概念' : '课程'}</div>`;
+    let typeLabel = '概念';
+    if (node.type === 'course') {
+        typeLabel = '课程';
+    } else if (node.type && node.type !== 'concept') {
+        typeLabel = node.type;
+    }
+    html += `<div class="node-detail"><strong>类型：</strong> ${typeLabel}</div>`;
     
     if (node.description) {
         html += `<div class="node-detail"><strong>描述：</strong> ${node.description}</div>`;
@@ -363,6 +536,15 @@ function updateNodeInfo() {
         node.courses.split('\n').forEach(course => {
             if (course.trim()) {
                 html += `<div class="node-detail" style="margin-left: 10px; color: #666;">• ${course.trim()}</div>`;
+            }
+        });
+    }
+
+    if (node.projects) {
+        html += `<div class="node-detail"><strong>🧪 推荐项目：</strong></div>`;
+        node.projects.split('\n').forEach(project => {
+            if (project.trim()) {
+                html += `<div class="node-detail" style="margin-left: 10px; color: #666;">• ${project.trim()}</div>`;
             }
         });
     }
@@ -545,8 +727,51 @@ function loadFromLocal() {
 }
 
 // 加载默认数据（34个节点的完整知识地图）
-function loadDefaultData() {
-    const defaultData = {"nodes":[{"id":"concept_cs","label":"Computer Science","type":"concept","description":"Core computer science discipline including programming, algorithms, and systems","shape":"diamond","color":{"background":"#667eea","border":"#5568d3"},"font":{"size":16,"color":"#fff"}},{"id":"concept_math","label":"Mathematics Foundations","type":"concept","description":"Mathematical foundations for computing","shape":"diamond","color":{"background":"#4facfe","border":"#3d8fd9"},"font":{"size":16,"color":"#fff"}},{"id":"concept_systems","label":"System Design","type":"concept","description":"Large-scale systems architecture and design","shape":"diamond","color":{"background":"#43e97b","border":"#38c178"},"font":{"size":16,"color":"#fff"}},{"id":"concept_ml","label":"Machine Learning & AI","type":"concept","description":"Data-driven intelligence and learning systems","shape":"diamond","color":{"background":"#fa709a","border":"#d85a7a"},"font":{"size":16,"color":"#fff"}},{"id":"concept_economics","label":"Economics","type":"concept","description":"Economic theory and analysis","shape":"diamond","color":{"background":"#feca57","border":"#ffa502"},"font":{"size":16,"color":"#000"}},{"id":"concept_soft_skills","label":"Soft Skills","type":"concept","description":"Communication, teamwork, and leadership","shape":"diamond","color":{"background":"#ff6348","border":"#ff4518"},"font":{"size":16,"color":"#fff"}},{"id":"skill_programming","label":"Programming Skills","type":"concept","description":"Core programming and coding abilities","shape":"diamond","color":{"background":"#764ba2","border":"#5d3a7d"},"font":{"size":16,"color":"#fff"}},{"id":"skill_problem_solving","label":"Problem Solving","type":"concept","description":"Algorithmic thinking and optimization","shape":"diamond","color":{"background":"#f093fb","border":"#d76fd3"},"font":{"size":16,"color":"#fff"}},{"id":"course_python","label":"Python Programming","type":"course","description":"Learn Python fundamentals and object-oriented programming","books":"Python Crash Course - Eric Matthes; Fluent Python - Luciano Ramalho","courses":"MIT 6.0001; Codecademy Python; DataCamp Python for Beginners","shape":"box","color":{"background":"#3776ab","border":"#1d4d6b"},"font":{"size":13,"color":"#fff"}},{"id":"course_java","label":"Java OOP","type":"course","description":"Java programming and object-oriented design principles","books":"Head First Java - Kathy Sierra; Effective Java - Joshua Bloch","courses":"Oracle University Java; Udacity Java Nanodegree","shape":"box","color":{"background":"#f89917","border":"#cc7a0f"},"font":{"size":13,"color":"#fff"}},{"id":"course_cpp","label":"C++ Systems Programming","type":"course","description":"C++ for systems-level and performance-critical programming","books":"C++ Programming Language - Bjarne Stroustrup; Effective C++","courses":"MIT 6.S096 Effective C++; Udacity C++ Nanodegree","shape":"box","color":{"background":"#00599c","border":"#00447a"},"font":{"size":13,"color":"#fff"}},{"id":"course_javascript","label":"JavaScript Web Development","type":"course","description":"JavaScript for frontend and web development","books":"You Dont Know JS - Kyle Simpson; Eloquent JavaScript","courses":"The Odin Project; freeCodeCamp JavaScript; Codecademy JS","shape":"box","color":{"background":"#f1e05a","border":"#c8aa00"},"font":{"size":13,"color":"#000"}},{"id":"course_dsa","label":"Data Structures & Algorithms","type":"course","description":"Essential algorithms, data structures, and complexity analysis","books":"Introduction to Algorithms (CLRS); Algorithms - Sedgewick & Wayne","courses":"MIT 6.006; Stanford CS161; Udacity DSA Nanodegree","shape":"box","color":{"background":"#e34c26","border":"#b83918"},"font":{"size":13,"color":"#fff"}},{"id":"course_oop","label":"OOP Design & Patterns","type":"course","description":"Object-oriented principles, design patterns, and refactoring","books":"Design Patterns - Gang of Four; Refactoring - Martin Fowler","courses":"Pluralsight Design Patterns; LinkedIn Learning OOP","shape":"box","color":{"background":"#9f7aea","border":"#6b4da8"},"font":{"size":13,"color":"#fff"}},{"id":"course_database","label":"Database Systems","type":"course","description":"Relational databases, SQL, design, and optimization","books":"Database Concepts - Silberschatz; SQL Performance Explained","courses":"Stanford CS145; CMU 15-445; Udacity SQL","shape":"box","color":{"background":"#336791","border":"#1f3f5c"},"font":{"size":13,"color":"#fff"}},{"id":"course_os","label":"Operating Systems","type":"course","description":"Process management, memory, file systems, concurrency","books":"Operating Systems Concepts - Silberschatz; Modern OS - Tanenbaum","courses":"MIT 6.004; Berkeley CS162; MIT 6.S081","shape":"box","color":{"background":"#1e1e1e","border":"#000"},"font":{"size":13,"color":"#fff"}},{"id":"course_networks","label":"Computer Networks","type":"course","description":"OSI model, TCP/IP, HTTP, DNS, routing, network security","books":"Computer Networks - Tanenbaum; Top-Down Approach - Kurose & Ross","courses":"Stanford CS144; Udacity Networking; Coursera Networks","shape":"box","color":{"background":"#cc342d","border":"#8b2320"},"font":{"size":13,"color":"#fff"}},{"id":"course_web_full_stack","label":"Web Development Full Stack","type":"course","description":"Full-stack web development: frontend, backend, deployment","books":"Eloquent JavaScript; You Dont Know JS; Full Stack JS - Bos","courses":"The Odin Project; freeCodeCamp; ZeroToMastery Web Dev","shape":"box","color":{"background":"#20c997","border":"#0f9c6b"},"font":{"size":13,"color":"#fff"}},{"id":"course_systems_design","label":"Systems Design & Architecture","type":"course","description":"Scalability, availability, caching, distributed systems","books":"Designing Data-Intensive Applications - Kleppmann; System Design Interview - Xu","courses":"ByteByteGo System Design; AlgoExpert System Design","shape":"box","color":{"background":"#2d3436","border":"#0a0a0a"},"font":{"size":13,"color":"#fff"}},{"id":"course_discrete_math","label":"Discrete Mathematics","type":"course","description":"Set theory, logic, graph theory, combinatorics","books":"Discrete Mathematics and Applications - Kenneth Rosen; Concrete Mathematics","courses":"MIT 6.042 Math for CS; Udacity Discrete Math","shape":"box","color":{"background":"#5865f2","border":"#3e4fb5"},"font":{"size":13,"color":"#fff"}},{"id":"course_linear_algebra","label":"Linear Algebra","type":"course","description":"Vectors, matrices, transformations, eigenvalues, applications to ML","books":"Introduction to Linear Algebra - Gilbert Strang; Linear Algebra Done Right","courses":"MIT 18.06; 3Blue1Brown Essence of Linear Algebra","shape":"box","color":{"background":"#0066cc","border":"#003d99"},"font":{"size":13,"color":"#fff"}},{"id":"course_probability_stats","label":"Probability & Statistics","type":"course","description":"Probability distributions, hypothesis testing, Bayesian inference","books":"Introduction to Probability - Bertsekas & Tsitsiklis; Statistical Rethinking","courses":"MIT 18.05; Stanford STATS 110; Coursera Statistics","shape":"box","color":{"background":"#00796b","border":"#004d40"},"font":{"size":13,"color":"#fff"}},{"id":"course_machine_learning","label":"Machine Learning Fundamentals","type":"course","description":"Supervised/unsupervised learning, feature engineering, model evaluation","books":"Hands-On ML - Aurélien Géron; Pattern Recognition and ML - Christopher Bishop","courses":"Andrew Ng ML Specialization; Fast.ai; Google ML Crash Course","shape":"box","color":{"background":"#ff7043","border":"#d84315"},"font":{"size":13,"color":"#fff"}},{"id":"course_deep_learning","label":"Deep Learning","type":"course","description":"Neural networks, CNNs, RNNs, LSTMs, Transformers, applications","books":"Deep Learning - Goodfellow & Bengio; Deep Learning for CV - Rosebrock","courses":"DeepLearning.AI Specialization; Fast.ai Practical DL; Stanford CS231N","shape":"box","color":{"background":"#e91e63","border":"#880e4f"},"font":{"size":13,"color":"#fff"}},{"id":"course_nlp","label":"Natural Language Processing","type":"course","description":"Text processing, word embeddings, language models, Transformers","books":"Speech and Language Processing - Jurafsky & Martin; NLP with Transformers","courses":"Stanford CS224N; DeepLearning.AI NLP; Hugging Face NLP Course","shape":"box","color":{"background":"#9c27b0","border":"#4a148c"},"font":{"size":13,"color":"#fff"}},{"id":"course_computer_vision","label":"Computer Vision","type":"course","description":"Image processing, feature detection, object detection, segmentation","books":"Computer Vision: Algorithms and Applications - Richard Szeliski","courses":"Stanford CS231N CNN; DeepLearning.AI CV Specialization; OpenCV","shape":"box","color":{"background":"#00bcd4","border":"#006064"},"font":{"size":13,"color":"#fff"}},{"id":"course_data_analysis","label":"Data Analysis & Visualization","type":"course","description":"Data cleaning, exploratory analysis, statistical analysis, visualization","books":"Python for Data Analysis - Wes McKinney; Data Visualization - Claus Wilke","courses":"DataCamp; Google Data Analytics; Tableau Public","shape":"box","color":{"background":"#3498db","border":"#2c3e50"},"font":{"size":13,"color":"#fff"}},{"id":"course_microeconomics","label":"Microeconomics","type":"course","description":"Individual economic decisions, supply/demand, market structures","books":"Principles of Microeconomics - Gregory Mankiw; Intermediate Microeconomics - Varian","courses":"MIT 14.01 Microeconomics; Yale ECON 115; Khan Academy","shape":"box","color":{"background":"#f39c12","border":"#c67f0a"},"font":{"size":13,"color":"#fff"}},{"id":"course_macroeconomics","label":"Macroeconomics","type":"course","description":"GDP, unemployment, inflation, monetary/fiscal policy, growth","books":"Macroeconomics - Gregory Mankiw; Advanced Macroeconomics - David Romer","courses":"MIT 14.02 Macroeconomics; Yale ECON 119; Khan Academy","shape":"box","color":{"background":"#e74c3c","border":"#c0392b"},"font":{"size":13,"color":"#fff"}},{"id":"course_communication","label":"Technical Communication","type":"course","description":"Technical writing, presentations, documentation, team communication","books":"Slide:ology - Nancy Duarte; Technical Writing - Andrew Etter","courses":"Toastmasters; Coursera Communication Skills; Skillshare","shape":"box","color":{"background":"#16a085","border":"#0d5a47"},"font":{"size":13,"color":"#fff"}},{"id":"course_teamwork","label":"Team Collaboration & Agile","type":"course","description":"Agile methodology, Scrum, Git collaboration, code review","books":"Peopleware - Tom DeMarco; The Phoenix Project - Gene Kim","courses":"Scrum.org Fundamentals; Coursera Agile; Atlassian Git Tutorials","shape":"box","color":{"background":"#8e44ad","border":"#512e5f"},"font":{"size":13,"color":"#fff"}},{"id":"practice_coding","label":"Coding Practice & Competitions","type":"course","description":"LeetCode problems, competitive programming, problem-solving practice","books":"Cracking the Coding Interview - Gayle Laakmann McDowell","courses":"LeetCode Premium; Codeforces; HackerRank; CodeSignal","shape":"box","color":{"background":"#34495e","border":"#1c2833"},"font":{"size":13,"color":"#fff"}},{"id":"practice_projects","label":"Real-World Projects","type":"course","description":"Personal projects, open-source contributions, internships, products","books":"The Mythical Man-Month - Frederick Brooks Jr.; Code Complete","courses":"GitHub Challenges; FreeCodeCamp Projects; Udacity Capstones","shape":"box","color":{"background":"#27ae60","border":"#1e8449"},"font":{"size":13,"color":"#fff"}},{"id":"practice_research","label":"Research & Literature Review","type":"course","description":"Reading papers, understanding research, staying current with AI/ML","books":"How to Read a Paper - S. Keshav; Research Methods","courses":"ArXiv.org; Google Scholar; Medium; Research blogs","shape":"box","color":{"background":"#2980b9","border":"#1b4f72"},"font":{"size":13,"color":"#fff"}}],"edges":[{"id":"cs_to_skill_prog","from":"concept_cs","to":"skill_programming","label":"requires","type":"related","arrows":"to","color":{"color":"#667eea"},"font":{"size":12}},{"id":"cs_to_skill_prob","from":"concept_cs","to":"skill_problem_solving","label":"requires","type":"related","arrows":"to","color":{"color":"#667eea"},"font":{"size":12}},{"id":"cs_to_math","from":"concept_cs","to":"concept_math","label":"depends on","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"},"font":{"size":12}},{"id":"skill_prog_to_py","from":"skill_programming","to":"course_python","label":"learn","type":"related","arrows":"to","color":{"color":"#667eea"},"font":{"size":12}},{"id":"skill_prog_to_java","from":"skill_programming","to":"course_java","label":"learn","type":"related","arrows":"to","color":{"color":"#667eea"},"font":{"size":12}},{"id":"skill_prog_to_cpp","from":"skill_programming","to":"course_cpp","label":"learn","type":"related","arrows":"to","color":{"color":"#667eea"},"font":{"size":12}},{"id":"skill_prog_to_js","from":"skill_programming","to":"course_javascript","label":"learn","type":"related","arrows":"to","color":{"color":"#667eea"},"font":{"size":12}},{"id":"py_to_dsa","from":"course_python","to":"course_dsa","label":"prerequisite","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"},"font":{"size":12}},{"id":"py_to_data_analysis","from":"course_python","to":"course_data_analysis","label":"prerequisite","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"},"font":{"size":12}},{"id":"py_to_ml","from":"course_python","to":"course_machine_learning","label":"prerequisite","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"},"font":{"size":12}},{"id":"dsa_to_systems_design","from":"course_dsa","to":"course_systems_design","label":"prerequisite","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"},"font":{"size":12}},{"id":"dsa_to_problem_solving","from":"course_dsa","to":"skill_problem_solving","label":"builds","type":"applied","arrows":"to","color":{"color":"#FFD93D"},"font":{"size":12}},{"id":"js_to_web_dev","from":"course_javascript","to":"course_web_full_stack","label":"prerequisite","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"},"font":{"size":12}},{"id":"db_to_systems","from":"course_database","to":"course_systems_design","label":"component of","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"os_to_systems","from":"course_os","to":"course_systems_design","label":"component of","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"networks_to_systems","from":"course_networks","to":"course_systems_design","label":"component of","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"math_to_discrete","from":"concept_math","to":"course_discrete_math","label":"includes","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"math_to_linear","from":"concept_math","to":"course_linear_algebra","label":"includes","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"math_to_prob","from":"concept_math","to":"course_probability_stats","label":"includes","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"linear_to_ml","from":"course_linear_algebra","to":"course_machine_learning","label":"prerequisite","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"},"font":{"size":12}},{"id":"prob_to_ml","from":"course_probability_stats","to":"course_machine_learning","label":"prerequisite","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"},"font":{"size":12}},{"id":"ml_to_dl","from":"course_machine_learning","to":"course_deep_learning","label":"prerequisite","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"},"font":{"size":12}},{"id":"ml_concept_to_ml_course","from":"concept_ml","to":"course_machine_learning","label":"includes","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"ml_concept_to_dl","from":"concept_ml","to":"course_deep_learning","label":"includes","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"ml_concept_to_nlp","from":"concept_ml","to":"course_nlp","label":"includes","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"ml_concept_to_cv","from":"concept_ml","to":"course_computer_vision","label":"includes","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"dl_to_nlp","from":"course_deep_learning","to":"course_nlp","label":"prerequisite","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"},"font":{"size":12}},{"id":"dl_to_cv","from":"course_deep_learning","to":"course_computer_vision","label":"prerequisite","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"},"font":{"size":12}},{"id":"econ_concept_to_micro","from":"concept_economics","to":"course_microeconomics","label":"includes","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"econ_concept_to_macro","from":"concept_economics","to":"course_macroeconomics","label":"includes","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"micro_to_macro","from":"course_microeconomics","to":"course_macroeconomics","label":"prerequisite","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"},"font":{"size":12}},{"id":"econ_to_math","from":"concept_economics","to":"concept_math","label":"depends on","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"},"font":{"size":12}},{"id":"soft_to_comm","from":"concept_soft_skills","to":"course_communication","label":"includes","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"soft_to_team","from":"concept_soft_skills","to":"course_teamwork","label":"includes","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"skill_prog_to_practice","from":"skill_programming","to":"practice_coding","label":"practice","type":"applied","arrows":"to","color":{"color":"#FFD93D"},"font":{"size":12}},{"id":"practice_coding_to_projects","from":"practice_coding","to":"practice_projects","label":"advances to","type":"follow","arrows":"to","color":{"color":"#4ECDC4"},"font":{"size":12}},{"id":"teamwork_to_projects","from":"course_teamwork","to":"practice_projects","label":"applied in","type":"applied","arrows":"to","color":{"color":"#FFD93D"},"font":{"size":12}},{"id":"research_to_ml","from":"practice_research","to":"course_machine_learning","label":"frontier knowledge","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"research_to_dl","from":"practice_research","to":"course_deep_learning","label":"frontier knowledge","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"research_to_systems","from":"practice_research","to":"course_systems_design","label":"frontier knowledge","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}},{"id":"systems_concept_to_course","from":"concept_systems","to":"course_systems_design","label":"includes","type":"related","arrows":"to","color":{"color":"#95E1D3"},"font":{"size":12}}]};
+async function loadDefaultData() {
+    try {
+        // 尝试从 knowledge-map-cn.json 加载中文数据
+        const response = await fetch('knowledge-map-cn.json?t=' + new Date().getTime());
+        if (response.ok) {
+            const data = await response.json();
+            if (data.nodes && data.edges) {
+                // 不显示悬浮 tooltip：移除 title 字段
+                const cleanNodes = data.nodes.map(n => {
+                    const copy = { ...n };
+                    delete copy.title;
+                    return copy;
+                });
+                nodes.add(cleanNodes);
+                edges.add(data.edges);
+                updateNodeSelectors();
+                updateJSONPreview();
+                network.fit();
+                return;
+            }
+        }
+    } catch (error) {
+        console.log('Failed to load from knowledge-map-cn.json:', error);
+    }
+    
+    // 如果加载失败，使用英文默认数据
+    console.log('Loading fallback data - using sample dataset');
+    // 这是一个简化的备选方案 - 在生产环境中应该包含完整的中文数据
+    const defaultData = {
+        "nodes": [
+            {"id":"concept_cs","label":"计算机科学","type":"学科","description":"计算机科学的基础学科","shape":"diamond","color":{"background":"#667eea","border":"#5568d3"},"font":{"size":16,"color":"#fff"}},
+            {"id":"concept_math","label":"数学基础","type":"学科","description":"计算的数学基础","shape":"diamond","color":{"background":"#4facfe","border":"#3d8fd9"},"font":{"size":16,"color":"#fff"}},
+            {"id":"course_python","label":"Python编程","type":"course","description":"Python基础","shape":"box","color":{"background":"#3776ab","border":"#1d4d6b"},"font":{"size":13,"color":"#fff"}},
+            {"id":"course_dsa","label":"数据结构与算法","type":"course","description":"算法和数据结构","shape":"box","color":{"background":"#e34c26","border":"#b83918"},"font":{"size":13,"color":"#fff"}}
+        ],
+        "edges": [
+            {"from":"concept_cs","to":"course_python","label":"包含","type":"contains","arrows":"to","color":{"color":"#95E1D3"}},
+            {"from":"concept_math","to":"course_python","label":"包含","type":"contains","arrows":"to","color":{"color":"#95E1D3"}},
+            {"from":"course_python","to":"course_dsa","label":"前置","type":"prerequisite","arrows":"to","color":{"color":"#FF6B6B"}}
+        ]
+    };
+    
+    // 保存原始备份
+    allNodesBackup = JSON.parse(JSON.stringify(defaultData.nodes));
+    allEdgesBackup = JSON.parse(JSON.stringify(defaultData.edges));
     
     nodes.add(defaultData.nodes);
     edges.add(defaultData.edges);
@@ -556,55 +781,161 @@ function loadDefaultData() {
 
 // 按概念标签过滤
 function filterByTag(tagId) {
-    const allNodes = nodes.get();
-    const allEdges = edges.get();
+    console.log('=== filterByTag called ===');
+    console.log('tagId:', tagId);
+    
+    // 获取当前所有节点
+    const allCurrentNodes = nodes.get();
+    const allCurrentEdges = edges.get();
     
     // 更新按钮状态
     document.querySelectorAll('.tag-btn').forEach(btn => {
         btn.classList.remove('active');
     });
-    if (event.target) {
-        event.target.classList.add('active');
-    }
     
     if (!tagId) {
         // 显示全部
-        nodes.update(allNodes);
-        edges.update(allEdges);
-        network.fit();
+        console.log('Showing all nodes');
+        document.querySelectorAll('.tag-btn')[0].classList.add('active');
+        
+        // 移除所有节点的hidden标签
+        const updatedNodes = allCurrentNodes.map(node => ({
+            ...node,
+            hidden: false
+        }));
+        
+        const updatedEdges = allCurrentEdges.map(edge => ({
+            ...edge,
+            hidden: false
+        }));
+        
+        try {
+            nodes.update(updatedNodes);
+            edges.update(updatedEdges);
+            network.fit({ animation: { duration: 400, easingFunction: 'easeInOutQuad' } });
+        } catch(e) {
+            console.error('Error updating nodes/edges:', e);
+        }
         return;
     }
     
-    // 获取与该标签相关的所有节点
+    // 标记当前按钮为活动
+    document.querySelectorAll('.tag-btn').forEach(btn => {
+        if (btn.textContent === getNodeLabel(tagId)) {
+            btn.classList.add('active');
+        }
+    });
+    
+    // 获取与该标签直接相连的节点（只查一层，不递归）
     const relatedNodeIds = new Set([tagId]);
-    const toExplore = [tagId];
+    allEdgesBackup.forEach(edge => {
+        if (edge.from === tagId) {
+            relatedNodeIds.add(edge.to);
+        }
+        if (edge.to === tagId) {
+            relatedNodeIds.add(edge.from);
+        }
+    });
     
-    while (toExplore.length > 0) {
-        const currentId = toExplore.pop();
-        allEdges.forEach(edge => {
-            if (edge.from === currentId && !relatedNodeIds.has(edge.to)) {
-                relatedNodeIds.add(edge.to);
-                toExplore.push(edge.to);
-            }
-            if (edge.to === currentId && !relatedNodeIds.has(edge.from)) {
-                relatedNodeIds.add(edge.from);
-                toExplore.push(edge.from);
-            }
-        });
-    }
+    console.log('Directly related node IDs:', Array.from(relatedNodeIds));
+    console.log('Related nodes count:', relatedNodeIds.size);
     
-    // 隐藏无关节点和边
-    nodes.update(allNodes.map(node => ({
+    // 更新所有节点的hidden状态
+    const updatedNodes = allCurrentNodes.map(node => ({
         ...node,
         hidden: !relatedNodeIds.has(node.id)
-    })));
+    }));
     
-    edges.update(allEdges.map(edge => ({
+    // 更新所有边的hidden状态
+    const updatedEdges = allCurrentEdges.map(edge => ({
         ...edge,
         hidden: !relatedNodeIds.has(edge.from) || !relatedNodeIds.has(edge.to)
-    })));
+    }));
     
-    network.fit();
+    console.log('Updating', updatedNodes.length, 'nodes and', updatedEdges.length, 'edges');
+    console.log('Hidden nodes:', updatedNodes.filter(n => n.hidden).length);
+    console.log('Hidden edges:', updatedEdges.filter(e => e.hidden).length);
+    
+    try {
+        nodes.update(updatedNodes);
+        edges.update(updatedEdges);
+        const visibleNodeIds = updatedNodes.filter(n => !n.hidden).map(n => n.id);
+        if (visibleNodeIds.length > 0) {
+            network.fit({
+                nodes: visibleNodeIds,
+                animation: { duration: 400, easingFunction: 'easeInOutQuad' }
+            });
+        }
+        console.log('Filter applied successfully');
+    } catch(e) {
+        console.error('Error applying filter:', e);
+        console.error('Error details:', e.stack);
+    }
+}
+
+// 点击节点时展开其关联节点（只扩展可见集合，不强制隐藏其他已可见节点）
+function expandRelatedNodes(nodeId) {
+    const allCurrentNodes = nodes.get();
+    const allCurrentEdges = edges.get();
+
+    if (!nodeId) {
+        // 显示全部
+        const updatedNodes = allCurrentNodes.map(node => ({ ...node, hidden: false }));
+        const updatedEdges = allCurrentEdges.map(edge => ({ ...edge, hidden: false }));
+        try {
+            nodes.update(updatedNodes);
+            edges.update(updatedEdges);
+            network.fit({ animation: { duration: 400, easingFunction: 'easeInOutQuad' } });
+        } catch (e) {
+            console.error('Error resetting nodes/edges:', e);
+        }
+        return;
+    }
+
+    // 计算关联节点（一层）
+    const relatedNodeIds = new Set([nodeId]);
+    allEdgesBackup.forEach(edge => {
+        if (edge.from === nodeId) relatedNodeIds.add(edge.to);
+        if (edge.to === nodeId) relatedNodeIds.add(edge.from);
+    });
+
+    // 展开关联节点（不收缩已可见节点）
+    const updatedNodes = allCurrentNodes.map(node => {
+        if (relatedNodeIds.has(node.id)) {
+            return { ...node, hidden: false };
+        }
+        return node;
+    });
+
+    const visibleNodeIds = updatedNodes.filter(n => !n.hidden).map(n => n.id);
+    const visibleNodeSet = new Set(visibleNodeIds);
+    const updatedEdges = allCurrentEdges.map(edge => ({
+        ...edge,
+        hidden: !visibleNodeSet.has(edge.from) || !visibleNodeSet.has(edge.to)
+    }));
+
+    try {
+        nodes.update(updatedNodes);
+        edges.update(updatedEdges);
+        if (visibleNodeIds.length > 0) {
+            network.fit({
+                nodes: visibleNodeIds,
+                animation: { duration: 300, easingFunction: 'easeInOutQuad' }
+            });
+        }
+    } catch (e) {
+        console.error('Error expanding related nodes:', e);
+    }
+}
+
+// 获取节点标签（用于匹配按钮文本）
+function getNodeLabel(nodeId) {
+    const node = nodes.get(nodeId);
+    if (node && node.label) {
+        // 如果标签包含换行符，取第一部分
+        return node.label.split('\n')[0];
+    }
+    return '';
 }
 
 // 设置事件监听
