@@ -13,6 +13,11 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: #f5f7fa;
@@ -22,6 +27,7 @@
         .container {
             display: flex;
             height: 100vh;
+            overflow: hidden;
         }
 
         .sidebar {
@@ -191,6 +197,7 @@
         #network {
             width: 100%;
             flex: 1;
+            min-height: 0;   /* 防止 flex 子项溢出导致尺寸抖动 */
             border-radius: 0;
         }
 

@@ -58,10 +58,16 @@ async function loadSampleData() {
             edges.add(data.edges);
             updateNodeSelectors();
             updateJSONPreview();
-            network.fit();
             updateConceptTags();
             // 标记版本
             localStorage.setItem('knowledgeMapVersion', 'v2.0-cn');
+            
+            // 物理布局稳定后冻结
+            network.once('stabilizationIterationsDone', function() {
+                network.setOptions({ physics: false });
+                network.fit();
+            });
+            network.stabilize(200);
         }
     } catch (error) {
         console.log('Error loading sample data:', error);
@@ -194,10 +200,11 @@ function initializeNetwork() {
     };
     
     const options = {
+        autoResize: false,  // 关闭自动检测容器大小变化
         physics: {
             enabled: true,
             stabilization: {
-                iterations: 200
+                enabled: false
             },
             barnesHut: {
                 gravitationalConstant: -15000,
@@ -206,10 +213,16 @@ function initializeNetwork() {
                 springConstant: 0.04
             }
         },
+        edges: {
+            smooth: {
+                type: 'continuous'
+            }
+        },
         interaction: {
             navigationButtons: true,
-            keyboard: true,
-            zoomView: true
+            keyboard: false,
+            zoomView: true,
+            dragView: true
         },
         nodes: {
             margin: 10,
@@ -220,6 +233,10 @@ function initializeNetwork() {
     };
     
     network = new vis.Network(container, data, options);
+    
+    // autoResize 关闭后，手动设置一次画布大小
+    var rect = container.getBoundingClientRect();
+    network.setSize(rect.width + 'px', rect.height + 'px');
     
     // 点击事件
     network.on('click', function(params) {
@@ -298,7 +315,7 @@ function addNode() {
             { background: '#87CEEB', border: '#4682B4', highlight: { background: '#6CB4EE', border: '#36648B' } },
         font: {
             size: isConcept ? 16 : 14,
-            color: '#000'
+            color: isConcept ? '#333' : '#fff'
         }
     };
     
@@ -744,7 +761,11 @@ async function loadDefaultData() {
                 edges.add(data.edges);
                 updateNodeSelectors();
                 updateJSONPreview();
-                network.fit();
+                network.once('stabilizationIterationsDone', function() {
+                    network.setOptions({ physics: false });
+                    network.fit();
+                });
+                network.stabilize(200);
                 return;
             }
         }
@@ -777,6 +798,11 @@ async function loadDefaultData() {
     edges.add(defaultData.edges);
     updateNodeSelectors();
     updateJSONPreview();
+    network.once('stabilizationIterationsDone', function() {
+        network.setOptions({ physics: false });
+        network.fit();
+    });
+    network.stabilize(200);
 }
 
 // 按概念标签过滤
