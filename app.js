@@ -62,9 +62,7 @@ async function loadSampleData() {
             // 标记版本
             localStorage.setItem('knowledgeMapVersion', 'v2.0-cn');
             
-            // 物理布局稳定后冻结
             network.once('stabilizationIterationsDone', function() {
-                network.setOptions({ physics: false });
                 network.fit();
             });
             network.stabilize(200);
@@ -824,7 +822,6 @@ async function loadDefaultData() {
                 updateJSONPreview();
                 updateConceptTags();
                 network.once('stabilizationIterationsDone', function() {
-                    network.setOptions({ physics: false });
                     network.fit();
                 });
                 network.stabilize(200);
@@ -861,7 +858,6 @@ async function loadDefaultData() {
     updateNodeSelectors();
     updateJSONPreview();
     network.once('stabilizationIterationsDone', function() {
-        network.setOptions({ physics: false });
         network.fit();
     });
     network.stabilize(200);
