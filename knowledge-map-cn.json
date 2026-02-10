@@ -1960,6 +1960,388 @@
         "color": "#fff"
       },
       "title": "<b>伦理与责任</b>\n\n利益相关者、风险与原则：做负责任的选择\n\n📚 教科书:\nJustice: What's the Right Thing to Do? - Michael Sandel\n\n🎓 课程:\nHarvardX - Justice\n\n🧪 项目:\n项目：对一个真实决策写伦理评估备忘录（影响/权衡/建议）"
+    },
+
+    {
+      "id": "course_exercise_fitness",
+      "label": "运动与体能训练",
+      "type": "course",
+      "description": "运动科学、训练计划与恢复：用科学方法管理体能",
+      "books": "Starting Strength - Mark Rippetoe\nExercise Physiology - McArdle, Katch & Katch (选读)",
+      "courses": "Coursera - Science of Exercise (University of Colorado)\nACE Fitness (公开资源)",
+      "projects": "项目：制定 8 周训练计划并执行，记录数据（体重/力量/心率）并复盘调整",
+      "shape": "box",
+      "color": {
+        "background": "#ec407a",
+        "border": "#ad1457"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>运动与体能训练</b>\n\n运动科学、训练计划与恢复：用科学方法管理体能\n\n📚 教科书:\nStarting Strength - Mark Rippetoe\nExercise Physiology - McArdle, Katch & Katch (选读)\n\n🎓 课程:\nCoursera - Science of Exercise (University of Colorado)\nACE Fitness (公开资源)\n\n🧪 项目:\n项目：制定 8 周训练计划并执行，记录数据（体重/力量/心率）并复盘调整"
+    },
+    {
+      "id": "course_real_estate",
+      "label": "房产知识与购房实务",
+      "type": "course",
+      "description": "房产市场、贷款、税费与法律：做出明智的购房决策",
+      "books": "The Book on Rental Property Investing - Brandon Turner\n购房实务指南（本地出版物）",
+      "courses": "Khan Academy - Housing (选读)\n本地房产政策与流程资料",
+      "projects": "项目：完成一份购房可行性分析（预算/区域/贷款方案/税费/风险清单）",
+      "shape": "box",
+      "color": {
+        "background": "#f39c12",
+        "border": "#c67f0a"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>房产知识与购房实务</b>\n\n房产市场、贷款、税费与法律：做出明智的购房决策\n\n📚 教科书:\nThe Book on Rental Property Investing - Brandon Turner\n购房实务指南（本地出版物）\n\n🎓 课程:\nKhan Academy - Housing (选读)\n本地房产政策与流程资料\n\n🧪 项目:\n项目：完成一份购房可行性分析（预算/区域/贷款方案/税费/风险清单）"
+    },
+    {
+      "id": "course_relationship_skills",
+      "label": "亲密关系经营",
+      "type": "course",
+      "description": "依恋、信任与冲突修复：经营长期稳定的亲密关系",
+      "books": "The Seven Principles for Making Marriage Work - John Gottman\nAttached - Amir Levine & Rachel Heller",
+      "courses": "Coursera - The Science of Well-Being (Yale，选读)\nGottman Institute 公开资源",
+      "projects": "项目：做 4 周关系日志（互动-情绪-改善行动），总结 3 条个人关系原则",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>亲密关系经营</b>\n\n依恋、信任与冲突修复：经营长期稳定的亲密关系\n\n📚 教科书:\nThe Seven Principles for Making Marriage Work - John Gottman\nAttached - Amir Levine & Rachel Heller\n\n🎓 课程:\nCoursera - The Science of Well-Being (Yale，选读)\nGottman Institute 公开资源\n\n🧪 项目:\n项目：做 4 周关系日志（互动-情绪-改善行动），总结 3 条个人关系原则"
+    },
+    {
+      "id": "course_job_interview",
+      "label": "求职与面试",
+      "type": "course",
+      "description": "求职策略、面试准备与谈薪：高效找到匹配岗位",
+      "books": "What Color Is Your Parachute? - Richard N. Bolles\nCracking the Coding Interview - Gayle Laakmann McDowell (技术岗)",
+      "courses": "Coursera - Career Success Specialization\nLinkedIn Learning - Interviewing Skills",
+      "projects": "项目：完成 5 次模拟面试（含行为/技术/案例），每次写复盘并迭代回答",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>求职与面试</b>\n\n求职策略、面试准备与谈薪：高效找到匹配岗位\n\n📚 教科书:\nWhat Color Is Your Parachute? - Richard N. Bolles\nCracking the Coding Interview - Gayle Laakmann McDowell (技术岗)\n\n🎓 课程:\nCoursera - Career Success Specialization\nLinkedIn Learning - Interviewing Skills\n\n🧪 项目:\n项目：完成 5 次模拟面试（含行为/技术/案例），每次写复盘并迭代回答"
+    },
+    {
+      "id": "course_personal_branding",
+      "label": "简历与个人品牌",
+      "type": "course",
+      "description": "简历、作品集与在线形象：让目标受众看到你的价值",
+      "books": "Show Your Work! - Austin Kleon\nBuilding a StoryBrand - Donald Miller",
+      "courses": "LinkedIn Learning - Writing a Resume\nGoogle Career Certificates (简历部分)",
+      "projects": "项目：完成简历+LinkedIn/个人主页+作品集，收集 3 人反馈并迭代",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>简历与个人品牌</b>\n\n简历、作品集与在线形象：让目标受众看到你的价值\n\n📚 教科书:\nShow Your Work! - Austin Kleon\nBuilding a StoryBrand - Donald Miller\n\n🎓 课程:\nLinkedIn Learning - Writing a Resume\nGoogle Career Certificates (简历部分)\n\n🧪 项目:\n项目：完成简历+LinkedIn/个人主页+作品集，收集 3 人反馈并迭代"
+    },
+    {
+      "id": "course_entrepreneurship",
+      "label": "创业实践",
+      "type": "course",
+      "description": "验证想法、最小可行产品与商业模式：从 0 到 1 的创业方法",
+      "books": "The Lean Startup - Eric Ries\nZero to One - Peter Thiel",
+      "courses": "Stanford Online - How to Start a Startup (YC)\nCoursera - Entrepreneurship Specialization (Wharton)",
+      "projects": "项目：完成商业模式画布+用户验证（>=10 位）+MVP 原型并测试",
+      "shape": "box",
+      "color": {
+        "background": "#f39c12",
+        "border": "#c67f0a"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>创业实践</b>\n\n验证想法、最小可行产品与商业模式：从 0 到 1 的创业方法\n\n📚 教科书:\nThe Lean Startup - Eric Ries\nZero to One - Peter Thiel\n\n🎓 课程:\nStanford Online - How to Start a Startup (YC)\nCoursera - Entrepreneurship Specialization (Wharton)\n\n🧪 项目:\n项目：完成商业模式画布+用户验证（>=10 位）+MVP 原型并测试"
+    },
+    {
+      "id": "course_cloud_devops",
+      "label": "云计算与DevOps",
+      "type": "course",
+      "description": "云服务、容器化、CI/CD 与监控：让应用可靠地上线运行",
+      "books": "The Phoenix Project - Kim, Behr, Spafford\nKubernetes in Action - Marko Luksa (进阶)",
+      "courses": "AWS Cloud Practitioner / Azure Fundamentals (入门)\nCoursera - Google Cloud Fundamentals",
+      "projects": "项目：将一个应用容器化并部署到云端（含 CI/CD Pipeline + 监控告警）",
+      "shape": "box",
+      "color": {
+        "background": "#3776ab",
+        "border": "#1d4d6b"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>云计算与DevOps</b>\n\n云服务、容器化、CI/CD 与监控：让应用可靠地上线运行\n\n📚 教科书:\nThe Phoenix Project - Kim, Behr, Spafford\nKubernetes in Action - Marko Luksa (进阶)\n\n🎓 课程:\nAWS Cloud Practitioner / Azure Fundamentals (入门)\nCoursera - Google Cloud Fundamentals\n\n🧪 项目:\n项目：将一个应用容器化并部署到云端（含 CI/CD Pipeline + 监控告警）"
+    },
+    {
+      "id": "course_ai_llm",
+      "label": "AI与大模型应用",
+      "type": "course",
+      "description": "Prompt工程、RAG与AI工具链：用大模型解决实际问题",
+      "books": "Artificial Intelligence: A Modern Approach - Russell & Norvig (选读)\nBuild a Large Language Model (From Scratch) - Sebastian Raschka",
+      "courses": "DeepLearning.AI - ChatGPT Prompt Engineering for Developers\nfast.ai - Practical Deep Learning",
+      "projects": "项目：用大模型 API 搭建一个实用工具（知识问答/文档摘要/代码助手）并上线",
+      "shape": "box",
+      "color": {
+        "background": "#3776ab",
+        "border": "#1d4d6b"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>AI与大模型应用</b>\n\nPrompt工程、RAG与AI工具链：用大模型解决实际问题\n\n📚 教科书:\nArtificial Intelligence: A Modern Approach - Russell & Norvig (选读)\nBuild a Large Language Model (From Scratch) - Sebastian Raschka\n\n🎓 课程:\nDeepLearning.AI - ChatGPT Prompt Engineering for Developers\nfast.ai - Practical Deep Learning\n\n🧪 项目:\n项目：用大模型 API 搭建一个实用工具（知识问答/文档摘要/代码助手）并上线"
+    },
+    {
+      "id": "course_first_aid",
+      "label": "急救与安全常识",
+      "type": "course",
+      "description": "心肺复苏、创伤处理与家庭安全：关键时刻能救命",
+      "books": "American Red Cross First Aid/CPR/AED Participant's Manual\n家庭急救手册（本地出版物）",
+      "courses": "Red Cross - First Aid/CPR/AED Online\nSt John Ambulance (公开资源)",
+      "projects": "项目：完成急救认证培训并制作家庭急救包+应急联络卡",
+      "shape": "box",
+      "color": {
+        "background": "#ec407a",
+        "border": "#ad1457"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>急救与安全常识</b>\n\n心肺复苏、创伤处理与家庭安全：关键时刻能救命\n\n📚 教科书:\nAmerican Red Cross First Aid/CPR/AED Participant's Manual\n家庭急救手册（本地出版物）\n\n🎓 课程:\nRed Cross - First Aid/CPR/AED Online\nSt John Ambulance (公开资源)\n\n🧪 项目:\n项目：完成急救认证培训并制作家庭急救包+应急联络卡"
+    },
+    {
+      "id": "course_insurance_planning",
+      "label": "保险与风险保障",
+      "type": "course",
+      "description": "保险类型、需求分析与配置：用保险转移重大风险",
+      "books": "The Insurance Handbook (选读)\n保险经纪人考试教材（基础部分）",
+      "courses": "Khan Academy - Insurance (选读)\n本地保险监管机构公开资料",
+      "projects": "项目：完成个人/家庭保险需求分析并输出配置方案（含保额/保费/优先级）",
+      "shape": "box",
+      "color": {
+        "background": "#546e7a",
+        "border": "#37474f"
+      },
+      "font": {
+        "size": 13,
+        "color": "#fff"
+      },
+      "title": "<b>保险与风险保障</b>\n\n保险类型、需求分析与配置：用保险转移重大风险\n\n📚 教科书:\nThe Insurance Handbook (选读)\n保险经纪人考试教材（基础部分）\n\n🎓 课程:\nKhan Academy - Insurance (选读)\n本地保险监管机构公开资料\n\n🧪 项目:\n项目：完成个人/家庭保险需求分析并输出配置方案（含保额/保费/优先级）"
+    },
+
+    {
+      "id": "goal_software_engineer",
+      "label": "成为软件工程师",
+      "type": "目标",
+      "description": "设计、开发、测试和维护软件系统，具备独立交付中小型项目的能力",
+      "practices": "掌握编程基础\n- 用一门语言（Python/JS）写 3 个以上小工具（CLI/脚本/自动化）\n- 完成 100-200 道算法题并输出题型总结\n理解计算机原理\n- 学完操作系统、网络、数据库核心概念并做笔记\n具备工程实践能力\n- 掌握 Git、测试、CI/CD、代码规范，参与团队协作\n- 给开源项目提交至少 3 个 PR（文档/测试/功能均可）\n- 搭建 CI/CD Pipeline 并容器化部署至少一个项目\n能独立交付完整项目\n- 搭建并上线一个全栈 Web 应用（登录/CRUD/数据库/部署/监控）\n- 完成一份系统设计文档（短链/聊天/推荐系统任选）\n通过技术面试\n- 通过 10 次模拟面试并复盘改进\n- 准备简历和 2-3 个可展示的作品集项目",
+      "criteria": "能独立完成中小型项目从需求到上线的全流程\n拥有 2-3 个可展示的项目作品集\n通过技术面试并拿到 Offer\n具备代码审查和团队协作能力",
+      "shape": "star",
+      "size": 30,
+      "color": {
+        "background": "#f093fb",
+        "border": "#d566e0"
+      },
+      "font": {
+        "size": 16,
+        "color": "#333"
+      },
+      "title": "<b>🎯 成为软件工程师</b>\n\n设计、开发、测试和维护软件系统，具备独立交付中小型项目的能力"
+    },
+    {
+      "id": "goal_data_analyst",
+      "label": "成为数据分析师",
+      "type": "目标",
+      "description": "用数据驱动决策：从问题定义到数据采集、分析、可视化与报告",
+      "practices": "掌握统计与工具基础\n- 掌握描述统计和概率论，用 Excel 完成基础数据分析\n- 用公开数据集写 50+ SQL 查询并输出洞察\n掌握编程与可视化\n- 掌握 Python/R 数据分析库（pandas/numpy/matplotlib）\n- 搭建一个交互式数据仪表盘（Tableau/PowerBI/Streamlit）\n完成端到端分析\n- 完成 3 份端到端数据分析报告（数据清洗→分析→可视化→结论）\n- 做一次 A/B 测试分析（含功效计算和置信区间）\n具备建模能力\n- 完成一个 Kaggle 入门赛（Titanic/House Prices），对比 3 个模型\n- 掌握基本特征工程和模型评估，能建立预测基线\n能产出自动化报告\n- 用 Python 完成一个自动化数据报告脚本",
+      "criteria": "能独立完成从数据采集到结论报告的全流程\n拥有 3 份以上可展示的分析作品\n熟练使用 SQL + Python/R + 可视化工具\n能用数据讲故事并给出可执行的业务建议",
+      "shape": "star",
+      "size": 30,
+      "color": {
+        "background": "#f093fb",
+        "border": "#d566e0"
+      },
+      "font": {
+        "size": 16,
+        "color": "#333"
+      },
+      "title": "<b>🎯 成为数据分析师</b>\n\n用数据驱动决策：从问题定义到数据采集、分析、可视化与报告"
+    },
+    {
+      "id": "goal_product_manager",
+      "label": "成为产品经理",
+      "type": "目标",
+      "description": "理解用户需求、定义产品方向、协调团队交付有价值的产品",
+      "practices": "建立产品认知\n- 拆解 5 个成功产品的功能、商业模型和增长策略\n掌握用户研究\n- 完成 10 位用户的深度访谈并输出洞察报告\n- 做一次竞品分析报告（功能/体验/策略/差异化）\n掌握需求与设计\n- 撰写 3 份完整 PRD（目标/用户/需求/指标/里程碑）\n- 用 Figma/Axure 制作可点击原型并做 2 轮用户测试\n具备数据驱动能力\n- 制定产品路线图和数据埋点方案\n- 用数据复盘一个功能的上线效果并输出迭代建议\n完成从0到1实战\n- 主导或参与一个产品从立项到发布的全流程",
+      "criteria": "能独立完成需求分析→PRD→原型→上线的全流程\n具备用数据驱动产品决策的能力\n能有效协调研发、设计、运营团队\n拥有至少 1 个完整的产品案例可展示",
+      "shape": "star",
+      "size": 30,
+      "color": {
+        "background": "#f093fb",
+        "border": "#d566e0"
+      },
+      "font": {
+        "size": 16,
+        "color": "#333"
+      },
+      "title": "<b>🎯 成为产品经理</b>\n\n理解用户需求、定义产品方向、协调团队交付有价值的产品"
+    },
+    {
+      "id": "goal_entrepreneur",
+      "label": "成为创业者",
+      "type": "目标",
+      "description": "从发现问题到验证商业模式、组建团队并实现盈利",
+      "practices": "发现并验证需求\n- 找到一个真实痛点并验证至少 20 人有此需求\n- 对 30+ 潜在用户做需求访谈\n设计商业模式\n- 完成商业模式画布并迭代 3 次以上\n- 完成财务模型：收入预测、成本结构和盈亏平衡分析\n构建 MVP 并获取反馈\n- 用最低成本构建 MVP 并上线（落地页/小程序/原型）\n- 获得前 10 个真实用户的反馈并迭代产品\n验证盈利与增长\n- 验证付费意愿，找到可持续的收入模型\n- 跑通一个获客渠道（内容/社群/投放）并记录数据\n获取外部认可\n- 参加至少 2 次路演并收集投资人反馈",
+      "criteria": "产品有真实付费用户或稳定活跃用户\n商业模式经过验证（用户愿意付费/广告可持续）\n团队能持续迭代和交付\n有清晰的增长路径和数据支撑",
+      "shape": "star",
+      "size": 30,
+      "color": {
+        "background": "#f093fb",
+        "border": "#d566e0"
+      },
+      "font": {
+        "size": 16,
+        "color": "#333"
+      },
+      "title": "<b>🎯 成为创业者</b>\n\n从发现问题到验证商业模式、组建团队并实现盈利"
+    },
+    {
+      "id": "goal_buy_house",
+      "label": "买房安家",
+      "type": "目标",
+      "description": "评估购房能力、选择房产、完成交易并合理安排贷款与税费",
+      "practices": "做好财务准备\n- 连续 6 个月记账并分析消费结构，制定首付储蓄计划\n- 建立应急基金（3-6个月支出），确保购房后不影响生活\n了解购房知识\n- 了解本地限购/限贷/税费政策并整理为清单\n- 完成购房资格和贷款额度的自我评估\n- 模拟计算不同贷款方案（等额本息/等额本金/组合贷）的月供和总利息\n调研市场并选房\n- 确定目标区域，实地看房 20+ 套，制作多维对比表\n- 综合评估地段/价格/配套/升值潜力，锁定目标房源\n完成交易\n- 完成一份完整的购房可行性分析报告\n- 谈判议价、签合同、办贷款、验房交接",
+      "criteria": "首付和应急基金准备充足\n月供不超过家庭收入的 30-40%\n对目标区域的房价、配套和发展有充分了解\n完成交易并顺利入住",
+      "shape": "star",
+      "size": 30,
+      "color": {
+        "background": "#f093fb",
+        "border": "#d566e0"
+      },
+      "font": {
+        "size": 16,
+        "color": "#333"
+      },
+      "title": "<b>🎯 买房安家</b>\n\n评估购房能力、选择房产、完成交易并合理安排贷款与税费"
+    },
+    {
+      "id": "goal_stay_healthy",
+      "label": "照顾好身体",
+      "type": "目标",
+      "description": "建立科学的饮食、运动与心理健康习惯，长期保持良好状态",
+      "practices": "建立健康认知\n- 了解身体基础知识、营养学原理和运动科学基本概念\n- 完成急救/CPR 基础培训\n养成饮食习惯\n- 连续 14 天饮食记录，分析宏量营养素分布并制定改善计划\n- 学习 10 个健康食谱并实践，减少外卖依赖\n建立运动习惯\n- 制定 8 周训练计划并执行（含力量/有氧/柔韧），记录进度\n改善睡眠质量\n- 连续 4 周睡眠日志（入睡时间/时长/质量），尝试一个改善干预\n持续健康管理\n- 每年完成一次全面体检并建立个人健康档案\n- 定期跟踪关键指标（体重/体脂/血压/心率），根据数据调整方案",
+      "criteria": "BMI/体脂率在健康范围内\n每周运动 3 次以上，持续 6 个月\n睡眠质量稳定（7-8小时/晚）\n年度体检指标无异常或持续改善\n有成型的压力管理方法且能持续使用",
+      "shape": "star",
+      "size": 30,
+      "color": {
+        "background": "#f093fb",
+        "border": "#d566e0"
+      },
+      "font": {
+        "size": 16,
+        "color": "#333"
+      },
+      "title": "<b>🎯 照顾好身体</b>\n\n建立科学的饮食、运动与心理健康习惯，长期保持良好状态"
+    },
+    {
+      "id": "goal_relationship",
+      "label": "经营亲密关系",
+      "type": "目标",
+      "description": "理解依恋模式、改善沟通、处理冲突，建立长期稳定的亲密关系",
+      "practices": "了解自我和关系模式\n- 完成依恋类型自评并了解自己的情绪模式和核心需求\n- 读完 2 本亲密关系经典书籍并输出笔记\n- 参加 1 次心理咨询或亲密关系工作坊\n提升沟通能力\n- 练习非暴力沟通框架并在 10 个真实场景中应用\n- 做 4 周关系日志（记录互动、情绪和改善行动）\n掌握冲突管理\n- 掌握冲突识别、降温和修复技巧并实际练习\n- 与伴侣/重要关系人进行 1 次深度对话（使用 36 问或类似工具）\n建立长期经营机制\n- 制定并执行日常情感连接计划（每日15分钟高质量互动）\n- 建立定期关系复盘机制（每月一次坦诚对话）",
+      "criteria": "能识别自己的情绪触发点并及时调节\n冲突后能在 24 小时内启动修复对话\n伴侣/关系人反馈沟通质量明显改善\n建立了稳定的情感连接节奏（每日/每周仪式）",
+      "shape": "star",
+      "size": 30,
+      "color": {
+        "background": "#f093fb",
+        "border": "#d566e0"
+      },
+      "font": {
+        "size": 16,
+        "color": "#333"
+      },
+      "title": "<b>🎯 经营亲密关系</b>\n\n理解依恋模式、改善沟通、处理冲突，建立长期稳定的亲密关系"
+    },
+    {
+      "id": "goal_financial_freedom",
+      "label": "投资理财",
+      "type": "目标",
+      "description": "建立预算体系、配置资产、控制风险，实现财务稳定与增长",
+      "practices": "摸清财务现状\n- 连续 90 天记账并输出月度财务报告\n- 用 50/30/20 或零基预算法制定 3 个月预算并执行\n建立安全垫\n- 建立应急基金（3-6个月支出）\n- 完成个人/家庭保险需求分析和配置方案\n学习投资知识\n- 读完 3 本经典投资书籍并输出读书笔记\n- 学会阅读基金/股票的基础财务指标\n实践投资\n- 制定资产配置方案（目标/期限/风险偏好/配比）\n- 用模拟盘或小额资金执行投资策略 6 个月并记录收益和复盘\n- 定期复盘和再平衡投资组合（至少每季度一次）",
+      "criteria": "拥有 3-6 个月的应急基金\n月度储蓄率稳定在 20% 以上\n基础保险配置完善（医疗/意外/重疾）\n有明确的资产配置方案且持续执行\n能独立做出基于数据的投资决策",
+      "shape": "star",
+      "size": 30,
+      "color": {
+        "background": "#f093fb",
+        "border": "#d566e0"
+      },
+      "font": {
+        "size": 16,
+        "color": "#333"
+      },
+      "title": "<b>🎯 投资理财</b>\n\n建立预算体系、配置资产、控制风险，实现财务稳定与增长"
+    },
+    {
+      "id": "goal_effective_learning",
+      "label": "高效学习与成长",
+      "type": "目标",
+      "description": "掌握学习方法、管理时间与知识，持续输出并建立个人知识体系",
+      "practices": "掌握学习方法论\n- 掌握主动回忆、间隔复习、费曼技巧等核心学习方法\n- 建立 Anki/闪卡间隔复习系统并持续使用 4 周以上\n建立时间管理体系\n- 做 4 周时间审计（记录-分析-调整），形成可复用的周计划模板\n搭建知识管理系统\n- 搭建个人知识库（Obsidian/Notion/Logseq）并写 30+ 条笔记\n- 形成输入→整理→输出的完整知识闭环\n持续输出与迭代\n- 每月输出 2 篇以上学习总结或教程文章\n- 完成一次「以教代学」实践（给他人讲解一个主题）\n- 每季度做一次学习方法和效率的复盘报告",
+      "criteria": "有稳定运行的间隔复习系统\n周计划执行率 > 80%\n个人知识库持续更新且可检索\n每月有稳定的知识输出（文章/笔记/分享）\n能在新领域快速建立知识框架",
+      "shape": "star",
+      "size": 30,
+      "color": {
+        "background": "#f093fb",
+        "border": "#d566e0"
+      },
+      "font": {
+        "size": 16,
+        "color": "#333"
+      },
+      "title": "<b>🎯 高效学习与成长</b>\n\n掌握学习方法、管理时间与知识，持续输出并建立个人知识体系"
+    },
+    {
+      "id": "goal_job_hunting",
+      "label": "找到好工作",
+      "type": "目标",
+      "description": "明确职业方向、准备简历与面试、高效求职并谈到满意的薪酬",
+      "practices": "明确求职方向\n- 做 MBTI/职业兴趣测评，明确目标岗位、行业和期望薪资\n- 与 3 位行业前辈做信息性面谈\n准备求职材料\n- 写 3 个版本的简历（针对不同岗位），收集 5 人反馈并迭代\n- 建立个人主页/作品集网站并上线\n训练面试能力\n- 准备 30 个常见面试问题的 STAR 回答\n- 完成 10 次模拟面试（含行为/技术/案例），每次写复盘\n投递与谈判\n- 批量投递并持续面试，每次面试后复盘\n- 研究目标公司的薪酬范围，准备谈薪话术和 BATNA",
+      "criteria": "拿到至少 2 个满意的 Offer\n面试通过率 > 30%\n薪酬达到目标范围\n对岗位职责、团队和发展空间有清晰认知",
+      "shape": "star",
+      "size": 30,
+      "color": {
+        "background": "#f093fb",
+        "border": "#d566e0"
+      },
+      "font": {
+        "size": 16,
+        "color": "#333"
+      },
+      "title": "<b>🎯 找到好工作</b>\n\n明确职业方向、准备简历与面试、高效求职并谈到满意的薪酬"
     }
   ],
   "edges": [
@@ -3535,6 +3917,567 @@
       "color": {
         "color": "#FF6B6B"
       }
+    },
+
+    {
+      "id": "concept_subject_health__contains__course_exercise_fitness",
+      "from": "concept_subject_health",
+      "to": "course_exercise_fitness",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": { "color": "#95E1D3" }
+    },
+    {
+      "id": "concept_subject_health__contains__course_first_aid",
+      "from": "concept_subject_health",
+      "to": "course_first_aid",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": { "color": "#95E1D3" }
+    },
+    {
+      "id": "concept_subject_econ_business__contains__course_real_estate",
+      "from": "concept_subject_econ_business",
+      "to": "course_real_estate",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": { "color": "#95E1D3" }
+    },
+    {
+      "id": "concept_subject_econ_business__contains__course_entrepreneurship",
+      "from": "concept_subject_econ_business",
+      "to": "course_entrepreneurship",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": { "color": "#95E1D3" }
+    },
+    {
+      "id": "concept_cap_communication_influence__contains__course_relationship_skills",
+      "from": "concept_cap_communication_influence",
+      "to": "course_relationship_skills",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": { "color": "#95E1D3" }
+    },
+    {
+      "id": "concept_cap_communication_influence__contains__course_job_interview",
+      "from": "concept_cap_communication_influence",
+      "to": "course_job_interview",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": { "color": "#95E1D3" }
+    },
+    {
+      "id": "concept_cap_writing_argumentation__contains__course_personal_branding",
+      "from": "concept_cap_writing_argumentation",
+      "to": "course_personal_branding",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": { "color": "#95E1D3" }
+    },
+    {
+      "id": "concept_subject_cs_it__contains__course_cloud_devops",
+      "from": "concept_subject_cs_it",
+      "to": "course_cloud_devops",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": { "color": "#95E1D3" }
+    },
+    {
+      "id": "concept_subject_cs_it__contains__course_ai_llm",
+      "from": "concept_subject_cs_it",
+      "to": "course_ai_llm",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": { "color": "#95E1D3" }
+    },
+    {
+      "id": "concept_cap_finance_risk__contains__course_insurance_planning",
+      "from": "concept_cap_finance_risk",
+      "to": "course_insurance_planning",
+      "label": "包含",
+      "type": "contains",
+      "arrows": "to",
+      "color": { "color": "#95E1D3" }
+    },
+
+    {
+      "id": "course_anatomy__prerequisite__course_exercise_fitness",
+      "from": "course_anatomy",
+      "to": "course_exercise_fitness",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": { "color": "#FF6B6B" }
+    },
+    {
+      "id": "course_personal_finance__prerequisite__course_real_estate",
+      "from": "course_personal_finance",
+      "to": "course_real_estate",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": { "color": "#FF6B6B" }
+    },
+    {
+      "id": "course_interpersonal_communication__prerequisite__course_relationship_skills",
+      "from": "course_interpersonal_communication",
+      "to": "course_relationship_skills",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": { "color": "#FF6B6B" }
+    },
+    {
+      "id": "course_interpersonal_communication__prerequisite__course_job_interview",
+      "from": "course_interpersonal_communication",
+      "to": "course_job_interview",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": { "color": "#FF6B6B" }
+    },
+    {
+      "id": "course_argumentation__prerequisite__course_personal_branding",
+      "from": "course_argumentation",
+      "to": "course_personal_branding",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": { "color": "#FF6B6B" }
+    },
+    {
+      "id": "course_product_management__prerequisite__course_entrepreneurship",
+      "from": "course_product_management",
+      "to": "course_entrepreneurship",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": { "color": "#FF6B6B" }
+    },
+    {
+      "id": "course_computer_systems__prerequisite__course_cloud_devops",
+      "from": "course_computer_systems",
+      "to": "course_cloud_devops",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": { "color": "#FF6B6B" }
+    },
+    {
+      "id": "course_programming_fundamentals__prerequisite__course_ai_llm",
+      "from": "course_programming_fundamentals",
+      "to": "course_ai_llm",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": { "color": "#FF6B6B" }
+    },
+    {
+      "id": "course_machine_learning__prerequisite__course_ai_llm",
+      "from": "course_machine_learning",
+      "to": "course_ai_llm",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": { "color": "#FF6B6B" }
+    },
+    {
+      "id": "course_personal_finance__prerequisite__course_insurance_planning",
+      "from": "course_personal_finance",
+      "to": "course_insurance_planning",
+      "label": "前置",
+      "type": "prerequisite",
+      "arrows": "to",
+      "color": { "color": "#FF6B6B" }
+    },
+
+    {
+      "id": "goal_software_engineer__requires__concept_subject_cs_it",
+      "from": "goal_software_engineer",
+      "to": "concept_subject_cs_it",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_software_engineer__requires__concept_subject_math_stats",
+      "from": "goal_software_engineer",
+      "to": "concept_subject_math_stats",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_software_engineer__requires__concept_cap_project_delivery",
+      "from": "goal_software_engineer",
+      "to": "concept_cap_project_delivery",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_software_engineer__requires__course_software_engineering",
+      "from": "goal_software_engineer",
+      "to": "course_software_engineering",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_software_engineer__requires__course_system_design",
+      "from": "goal_software_engineer",
+      "to": "course_system_design",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+
+    {
+      "id": "goal_data_analyst__requires__concept_cap_data_analysis",
+      "from": "goal_data_analyst",
+      "to": "concept_cap_data_analysis",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_data_analyst__requires__concept_subject_math_stats",
+      "from": "goal_data_analyst",
+      "to": "concept_subject_math_stats",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_data_analyst__requires__course_data_analysis",
+      "from": "goal_data_analyst",
+      "to": "course_data_analysis",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_data_analyst__requires__course_machine_learning",
+      "from": "goal_data_analyst",
+      "to": "course_machine_learning",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+
+    {
+      "id": "goal_product_manager__requires__concept_cap_design_product",
+      "from": "goal_product_manager",
+      "to": "concept_cap_design_product",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_product_manager__requires__concept_cap_communication_influence",
+      "from": "goal_product_manager",
+      "to": "concept_cap_communication_influence",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_product_manager__requires__course_product_management",
+      "from": "goal_product_manager",
+      "to": "course_product_management",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_product_manager__requires__course_user_research_ux",
+      "from": "goal_product_manager",
+      "to": "course_user_research_ux",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+
+    {
+      "id": "goal_entrepreneur__requires__concept_subject_econ_business",
+      "from": "goal_entrepreneur",
+      "to": "concept_subject_econ_business",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_entrepreneur__requires__concept_cap_project_delivery",
+      "from": "goal_entrepreneur",
+      "to": "concept_cap_project_delivery",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_entrepreneur__requires__course_entrepreneurship",
+      "from": "goal_entrepreneur",
+      "to": "course_entrepreneurship",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_entrepreneur__requires__course_marketing",
+      "from": "goal_entrepreneur",
+      "to": "course_marketing",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+
+    {
+      "id": "goal_buy_house__requires__concept_cap_finance_risk",
+      "from": "goal_buy_house",
+      "to": "concept_cap_finance_risk",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_buy_house__requires__course_personal_finance",
+      "from": "goal_buy_house",
+      "to": "course_personal_finance",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_buy_house__requires__course_real_estate",
+      "from": "goal_buy_house",
+      "to": "course_real_estate",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_buy_house__requires__course_law",
+      "from": "goal_buy_house",
+      "to": "course_law",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+
+    {
+      "id": "goal_stay_healthy__requires__concept_subject_health",
+      "from": "goal_stay_healthy",
+      "to": "concept_subject_health",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_stay_healthy__requires__course_nutrition",
+      "from": "goal_stay_healthy",
+      "to": "course_nutrition",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_stay_healthy__requires__course_exercise_fitness",
+      "from": "goal_stay_healthy",
+      "to": "course_exercise_fitness",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_stay_healthy__requires__course_mental_health",
+      "from": "goal_stay_healthy",
+      "to": "course_mental_health",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+
+    {
+      "id": "goal_relationship__requires__concept_cap_communication_influence",
+      "from": "goal_relationship",
+      "to": "concept_cap_communication_influence",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_relationship__requires__course_interpersonal_communication",
+      "from": "goal_relationship",
+      "to": "course_interpersonal_communication",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_relationship__requires__course_psychology",
+      "from": "goal_relationship",
+      "to": "course_psychology",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_relationship__requires__course_relationship_skills",
+      "from": "goal_relationship",
+      "to": "course_relationship_skills",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+
+    {
+      "id": "goal_financial_freedom__requires__concept_cap_finance_risk",
+      "from": "goal_financial_freedom",
+      "to": "concept_cap_finance_risk",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_financial_freedom__requires__concept_subject_econ_business",
+      "from": "goal_financial_freedom",
+      "to": "concept_subject_econ_business",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_financial_freedom__requires__course_investing",
+      "from": "goal_financial_freedom",
+      "to": "course_investing",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_financial_freedom__requires__course_accounting",
+      "from": "goal_financial_freedom",
+      "to": "course_accounting",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+
+    {
+      "id": "goal_effective_learning__requires__concept_cap_learning_systems",
+      "from": "goal_effective_learning",
+      "to": "concept_cap_learning_systems",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_effective_learning__requires__concept_cap_information_literacy",
+      "from": "goal_effective_learning",
+      "to": "concept_cap_information_literacy",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_effective_learning__requires__course_learning_how_to_learn",
+      "from": "goal_effective_learning",
+      "to": "course_learning_how_to_learn",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_effective_learning__requires__course_knowledge_management",
+      "from": "goal_effective_learning",
+      "to": "course_knowledge_management",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+
+    {
+      "id": "goal_job_hunting__requires__concept_cap_communication_influence",
+      "from": "goal_job_hunting",
+      "to": "concept_cap_communication_influence",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_job_hunting__requires__concept_cap_writing_argumentation",
+      "from": "goal_job_hunting",
+      "to": "concept_cap_writing_argumentation",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_job_hunting__requires__course_job_interview",
+      "from": "goal_job_hunting",
+      "to": "course_job_interview",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
+    },
+    {
+      "id": "goal_job_hunting__requires__course_personal_branding",
+      "from": "goal_job_hunting",
+      "to": "course_personal_branding",
+      "label": "需要",
+      "type": "requires",
+      "arrows": "to",
+      "color": { "color": "#4CAF50" }
     }
   ]
 }

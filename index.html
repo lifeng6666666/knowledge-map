@@ -377,7 +377,8 @@
                             <h3 style="font-size: 13px; color: #555; margin-bottom: 10px;">选择节点类型</h3>
                             <div class="btn-group" style="gap: 5px;">
                                 <button class="btn-secondary" style="padding: 8px;" onclick="setNodeType('course')">📖 课程</button>
-                                <button class="btn-secondary" style="padding: 8px;" onclick="setNodeType('concept')">🎯 概念</button>
+                                <button class="btn-secondary" style="padding: 8px;" onclick="setNodeType('concept')">💎 概念</button>
+                                <button class="btn-secondary" style="padding: 8px;" onclick="setNodeType('goal')">🎯 目标</button>
                             </div>
                         </div>
                         <div class="form-group">
@@ -430,8 +431,9 @@
                         <div class="form-group">
                             <label>关系类型</label>
                             <select id="edgeType" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
-                                <option value="contains">包含关系</option>
-                                <option value="prerequisite">前置课程</option>
+                                <option value="contains">包含（概念→课程）</option>
+                                <option value="prerequisite">前置（课程→课程）</option>
+                                <option value="requires">需要（目标→概念/课程）</option>
                             </select>
                         </div>
                         <div class="btn-group">
