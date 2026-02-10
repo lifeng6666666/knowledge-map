@@ -85,10 +85,11 @@ function updateConceptTags() {
     
     console.log('Found concept nodes:', conceptNodes.length);
     
-    // 按类型分组（概念只保留：学科 / 能力）
+    // 按类型分组（概念：学科 / 能力 / 目标）
     const byType = {
         '学科': [],
-        '能力': []
+        '能力': [],
+        '目标': []
     };
     
     conceptNodes.forEach(node => {
@@ -106,11 +107,12 @@ function updateConceptTags() {
     // 颜色映射
     const typeColors = {
         '学科': { bg: '#667eea', text: '#fff' },
-        '能力': { bg: '#764ba2', text: '#fff' }
+        '能力': { bg: '#764ba2', text: '#fff' },
+        '目标': { bg: '#f093fb', text: '#fff' }
     };
     
     // 遍历每个类型的标签
-    ['学科', '能力'].forEach(type => {
+    ['学科', '能力', '目标'].forEach(type => {
         const nodeList = byType[type];
         if (nodeList.length === 0) return;
         
@@ -273,6 +275,14 @@ function setNodeType(type) {
     if (conceptTypeGroup) {
         conceptTypeGroup.style.display = currentNodeType === 'concept' ? 'block' : 'none';
     }
+    // 目标节点不需要教科书/课程/项目字段
+    const goalHideFields = ['nodeBooks', 'nodeCourses', 'nodeProjects'];
+    goalHideFields.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && el.parentElement) {
+            el.parentElement.style.display = currentNodeType === 'goal' ? 'none' : 'block';
+        }
+    });
 }
 
 // 添加节点
@@ -296,12 +306,27 @@ function addNode() {
     
     const nodeId = 'node_' + Date.now();
     const isConcept = currentNodeType === 'concept';
-    const nodeType = isConcept ? conceptType : 'course';
+    const isGoal = currentNodeType === 'goal';
+    const nodeType = isGoal ? '目标' : (isConcept ? conceptType : 'course');
     const conceptColors = {
         '学科': { background: '#667eea', border: '#5568d3', highlight: { background: '#5c6ee0', border: '#4b5fc5' } },
         '能力': { background: '#764ba2', border: '#5e3d86', highlight: { background: '#6b4295', border: '#4f3371' } }
     };
     
+    let nodeShape = 'box';
+    let nodeColor = { background: '#87CEEB', border: '#4682B4', highlight: { background: '#6CB4EE', border: '#36648B' } };
+    let nodeFont = { size: 14, color: '#fff' };
+
+    if (isGoal) {
+        nodeShape = 'star';
+        nodeColor = { background: '#f093fb', border: '#d566e0', highlight: { background: '#e87df0', border: '#c050cc' } };
+        nodeFont = { size: 16, color: '#333' };
+    } else if (isConcept) {
+        nodeShape = 'diamond';
+        nodeColor = conceptColors[conceptType] || { background: '#FFD700', border: '#FFA500', highlight: { background: '#FFC700', border: '#FF8C00' } };
+        nodeFont = { size: 16, color: '#333' };
+    }
+
     const nodeData = {
         id: nodeId,
         label: name,
@@ -310,13 +335,10 @@ function addNode() {
         books: books,
         courses: courses,
         projects: projects,
-        shape: isConcept ? 'diamond' : 'box',
-        color: isConcept ? (conceptColors[conceptType] || { background: '#FFD700', border: '#FFA500', highlight: { background: '#FFC700', border: '#FF8C00' } }) :
-            { background: '#87CEEB', border: '#4682B4', highlight: { background: '#6CB4EE', border: '#36648B' } },
-        font: {
-            size: isConcept ? 16 : 14,
-            color: isConcept ? '#333' : '#fff'
-        }
+        shape: nodeShape,
+        size: isGoal ? 30 : undefined,
+        color: nodeColor,
+        font: nodeFont
     };
     
     nodes.add(nodeData);
@@ -372,8 +394,18 @@ function addEdge() {
         return;
     }
     if (edgeType === 'contains') {
-        if (fromNode.type === 'course' || toNode.type !== 'course') {
+        if (fromNode.type === 'course' || fromNode.type === '目标' || toNode.type !== 'course') {
             showStatus('“包含”关系必须是：概念 → 课程', 'error');
+            return;
+        }
+    }
+    if (edgeType === 'requires') {
+        if (fromNode.type !== '目标') {
+            showStatus('"需要"关系必须是：目标 → 概念/课程', 'error');
+            return;
+        }
+        if (toNode.type === '目标') {
+            showStatus('"需要"关系的终点不能是目标节点', 'error');
             return;
         }
     }
@@ -394,12 +426,14 @@ function addEdge() {
     
     const labelMap = {
         'contains': '包含',
-        'prerequisite': '前置'
+        'prerequisite': '前置',
+        'requires': '需要'
     };
     
     const colorMap = {
         'contains': '#95E1D3',
-        'prerequisite': '#FF6B6B'
+        'prerequisite': '#FF6B6B',
+        'requires': '#4CAF50'
     };
     
     const edgeData = {
@@ -562,6 +596,31 @@ function updateNodeInfo() {
         node.projects.split('\n').forEach(project => {
             if (project.trim()) {
                 html += `<div class="node-detail" style="margin-left: 10px; color: #666;">• ${project.trim()}</div>`;
+            }
+        });
+    }
+
+    // 目标节点专属字段：子目标 + 对应实践
+    if (node.practices) {
+        html += `<div class="node-detail" style="margin-top: 12px; padding-top: 10px; border-top: 1px solid #e0e0e0;"><strong>🛠️ 子目标与实践：</strong></div>`;
+        node.practices.split('\n').forEach(line => {
+            if (line.trim()) {
+                if (line.trim().startsWith('- ')) {
+                    // 实践条目
+                    html += `<div class="node-detail" style="margin-left: 24px; color: #555; line-height: 1.7;">☐ ${line.trim().slice(2)}</div>`;
+                } else {
+                    // 子目标标题
+                    html += `<div class="node-detail" style="margin-top: 8px; margin-left: 10px; color: #333; font-weight: bold;">▸ ${line.trim()}</div>`;
+                }
+            }
+        });
+    }
+
+    if (node.criteria) {
+        html += `<div class="node-detail" style="margin-top: 10px;"><strong>✅ 达成标准：</strong></div>`;
+        node.criteria.split('\n').forEach(criterion => {
+            if (criterion.trim()) {
+                html += `<div class="node-detail" style="margin-left: 10px; color: #2e7d32;">✓ ${criterion.trim()}</div>`;
             }
         });
     }
@@ -757,10 +816,13 @@ async function loadDefaultData() {
                     delete copy.title;
                     return copy;
                 });
+                allNodesBackup = JSON.parse(JSON.stringify(data.nodes));
+                allEdgesBackup = JSON.parse(JSON.stringify(data.edges));
                 nodes.add(cleanNodes);
                 edges.add(data.edges);
                 updateNodeSelectors();
                 updateJSONPreview();
+                updateConceptTags();
                 network.once('stabilizationIterationsDone', function() {
                     network.setOptions({ physics: false });
                     network.fit();
@@ -778,8 +840,8 @@ async function loadDefaultData() {
     // 这是一个简化的备选方案 - 在生产环境中应该包含完整的中文数据
     const defaultData = {
         "nodes": [
-            {"id":"concept_cs","label":"计算机科学","type":"学科","description":"计算机科学的基础学科","shape":"diamond","color":{"background":"#667eea","border":"#5568d3"},"font":{"size":16,"color":"#fff"}},
-            {"id":"concept_math","label":"数学基础","type":"学科","description":"计算的数学基础","shape":"diamond","color":{"background":"#4facfe","border":"#3d8fd9"},"font":{"size":16,"color":"#fff"}},
+            {"id":"concept_cs","label":"计算机科学","type":"学科","description":"计算机科学的基础学科","shape":"diamond","color":{"background":"#667eea","border":"#5568d3"},"font":{"size":16,"color":"#333"}},
+            {"id":"concept_math","label":"数学基础","type":"学科","description":"计算的数学基础","shape":"diamond","color":{"background":"#4facfe","border":"#3d8fd9"},"font":{"size":16,"color":"#333"}},
             {"id":"course_python","label":"Python编程","type":"course","description":"Python基础","shape":"box","color":{"background":"#3776ab","border":"#1d4d6b"},"font":{"size":13,"color":"#fff"}},
             {"id":"course_dsa","label":"数据结构与算法","type":"course","description":"算法和数据结构","shape":"box","color":{"background":"#e34c26","border":"#b83918"},"font":{"size":13,"color":"#fff"}}
         ],
